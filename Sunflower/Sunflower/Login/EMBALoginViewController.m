@@ -30,10 +30,10 @@
     imageView.image = [UIImage imageNamed:@"bg.png"];
     [self.view addSubview:imageView];
     
-    EMBALoginInputView *inputView = [[EMBALoginInputView alloc] initWithFrame:CGRectMake(26, self.view.bounds.size.height/2, 268, 92)];
-    inputView.backgroundColor = [UIColor clearColor];
+    _inputView = [[EMBALoginInputView alloc] initWithFrame:CGRectMake(26, self.view.bounds.size.height/2, 268, 92)];
+    _inputView.backgroundColor = [UIColor clearColor];
     
-    [self.view addSubview:inputView];
+    [self.view addSubview:_inputView];
     
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     loginButton.frame = CGRectMake(26, 400, 268, 46);
@@ -43,7 +43,28 @@
     loginButton.titleLabel.font = [UIFont systemFontOfSize:19];
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [loginButton setTitleColor:UIColorFromRGB(0xfefee4) forState:UIControlStateNormal];
+    [loginButton addTarget:self action:@selector(loginButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
+}
+#pragma mark -
+#pragma mark Login button click -
+- (void)loginButtonClicked:(UIButton *)sender{
+//    http://www.vpengo.com/login?loginName=13598084041&password=123456
+    [WTRequestCenter postWithURL:@"http://www.vpengo.com/login" parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
+        NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
+        if (jsonDic[@"sessionId"]) {
+            self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[[UINavigationController alloc] initWithRootViewController:[EMBAMainViewController new]]];
+            self.sideMenuViewController.shadowColor = [UIColor blackColor];
+            self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+            self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+            [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+            
+            
+            
+        }
+    } failed:^(NSURLResponse *response, NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{

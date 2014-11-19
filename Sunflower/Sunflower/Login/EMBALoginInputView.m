@@ -34,6 +34,7 @@
     imageView.frame = CGRectMake(leftView1.frame.size.width/4, leftView1.frame.size.height/4, leftView1.frame.size.width/2, leftView1.frame.size.height/2);
     [leftView1 addSubview:imageView];
     _userNameField.leftView =  leftView1;
+    _userNameField.textColor = UIColorFromRGB(0xffffff);
     _userNameField.leftViewMode = UITextFieldViewModeAlways;
     [self addSubview:_userNameField];
     
@@ -45,6 +46,7 @@
     imageView2.frame = CGRectMake(leftView2.frame.size.width/4, leftView2.frame.size.height/4, leftView2.frame.size.width/2, leftView2.frame.size.height/2);
     [leftView2 addSubview:imageView2];
     _userPswField.leftView = leftView2;
+    _userPswField.textColor = UIColorFromRGB(0xffffff);
     _userPswField.leftViewMode = UITextFieldViewModeAlways;
     [self addSubview:_userPswField];
 }
@@ -74,7 +76,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-            // Initialization code
     }
     return self;
 }
@@ -85,18 +86,7 @@
 }
 - (void)drawPlaceholderInRect:(CGRect)rect
 {
-    [[UIColor whiteColor] setFill];
-//#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+    [[UIColor grayColor] setFill];
     [[self placeholder] drawInRect:rect withFont:[UIFont systemFontOfSize:18]];
-//#else
-//    NSMutableParagraphStyle *paragraphStyle= [[NSMutableParagraphStyle alloc] init];
-//    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-//    paragraphStyle.alignment = NSTextAlignmentLeft;
-//    [[self placeholder] drawInRect:rect withAttributes:
-//     @{[UIFont systemFontOfSize:22]: NSFontAttributeName,
-//       paragraphStyle:NSParagraphStyleAttributeName,[UIColor blackColor]:NSForegroundColorAttributeName,[UIColor whiteColor]:NSStrokeColorAttributeName,[NSNumber numberWithFloat:2.0]:NSStrokeWidthAttributeName}];
-//    
-//    
-//#endif
 }
 @end

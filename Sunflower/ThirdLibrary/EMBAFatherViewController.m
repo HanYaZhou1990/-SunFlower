@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.navigationController.navigationBar.translucent = NO;
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navB.png"] forBarMetrics:UIBarMetricsDefault];
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage initWithColor:UIColorFromRGB(0x4c4c4c)] forBarMetrics:UIBarMetricsDefault];
         [[UINavigationBar appearance] setShadowImage:[UIImage initWithColor:[UIColor clearColor]]];
         
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];

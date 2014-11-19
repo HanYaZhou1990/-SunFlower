@@ -8,7 +8,13 @@
 
 #import "EMBAFatherViewController.h"
 #import "EMBALoginInputView.h"
+#import "EMBAMainViewController.h"
+#import "TWTSideMenuViewController.h"
+#import "EMBASettingsViewController.h"
 
 @interface EMBALoginViewController : EMBAFatherViewController
+
+@property (nonatomic, strong) EMBALoginInputView *inputView;
+@property (strong, nonatomic) TWTSideMenuViewController *sideMenuViewController;
 
 @end
