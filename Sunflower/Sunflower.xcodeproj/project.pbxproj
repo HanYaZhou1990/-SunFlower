@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3219FAA17D0044F48D /* MySqlite.m */; };
+		A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3519FAA2BA0044F48D /* UserInformation.m */; };
+		A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */; };
+		A825EE3D19FAA5080044F48D /* HYZ+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3C19FAA5080044F48D /* HYZ+Color.m */; };
+		A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */; };
+		A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE4219FAA7710044F48D /* EMBALoginInputView.m */; };
+		A825EE4519FAA8DB0044F48D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A825EE4419FAA8DB0044F48D /* QuartzCore.framework */; };
+		A8367D1519FAA00E00ED14CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1419FAA00E00ED14CA /* Foundation.framework */; };
+		A8367D1719FAA00E00ED14CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1619FAA00E00ED14CA /* CoreGraphics.framework */; };
+		A8367D1919FAA00E00ED14CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1819FAA00E00ED14CA /* UIKit.framework */; };
+		A8367D1B19FAA00E00ED14CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1A19FAA00E00ED14CA /* CoreData.framework */; };
+		A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8367D1F19FAA00E00ED14CA /* InfoPlist.strings */; };
+		A8367D2319FAA00E00ED14CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8367D2219FAA00E00ED14CA /* main.m */; };
+		A8367D2719FAA00E00ED14CA /* EMBAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8367D2619FAA00E00ED14CA /* EMBAAppDelegate.m */; };
+		A8367D2A19FAA00E00ED14CA /* Sunflower.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8367D2819FAA00E00ED14CA /* Sunflower.xcdatamodeld */; };
+		A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8367D2B19FAA00E00ED14CA /* Images.xcassets */; };
+		A8367D3319FAA00E00ED14CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D3219FAA00E00ED14CA /* XCTest.framework */; };
+		A8367D3419FAA00E00ED14CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1419FAA00E00ED14CA /* Foundation.framework */; };
+		A8367D3519FAA00E00ED14CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1819FAA00E00ED14CA /* UIKit.framework */; };
+		A8367D3619FAA00E00ED14CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1A19FAA00E00ED14CA /* CoreData.framework */; };
+		A8367D3E19FAA00E00ED14CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8367D3C19FAA00E00ED14CA /* InfoPlist.strings */; };
+		A8367D4019FAA00E00ED14CA /* SunflowerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8367D3F19FAA00E00ED14CA /* SunflowerTests.m */; };
+		A8367D4F19FAA04500ED14CA /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4B19FAA04500ED14CA /* success.png */; };
+		A8367D5019FAA04500ED14CA /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4C19FAA04500ED14CA /* bg.png */; };
+		A8367D5119FAA04500ED14CA /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4D19FAA04500ED14CA /* lock.png */; };
+		A8367D5219FAA04500ED14CA /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4E19FAA04500ED14CA /* user.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8367D3719FAA00E00ED14CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8367D0919FAA00E00ED14CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8367D1019FAA00E00ED14CA;
+			remoteInfo = Sunflower;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A825EE3119FAA17D0044F48D /* MySqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySqlite.h; sourceTree = "<group>"; };
+		A825EE3219FAA17D0044F48D /* MySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySqlite.m; sourceTree = "<group>"; };
+		A825EE3419FAA2BA0044F48D /* UserInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInformation.h; path = ../Sunflower/UserInformation.h; sourceTree = "<group>"; };
+		A825EE3519FAA2BA0044F48D /* UserInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInformation.m; path = ../Sunflower/UserInformation.m; sourceTree = "<group>"; };
+		A825EE3819FAA3810044F48D /* EMBAFatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAFatherViewController.h; sourceTree = "<group>"; };
+		A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAFatherViewController.m; sourceTree = "<group>"; };
+		A825EE3B19FAA5080044F48D /* HYZ+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HYZ+Color.h"; sourceTree = "<group>"; };
+		A825EE3C19FAA5080044F48D /* HYZ+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HYZ+Color.m"; sourceTree = "<group>"; };
+		A825EE3E19FAA5BD0044F48D /* EMBALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBALoginViewController.h; sourceTree = "<group>"; };
+		A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBALoginViewController.m; sourceTree = "<group>"; };
+		A825EE4119FAA7710044F48D /* EMBALoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBALoginInputView.h; sourceTree = "<group>"; };
+		A825EE4219FAA7710044F48D /* EMBALoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBALoginInputView.m; sourceTree = "<group>"; };
+		A825EE4419FAA8DB0044F48D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A8367D1119FAA00E00ED14CA /* Sunflower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunflower.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8367D1419FAA00E00ED14CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A8367D1619FAA00E00ED14CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8367D1819FAA00E00ED14CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A8367D1A19FAA00E00ED14CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A8367D1E19FAA00E00ED14CA /* Sunflower-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sunflower-Info.plist"; sourceTree = "<group>"; };
+		A8367D2019FAA00E00ED14CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8367D2219FAA00E00ED14CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8367D2419FAA00E00ED14CA /* Sunflower-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sunflower-Prefix.pch"; sourceTree = "<group>"; };
+		A8367D2519FAA00E00ED14CA /* EMBAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMBAAppDelegate.h; sourceTree = "<group>"; };
+		A8367D2619FAA00E00ED14CA /* EMBAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMBAAppDelegate.m; sourceTree = "<group>"; };
+		A8367D2919FAA00E00ED14CA /* Sunflower.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sunflower.xcdatamodel; sourceTree = "<group>"; };
+		A8367D2B19FAA00E00ED14CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A8367D3119FAA00E00ED14CA /* SunflowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunflowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8367D3219FAA00E00ED14CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A8367D3B19FAA00E00ED14CA /* SunflowerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunflowerTests-Info.plist"; sourceTree = "<group>"; };
+		A8367D3D19FAA00E00ED14CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8367D3F19FAA00E00ED14CA /* SunflowerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunflowerTests.m; sourceTree = "<group>"; };
+		A8367D4B19FAA04500ED14CA /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		A8367D4C19FAA04500ED14CA /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		A8367D4D19FAA04500ED14CA /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		A8367D4E19FAA04500ED14CA /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8367D0E19FAA00E00ED14CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A825EE4519FAA8DB0044F48D /* QuartzCore.framework in Frameworks */,
+				A8367D1719FAA00E00ED14CA /* CoreGraphics.framework in Frameworks */,
+				A8367D1B19FAA00E00ED14CA /* CoreData.framework in Frameworks */,
+				A8367D1919FAA00E00ED14CA /* UIKit.framework in Frameworks */,
+				A8367D1519FAA00E00ED14CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8367D2E19FAA00E00ED14CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8367D3319FAA00E00ED14CA /* XCTest.framework in Frameworks */,
+				A8367D3619FAA00E00ED14CA /* CoreData.framework in Frameworks */,
+				A8367D3519FAA00E00ED14CA /* UIKit.framework in Frameworks */,
+				A8367D3419FAA00E00ED14CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A825EE2F19FAA16F0044F48D /* ThirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				A825EE3719FAA35F0044F48D /* FatherViewController */,
+				A825EE3019FAA1730044F48D /* CoreData */,
+			);
+			path = ThirdLibrary;
+			sourceTree = "<group>";
+		};
+		A825EE3019FAA1730044F48D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A825EE3119FAA17D0044F48D /* MySqlite.h */,
+				A825EE3219FAA17D0044F48D /* MySqlite.m */,
+				A825EE3419FAA2BA0044F48D /* UserInformation.h */,
+				A825EE3519FAA2BA0044F48D /* UserInformation.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		A825EE3719FAA35F0044F48D /* FatherViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A825EE3819FAA3810044F48D /* EMBAFatherViewController.h */,
+				A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */,
+				A825EE3B19FAA5080044F48D /* HYZ+Color.h */,
+				A825EE3C19FAA5080044F48D /* HYZ+Color.m */,
+			);
+			name = FatherViewController;
+			sourceTree = "<group>";
+		};
+		A8367D0819FAA00E00ED14CA = {
+			isa = PBXGroup;
+			children = (
+				A825EE2F19FAA16F0044F48D /* ThirdLibrary */,
+				A8367D4919FAA03700ED14CA /* images */,
+				A8367D4A19FAA03700ED14CA /* Login */,
+				A8367D1C19FAA00E00ED14CA /* Sunflower */,
+				A8367D3919FAA00E00ED14CA /* SunflowerTests */,
+				A8367D1319FAA00E00ED14CA /* Frameworks */,
+				A8367D1219FAA00E00ED14CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8367D1219FAA00E00ED14CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8367D1119FAA00E00ED14CA /* Sunflower.app */,
+				A8367D3119FAA00E00ED14CA /* SunflowerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8367D1319FAA00E00ED14CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A825EE4419FAA8DB0044F48D /* QuartzCore.framework */,
+				A8367D1419FAA00E00ED14CA /* Foundation.framework */,
+				A8367D1619FAA00E00ED14CA /* CoreGraphics.framework */,
+				A8367D1819FAA00E00ED14CA /* UIKit.framework */,
+				A8367D1A19FAA00E00ED14CA /* CoreData.framework */,
+				A8367D3219FAA00E00ED14CA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8367D1C19FAA00E00ED14CA /* Sunflower */ = {
+			isa = PBXGroup;
+			children = (
+				A8367D2519FAA00E00ED14CA /* EMBAAppDelegate.h */,
+				A8367D2619FAA00E00ED14CA /* EMBAAppDelegate.m */,
+				A8367D2B19FAA00E00ED14CA /* Images.xcassets */,
+				A8367D2819FAA00E00ED14CA /* Sunflower.xcdatamodeld */,
+				A8367D1D19FAA00E00ED14CA /* Supporting Files */,
+			);
+			path = Sunflower;
+			sourceTree = "<group>";
+		};
+		A8367D1D19FAA00E00ED14CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8367D1E19FAA00E00ED14CA /* Sunflower-Info.plist */,
+				A8367D1F19FAA00E00ED14CA /* InfoPlist.strings */,
+				A8367D2219FAA00E00ED14CA /* main.m */,
+				A8367D2419FAA00E00ED14CA /* Sunflower-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8367D3919FAA00E00ED14CA /* SunflowerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8367D3F19FAA00E00ED14CA /* SunflowerTests.m */,
+				A8367D3A19FAA00E00ED14CA /* Supporting Files */,
+			);
+			path = SunflowerTests;
+			sourceTree = "<group>";
+		};
+		A8367D3A19FAA00E00ED14CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8367D3B19FAA00E00ED14CA /* SunflowerTests-Info.plist */,
+				A8367D3C19FAA00E00ED14CA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8367D4919FAA03700ED14CA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A8367D4B19FAA04500ED14CA /* success.png */,
+				A8367D4C19FAA04500ED14CA /* bg.png */,
+				A8367D4D19FAA04500ED14CA /* lock.png */,
+				A8367D4E19FAA04500ED14CA /* user.png */,
+			);
+			name = images;
+			path = Sunflower/images;
+			sourceTree = "<group>";
+		};
+		A8367D4A19FAA03700ED14CA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A825EE3E19FAA5BD0044F48D /* EMBALoginViewController.h */,
+				A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */,
+				A825EE4119FAA7710044F48D /* EMBALoginInputView.h */,
+				A825EE4219FAA7710044F48D /* EMBALoginInputView.m */,
+			);
+			name = Login;
+			path = Sunflower/Login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8367D1019FAA00E00ED14CA /* Sunflower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8367D4319FAA00E00ED14CA /* Build configuration list for PBXNativeTarget "Sunflower" */;
+			buildPhases = (
+				A8367D0D19FAA00E00ED14CA /* Sources */,
+				A8367D0E19FAA00E00ED14CA /* Frameworks */,
+				A8367D0F19FAA00E00ED14CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sunflower;
+			productName = Sunflower;
+			productReference = A8367D1119FAA00E00ED14CA /* Sunflower.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8367D3019FAA00E00ED14CA /* SunflowerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8367D4619FAA00E00ED14CA /* Build configuration list for PBXNativeTarget "SunflowerTests" */;
+			buildPhases = (
+				A8367D2D19FAA00E00ED14CA /* Sources */,
+				A8367D2E19FAA00E00ED14CA /* Frameworks */,
+				A8367D2F19FAA00E00ED14CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8367D3819FAA00E00ED14CA /* PBXTargetDependency */,
+			);
+			name = SunflowerTests;
+			productName = SunflowerTests;
+			productReference = A8367D3119FAA00E00ED14CA /* SunflowerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8367D0919FAA00E00ED14CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EMBA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "韩亚周";
+				TargetAttributes = {
+					A8367D3019FAA00E00ED14CA = {
+						TestTargetID = A8367D1019FAA00E00ED14CA;
+					};
+				};
+			};
+			buildConfigurationList = A8367D0C19FAA00E00ED14CA /* Build configuration list for PBXProject "Sunflower" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A8367D0819FAA00E00ED14CA;
+			productRefGroup = A8367D1219FAA00E00ED14CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8367D1019FAA00E00ED14CA /* Sunflower */,
+				A8367D3019FAA00E00ED14CA /* SunflowerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8367D0F19FAA00E00ED14CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */,
+				A8367D5119FAA04500ED14CA /* lock.png in Resources */,
+				A8367D5219FAA04500ED14CA /* user.png in Resources */,
+				A8367D4F19FAA04500ED14CA /* success.png in Resources */,
+				A8367D5019FAA04500ED14CA /* bg.png in Resources */,
+				A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8367D2F19FAA00E00ED14CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8367D3E19FAA00E00ED14CA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8367D0D19FAA00E00ED14CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8367D2319FAA00E00ED14CA /* main.m in Sources */,
+				A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */,
+				A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */,
+				A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */,
+				A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */,
+				A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */,
+				A8367D2A19FAA00E00ED14CA /* Sunflower.xcdatamodeld in Sources */,
+				A825EE3D19FAA5080044F48D /* HYZ+Color.m in Sources */,
+				A8367D2719FAA00E00ED14CA /* EMBAAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8367D2D19FAA00E00ED14CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8367D4019FAA00E00ED14CA /* SunflowerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8367D3819FAA00E00ED14CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8367D1019FAA00E00ED14CA /* Sunflower */;
+			targetProxy = A8367D3719FAA00E00ED14CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8367D1F19FAA00E00ED14CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8367D2019FAA00E00ED14CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A8367D3C19FAA00E00ED14CA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8367D3D19FAA00E00ED14CA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8367D4119FAA00E00ED14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A8367D4219FAA00E00ED14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8367D4419FAA00E00ED14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
+				INFOPLIST_FILE = "Sunflower/Sunflower-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A8367D4519FAA00E00ED14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
+				INFOPLIST_FILE = "Sunflower/Sunflower-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A8367D4719FAA00E00ED14CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sunflower.app/Sunflower";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SunflowerTests/SunflowerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A8367D4819FAA00E00ED14CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sunflower.app/Sunflower";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
+				INFOPLIST_FILE = "SunflowerTests/SunflowerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8367D0C19FAA00E00ED14CA /* Build configuration list for PBXProject "Sunflower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8367D4119FAA00E00ED14CA /* Debug */,
+				A8367D4219FAA00E00ED14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8367D4319FAA00E00ED14CA /* Build configuration list for PBXNativeTarget "Sunflower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8367D4419FAA00E00ED14CA /* Debug */,
+				A8367D4519FAA00E00ED14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8367D4619FAA00E00ED14CA /* Build configuration list for PBXNativeTarget "SunflowerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8367D4719FAA00E00ED14CA /* Debug */,
+				A8367D4819FAA00E00ED14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A8367D2819FAA00E00ED14CA /* Sunflower.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A8367D2919FAA00E00ED14CA /* Sunflower.xcdatamodel */,
+			);
+			currentVersion = A8367D2919FAA00E00ED14CA /* Sunflower.xcdatamodel */;
+			path = Sunflower.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A8367D0919FAA00E00ED14CA /* Project object */;
+}
