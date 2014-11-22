@@ -8,6 +8,6 @@
 
 #import "EMBAFatherViewController.h"
 
-@interface EMBASettingsViewController : EMBAFatherViewController
+@interface EMBASettingsViewController : EMBAFatherViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

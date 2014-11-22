@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		589D68F01A205D05002EAB1F /* left_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E51A205D05002EAB1F /* left_about.png */; };
+		589D68F11A205D05002EAB1F /* left_collect.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E61A205D05002EAB1F /* left_collect.png */; };
+		589D68F21A205D05002EAB1F /* left_contactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E71A205D05002EAB1F /* left_contactus.png */; };
+		589D68F31A205D05002EAB1F /* left_logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E81A205D05002EAB1F /* left_logout.png */; };
+		589D68F41A205D05002EAB1F /* left_systemsetting.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E91A205D05002EAB1F /* left_systemsetting.png */; };
+		589D68F51A205D05002EAB1F /* noCollectPrompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EA1A205D05002EAB1F /* noCollectPrompt.png */; };
+		589D68F61A205D05002EAB1F /* personalInfo_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EB1A205D05002EAB1F /* personalInfo_delete.png */; };
+		589D68F71A205D05002EAB1F /* personalInfo_SArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EC1A205D05002EAB1F /* personalInfo_SArrow.png */; };
+		589D68F81A205D05002EAB1F /* setting_switch_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68ED1A205D05002EAB1F /* setting_switch_off.png */; };
+		589D68F91A205D05002EAB1F /* setting_switch_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EE1A205D05002EAB1F /* setting_switch_on.png */; };
+		589D68FA1A205D05002EAB1F /* setting_switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EF1A205D05002EAB1F /* setting_switch.png */; };
 		A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3219FAA17D0044F48D /* MySqlite.m */; };
 		A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3519FAA2BA0044F48D /* UserInformation.m */; };
 		A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */; };
@@ -63,6 +74,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		589D68E51A205D05002EAB1F /* left_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_about.png; sourceTree = "<group>"; };
+		589D68E61A205D05002EAB1F /* left_collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_collect.png; sourceTree = "<group>"; };
+		589D68E71A205D05002EAB1F /* left_contactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_contactus.png; sourceTree = "<group>"; };
+		589D68E81A205D05002EAB1F /* left_logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_logout.png; sourceTree = "<group>"; };
+		589D68E91A205D05002EAB1F /* left_systemsetting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_systemsetting.png; sourceTree = "<group>"; };
+		589D68EA1A205D05002EAB1F /* noCollectPrompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noCollectPrompt.png; sourceTree = "<group>"; };
+		589D68EB1A205D05002EAB1F /* personalInfo_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personalInfo_delete.png; sourceTree = "<group>"; };
+		589D68EC1A205D05002EAB1F /* personalInfo_SArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personalInfo_SArrow.png; sourceTree = "<group>"; };
+		589D68ED1A205D05002EAB1F /* setting_switch_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_switch_off.png; sourceTree = "<group>"; };
+		589D68EE1A205D05002EAB1F /* setting_switch_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_switch_on.png; sourceTree = "<group>"; };
+		589D68EF1A205D05002EAB1F /* setting_switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_switch.png; sourceTree = "<group>"; };
 		A825EE3119FAA17D0044F48D /* MySqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySqlite.h; sourceTree = "<group>"; };
 		A825EE3219FAA17D0044F48D /* MySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySqlite.m; sourceTree = "<group>"; };
 		A825EE3419FAA2BA0044F48D /* UserInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInformation.h; path = ../Sunflower/UserInformation.h; sourceTree = "<group>"; };
@@ -163,6 +185,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		589D68E41A205CFA002EAB1F /* leftBar_images */ = {
+			isa = PBXGroup;
+			children = (
+				589D68E51A205D05002EAB1F /* left_about.png */,
+				589D68E61A205D05002EAB1F /* left_collect.png */,
+				589D68E71A205D05002EAB1F /* left_contactus.png */,
+				589D68E81A205D05002EAB1F /* left_logout.png */,
+				589D68E91A205D05002EAB1F /* left_systemsetting.png */,
+				589D68EA1A205D05002EAB1F /* noCollectPrompt.png */,
+				589D68EB1A205D05002EAB1F /* personalInfo_delete.png */,
+				589D68EC1A205D05002EAB1F /* personalInfo_SArrow.png */,
+				589D68ED1A205D05002EAB1F /* setting_switch_off.png */,
+				589D68EE1A205D05002EAB1F /* setting_switch_on.png */,
+				589D68EF1A205D05002EAB1F /* setting_switch.png */,
+			);
+			path = leftBar_images;
+			sourceTree = "<group>";
+		};
 		A825EE2F19FAA16F0044F48D /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +322,7 @@
 				A8367D4C19FAA04500ED14CA /* bg.png */,
 				A8367D4D19FAA04500ED14CA /* lock.png */,
 				A8367D4E19FAA04500ED14CA /* user.png */,
+				589D68E41A205CFA002EAB1F /* leftBar_images */,
 			);
 			name = images;
 			path = Sunflower/images;
@@ -431,11 +472,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */,
+				589D68F41A205D05002EAB1F /* left_systemsetting.png in Resources */,
 				A8367D5119FAA04500ED14CA /* lock.png in Resources */,
+				589D68F91A205D05002EAB1F /* setting_switch_on.png in Resources */,
+				589D68F31A205D05002EAB1F /* left_logout.png in Resources */,
 				A8367D5219FAA04500ED14CA /* user.png in Resources */,
+				589D68F11A205D05002EAB1F /* left_collect.png in Resources */,
 				A8367D4F19FAA04500ED14CA /* success.png in Resources */,
+				589D68F51A205D05002EAB1F /* noCollectPrompt.png in Resources */,
 				A8367D5019FAA04500ED14CA /* bg.png in Resources */,
+				589D68F81A205D05002EAB1F /* setting_switch_off.png in Resources */,
+				589D68F71A205D05002EAB1F /* personalInfo_SArrow.png in Resources */,
+				589D68F61A205D05002EAB1F /* personalInfo_delete.png in Resources */,
+				589D68F01A205D05002EAB1F /* left_about.png in Resources */,
 				A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */,
+				589D68F21A205D05002EAB1F /* left_contactus.png in Resources */,
+				589D68FA1A205D05002EAB1F /* setting_switch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -585,7 +637,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -599,6 +651,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
 				INFOPLIST_FILE = "Sunflower/Sunflower-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -612,6 +665,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
 				INFOPLIST_FILE = "Sunflower/Sunflower-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
