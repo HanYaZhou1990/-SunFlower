@@ -50,9 +50,9 @@
 #pragma mark Login button click -
 - (void)loginButtonClicked:(UIButton *)sender{
 //    http://www.vpengo.com/login?loginName=13598084041&password=123456
-    [WTRequestCenter postWithURL:@"http://www.vpengo.com/login" parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
-        NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
-        if (jsonDic[@"sessionId"]) {
+//    [WTRequestCenter postWithURL:@"http://www.vpengo.com/login" parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
+//        NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
+//        if (jsonDic[@"sessionId"]) {
             self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[[UINavigationController alloc] initWithRootViewController:[EMBAMainViewController new]]];
             self.sideMenuViewController.shadowColor = [UIColor blackColor];
             self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
@@ -60,11 +60,11 @@
             [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
             
             
-            
-        }
-    } failed:^(NSURLResponse *response, NSError *error) {
-        NSLog(@"%@",error);
-    }];
+//            
+//        }
+//    } failed:^(NSURLResponse *response, NSError *error) {
+//        NSLog(@"%@",error);
+//    }];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
