@@ -17,7 +17,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [EMBALoginViewController new];
+    EMBALoginViewController *lVC = [[EMBALoginViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lVC];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage initWithColor:UIColorFromRGB(0x4c4c4c)] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[UIImage initWithColor:[UIColor clearColor]]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

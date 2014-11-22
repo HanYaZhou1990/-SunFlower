@@ -7,7 +7,7 @@
 //
 
 #import "EMBALoginViewController.h"
-
+#import "EMBAForgetPwdViewController.h"
 @interface EMBALoginViewController ()
 
 @end
@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imageView.image = [UIImage imageNamed:@"bg.png"];
     [self.view addSubview:imageView];
@@ -45,9 +46,30 @@
     [loginButton setTitleColor:UIColorFromRGB(0xfefee4) forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(loginButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
+    
+    UIButton *forgetPwd = [UIButton buttonWithType:UIButtonTypeCustom];
+    forgetPwd.frame = CGRectMake((SCREEN_WIDTH-100)/2, loginButton.frame.size.height+loginButton.frame.origin.y+10, 100, 40);
+    forgetPwd.titleLabel.font = [UIFont systemFontOfSize:14];
+    [forgetPwd setTitle:@"忘记密码？" forState:UIControlStateNormal];
+    [forgetPwd setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [forgetPwd addTarget:self action:@selector(forgetPwdButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:forgetPwd];
+    
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
+
 #pragma mark -
-#pragma mark Login button click -
+#pragma mark  button click -
 - (void)loginButtonClicked:(UIButton *)sender{
 //    http://www.vpengo.com/login?loginName=13598084041&password=123456
 //    [WTRequestCenter postWithURL:@"http://www.vpengo.com/login" parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
@@ -66,10 +88,19 @@
 //        NSLog(@"%@",error);
 //    }];
 }
+//忘记密码
+- (void)forgetPwdButtonClicked:(UIButton *)sender
+{
+    EMBAForgetPwdViewController *fpVC = [[EMBAForgetPwdViewController alloc]init];
+    [self.navigationController pushViewController:fpVC animated:NO];
+}
+
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+
+
 
 - (void)didReceiveMemoryWarning{[super didReceiveMemoryWarning];}
 @end

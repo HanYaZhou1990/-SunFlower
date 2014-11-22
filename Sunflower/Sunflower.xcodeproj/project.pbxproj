@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		589D68F01A205D05002EAB1F /* left_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E51A205D05002EAB1F /* left_about.png */; };
-		589D68F11A205D05002EAB1F /* left_collect.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E61A205D05002EAB1F /* left_collect.png */; };
-		589D68F21A205D05002EAB1F /* left_contactus.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E71A205D05002EAB1F /* left_contactus.png */; };
-		589D68F31A205D05002EAB1F /* left_logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E81A205D05002EAB1F /* left_logout.png */; };
-		589D68F41A205D05002EAB1F /* left_systemsetting.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68E91A205D05002EAB1F /* left_systemsetting.png */; };
-		589D68F51A205D05002EAB1F /* noCollectPrompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EA1A205D05002EAB1F /* noCollectPrompt.png */; };
-		589D68F61A205D05002EAB1F /* personalInfo_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EB1A205D05002EAB1F /* personalInfo_delete.png */; };
-		589D68F71A205D05002EAB1F /* personalInfo_SArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EC1A205D05002EAB1F /* personalInfo_SArrow.png */; };
-		589D68F81A205D05002EAB1F /* setting_switch_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68ED1A205D05002EAB1F /* setting_switch_off.png */; };
-		589D68F91A205D05002EAB1F /* setting_switch_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EE1A205D05002EAB1F /* setting_switch_on.png */; };
-		589D68FA1A205D05002EAB1F /* setting_switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68EF1A205D05002EAB1F /* setting_switch.png */; };
+		589D69061A207E91002EAB1F /* left_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FB1A207E91002EAB1F /* left_about@2x.png */; };
+		589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FC1A207E91002EAB1F /* left_collect@2x.png */; };
+		589D69081A207E91002EAB1F /* left_contactus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FD1A207E91002EAB1F /* left_contactus@2x.png */; };
+		589D69091A207E91002EAB1F /* left_logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FE1A207E91002EAB1F /* left_logout@2x.png */; };
+		589D690A1A207E91002EAB1F /* left_systemsetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FF1A207E91002EAB1F /* left_systemsetting@2x.png */; };
+		589D690B1A207E91002EAB1F /* noCollectPrompt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69001A207E91002EAB1F /* noCollectPrompt@2x.png */; };
+		589D690C1A207E91002EAB1F /* personalInfo_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69011A207E91002EAB1F /* personalInfo_delete@2x.png */; };
+		589D690D1A207E91002EAB1F /* personalInfo_SArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69021A207E91002EAB1F /* personalInfo_SArrow@2x.png */; };
+		589D690E1A207E91002EAB1F /* setting_switch_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69031A207E91002EAB1F /* setting_switch_off@2x.png */; };
+		589D690F1A207E91002EAB1F /* setting_switch_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69041A207E91002EAB1F /* setting_switch_on@2x.png */; };
+		589D69101A207E91002EAB1F /* setting_switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69051A207E91002EAB1F /* setting_switch@2x.png */; };
+		589D69121A2088B0002EAB1F /* iOS-defaultHead0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69111A2088B0002EAB1F /* iOS-defaultHead0@2x.png */; };
+		589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */; };
+		589D691A1A2091D9002EAB1F /* backButtonIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69191A2091D9002EAB1F /* backButtonIcon@2x.png */; };
+		589D691D1A209578002EAB1F /* EMBAForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */; };
 		A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3219FAA17D0044F48D /* MySqlite.m */; };
 		A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3519FAA2BA0044F48D /* UserInformation.m */; };
 		A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */; };
@@ -74,17 +78,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		589D68E51A205D05002EAB1F /* left_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_about.png; sourceTree = "<group>"; };
-		589D68E61A205D05002EAB1F /* left_collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_collect.png; sourceTree = "<group>"; };
-		589D68E71A205D05002EAB1F /* left_contactus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_contactus.png; sourceTree = "<group>"; };
-		589D68E81A205D05002EAB1F /* left_logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_logout.png; sourceTree = "<group>"; };
-		589D68E91A205D05002EAB1F /* left_systemsetting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_systemsetting.png; sourceTree = "<group>"; };
-		589D68EA1A205D05002EAB1F /* noCollectPrompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noCollectPrompt.png; sourceTree = "<group>"; };
-		589D68EB1A205D05002EAB1F /* personalInfo_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personalInfo_delete.png; sourceTree = "<group>"; };
-		589D68EC1A205D05002EAB1F /* personalInfo_SArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personalInfo_SArrow.png; sourceTree = "<group>"; };
-		589D68ED1A205D05002EAB1F /* setting_switch_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_switch_off.png; sourceTree = "<group>"; };
-		589D68EE1A205D05002EAB1F /* setting_switch_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_switch_on.png; sourceTree = "<group>"; };
-		589D68EF1A205D05002EAB1F /* setting_switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_switch.png; sourceTree = "<group>"; };
+		589D68FB1A207E91002EAB1F /* left_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_about@2x.png"; sourceTree = "<group>"; };
+		589D68FC1A207E91002EAB1F /* left_collect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_collect@2x.png"; sourceTree = "<group>"; };
+		589D68FD1A207E91002EAB1F /* left_contactus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_contactus@2x.png"; sourceTree = "<group>"; };
+		589D68FE1A207E91002EAB1F /* left_logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_logout@2x.png"; sourceTree = "<group>"; };
+		589D68FF1A207E91002EAB1F /* left_systemsetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_systemsetting@2x.png"; sourceTree = "<group>"; };
+		589D69001A207E91002EAB1F /* noCollectPrompt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noCollectPrompt@2x.png"; sourceTree = "<group>"; };
+		589D69011A207E91002EAB1F /* personalInfo_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personalInfo_delete@2x.png"; sourceTree = "<group>"; };
+		589D69021A207E91002EAB1F /* personalInfo_SArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personalInfo_SArrow@2x.png"; sourceTree = "<group>"; };
+		589D69031A207E91002EAB1F /* setting_switch_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_switch_off@2x.png"; sourceTree = "<group>"; };
+		589D69041A207E91002EAB1F /* setting_switch_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_switch_on@2x.png"; sourceTree = "<group>"; };
+		589D69051A207E91002EAB1F /* setting_switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_switch@2x.png"; sourceTree = "<group>"; };
+		589D69111A2088B0002EAB1F /* iOS-defaultHead0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-defaultHead0@2x.png"; sourceTree = "<group>"; };
+		589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAUserInfoViewController.h; sourceTree = "<group>"; };
+		589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAUserInfoViewController.m; sourceTree = "<group>"; };
+		589D69191A2091D9002EAB1F /* backButtonIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButtonIcon@2x.png"; sourceTree = "<group>"; };
+		589D691B1A209578002EAB1F /* EMBAForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAForgetPwdViewController.h; sourceTree = "<group>"; };
+		589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAForgetPwdViewController.m; sourceTree = "<group>"; };
 		A825EE3119FAA17D0044F48D /* MySqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySqlite.h; sourceTree = "<group>"; };
 		A825EE3219FAA17D0044F48D /* MySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySqlite.m; sourceTree = "<group>"; };
 		A825EE3419FAA2BA0044F48D /* UserInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInformation.h; path = ../Sunflower/UserInformation.h; sourceTree = "<group>"; };
@@ -188,17 +198,18 @@
 		589D68E41A205CFA002EAB1F /* leftBar_images */ = {
 			isa = PBXGroup;
 			children = (
-				589D68E51A205D05002EAB1F /* left_about.png */,
-				589D68E61A205D05002EAB1F /* left_collect.png */,
-				589D68E71A205D05002EAB1F /* left_contactus.png */,
-				589D68E81A205D05002EAB1F /* left_logout.png */,
-				589D68E91A205D05002EAB1F /* left_systemsetting.png */,
-				589D68EA1A205D05002EAB1F /* noCollectPrompt.png */,
-				589D68EB1A205D05002EAB1F /* personalInfo_delete.png */,
-				589D68EC1A205D05002EAB1F /* personalInfo_SArrow.png */,
-				589D68ED1A205D05002EAB1F /* setting_switch_off.png */,
-				589D68EE1A205D05002EAB1F /* setting_switch_on.png */,
-				589D68EF1A205D05002EAB1F /* setting_switch.png */,
+				589D68FB1A207E91002EAB1F /* left_about@2x.png */,
+				589D68FC1A207E91002EAB1F /* left_collect@2x.png */,
+				589D68FD1A207E91002EAB1F /* left_contactus@2x.png */,
+				589D68FE1A207E91002EAB1F /* left_logout@2x.png */,
+				589D68FF1A207E91002EAB1F /* left_systemsetting@2x.png */,
+				589D69001A207E91002EAB1F /* noCollectPrompt@2x.png */,
+				589D69011A207E91002EAB1F /* personalInfo_delete@2x.png */,
+				589D69021A207E91002EAB1F /* personalInfo_SArrow@2x.png */,
+				589D69031A207E91002EAB1F /* setting_switch_off@2x.png */,
+				589D69041A207E91002EAB1F /* setting_switch_on@2x.png */,
+				589D69051A207E91002EAB1F /* setting_switch@2x.png */,
+				589D69111A2088B0002EAB1F /* iOS-defaultHead0@2x.png */,
 			);
 			path = leftBar_images;
 			sourceTree = "<group>";
@@ -322,6 +333,7 @@
 				A8367D4C19FAA04500ED14CA /* bg.png */,
 				A8367D4D19FAA04500ED14CA /* lock.png */,
 				A8367D4E19FAA04500ED14CA /* user.png */,
+				589D69191A2091D9002EAB1F /* backButtonIcon@2x.png */,
 				589D68E41A205CFA002EAB1F /* leftBar_images */,
 			);
 			name = images;
@@ -387,10 +399,14 @@
 		A8A4681D1A1D0EC9001FFFFF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				589D691B1A209578002EAB1F /* EMBAForgetPwdViewController.h */,
+				589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */,
 				A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */,
 				A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */,
 				A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */,
 				A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */,
+				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
+				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -471,23 +487,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589D690F1A207E91002EAB1F /* setting_switch_on@2x.png in Resources */,
+				589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */,
+				589D691A1A2091D9002EAB1F /* backButtonIcon@2x.png in Resources */,
+				589D69061A207E91002EAB1F /* left_about@2x.png in Resources */,
 				A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */,
-				589D68F41A205D05002EAB1F /* left_systemsetting.png in Resources */,
 				A8367D5119FAA04500ED14CA /* lock.png in Resources */,
-				589D68F91A205D05002EAB1F /* setting_switch_on.png in Resources */,
-				589D68F31A205D05002EAB1F /* left_logout.png in Resources */,
 				A8367D5219FAA04500ED14CA /* user.png in Resources */,
-				589D68F11A205D05002EAB1F /* left_collect.png in Resources */,
+				589D690C1A207E91002EAB1F /* personalInfo_delete@2x.png in Resources */,
+				589D69091A207E91002EAB1F /* left_logout@2x.png in Resources */,
 				A8367D4F19FAA04500ED14CA /* success.png in Resources */,
-				589D68F51A205D05002EAB1F /* noCollectPrompt.png in Resources */,
+				589D69081A207E91002EAB1F /* left_contactus@2x.png in Resources */,
+				589D690B1A207E91002EAB1F /* noCollectPrompt@2x.png in Resources */,
+				589D690D1A207E91002EAB1F /* personalInfo_SArrow@2x.png in Resources */,
 				A8367D5019FAA04500ED14CA /* bg.png in Resources */,
-				589D68F81A205D05002EAB1F /* setting_switch_off.png in Resources */,
-				589D68F71A205D05002EAB1F /* personalInfo_SArrow.png in Resources */,
-				589D68F61A205D05002EAB1F /* personalInfo_delete.png in Resources */,
-				589D68F01A205D05002EAB1F /* left_about.png in Resources */,
 				A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */,
-				589D68F21A205D05002EAB1F /* left_contactus.png in Resources */,
-				589D68FA1A205D05002EAB1F /* setting_switch.png in Resources */,
+				589D690A1A207E91002EAB1F /* left_systemsetting@2x.png in Resources */,
+				589D69101A207E91002EAB1F /* setting_switch@2x.png in Resources */,
+				589D690E1A207E91002EAB1F /* setting_switch_off@2x.png in Resources */,
+				589D69121A2088B0002EAB1F /* iOS-defaultHead0@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +530,7 @@
 				A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */,
 				A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */,
 				A8A468181A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m in Sources */,
+				589D691D1A209578002EAB1F /* EMBAForgetPwdViewController.m in Sources */,
 				A8A467FA1A1D0309001FFFFF /* WTURLSessionManager.m in Sources */,
 				A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */,
 				A8A467F61A1D0309001FFFFF /* WTDataSaver.m in Sources */,
@@ -521,6 +540,7 @@
 				A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */,
 				A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */,
 				A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */,
+				589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */,
 				A8A468141A1D0319001FFFFF /* UIImage+WTRequestCenter.m in Sources */,
 				A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */,
 				A8A468121A1D0319001FFFFF /* UIColor+WTRequestCenter.m in Sources */,
