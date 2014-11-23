@@ -8,7 +8,10 @@
 
 #import "EMBAFatherViewController.h"
 #import "TWTSideMenuViewController.h"
+#import "HYZMainMenuView.h"
 
-@interface EMBAMainViewController : EMBAFatherViewController
+@interface EMBAMainViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate,HYZMainMenuViewDelegate>
+
+@property (nonatomic, strong) UITableView *mainTableView;
 
 @end

@@ -34,6 +34,7 @@
     imageView.frame = CGRectMake(leftView1.frame.size.width/4, leftView1.frame.size.height/4, leftView1.frame.size.width/2, leftView1.frame.size.height/2);
     [leftView1 addSubview:imageView];
     _userNameField.leftView =  leftView1;
+    _userNameField.text = @"15093296683";
     _userNameField.textColor = UIColorFromRGB(0xffffff);
     _userNameField.leftViewMode = UITextFieldViewModeAlways;
     [self addSubview:_userNameField];
@@ -41,6 +42,7 @@
     _userPswField = [[YZTextField alloc]initWithFrame:CGRectMake(0, frame.size.height/2, frame.size.width, frame.size.height/2)];
     _userPswField.borderStyle = UITextBorderStyleNone;
     _userPswField.placeholder = @"密码";
+    _userPswField.text =@"123456";
     UIView *leftView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 46, 46)];
     UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lock.png"]];
     imageView2.frame = CGRectMake(leftView2.frame.size.width/4, leftView2.frame.size.height/4, leftView2.frame.size.width/2, leftView2.frame.size.height/2);
