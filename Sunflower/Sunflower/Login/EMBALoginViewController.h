@@ -11,6 +11,7 @@
 #import "EMBAMainViewController.h"
 #import "TWTSideMenuViewController.h"
 #import "EMBASettingsViewController.h"
+#import "EMBAChangeRootViewController.h"
 
 @interface EMBALoginViewController : EMBAFatherViewController
 

@@ -48,6 +48,8 @@
 		A8367D5019FAA04500ED14CA /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4C19FAA04500ED14CA /* bg.png */; };
 		A8367D5119FAA04500ED14CA /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4D19FAA04500ED14CA /* lock.png */; };
 		A8367D5219FAA04500ED14CA /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A8367D4E19FAA04500ED14CA /* user.png */; };
+		A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */ = {isa = PBXBuildFile; fileRef = A869AEE31A2382C500ABDB4B /* OpenBar.png */; };
+		A869AEE61A2382C500ABDB4B /* OpenBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A869AEE41A2382C500ABDB4B /* OpenBar@2x.png */; };
 		A8A467F61A1D0309001FFFFF /* WTDataSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A467ED1A1D0309001FFFFF /* WTDataSaver.m */; };
 		A8A467F71A1D0309001FFFFF /* WTDataWriteOpeation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A467EF1A1D0309001FFFFF /* WTDataWriteOpeation.m */; };
 		A8A467F81A1D0309001FFFFF /* WTRequestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A467F11A1D0309001FFFFF /* WTRequestCenter.m */; };
@@ -65,6 +67,18 @@
 		A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */; };
 		A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A468221A1D121E001FFFFF /* TWTSideMenuViewController.m */; };
 		A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */; };
+		A8C9278E1A262CD300426D48 /* EMBAChangeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9278D1A262CD300426D48 /* EMBAChangeRootViewController.m */; };
+		A8C927921A262DA600426D48 /* EMBASchoolfellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */; };
+		A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C927941A262DB500426D48 /* EMBAMineViewController.m */; };
+		A8C927981A262DCE00426D48 /* EMBATogetherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C927971A262DCE00426D48 /* EMBATogetherViewController.m */; };
+		A8C9279F1A2636C900426D48 /* together_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C9279B1A2636C900426D48 /* together_icon.png */; };
+		A8C927A01A2636C900426D48 /* mine_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C9279C1A2636C900426D48 /* mine_icon.png */; };
+		A8C927A11A2636C900426D48 /* message_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C9279D1A2636C900426D48 /* message_icon.png */; };
+		A8C927A21A2636C900426D48 /* school_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C9279E1A2636C900426D48 /* school_icon.png */; };
+		A8C927A71A26375D00426D48 /* message_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A31A26375D00426D48 /* message_icon@2x.png */; };
+		A8C927A81A26375D00426D48 /* mine_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A41A26375D00426D48 /* mine_icon@2x.png */; };
+		A8C927A91A26375D00426D48 /* school_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A51A26375D00426D48 /* school_icon@2x.png */; };
+		A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A61A26375D00426D48 /* together_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +144,8 @@
 		A8367D4C19FAA04500ED14CA /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		A8367D4D19FAA04500ED14CA /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		A8367D4E19FAA04500ED14CA /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		A869AEE31A2382C500ABDB4B /* OpenBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenBar.png; sourceTree = "<group>"; };
+		A869AEE41A2382C500ABDB4B /* OpenBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OpenBar@2x.png"; sourceTree = "<group>"; };
 		A8A467EC1A1D0309001FFFFF /* WTDataSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDataSaver.h; sourceTree = "<group>"; };
 		A8A467ED1A1D0309001FFFFF /* WTDataSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDataSaver.m; sourceTree = "<group>"; };
 		A8A467EE1A1D0309001FFFFF /* WTDataWriteOpeation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDataWriteOpeation.h; sourceTree = "<group>"; };
@@ -160,12 +176,28 @@
 		A8A4680D1A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		A8A4680E1A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		A8A4680F1A1D0319001FFFFF /* WTRequestCenterMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRequestCenterMacro.h; sourceTree = "<group>"; };
-		A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMainViewController.h; sourceTree = "<group>"; };
-		A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMainViewController.m; sourceTree = "<group>"; };
+		A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBAMainViewController.h; path = ../ViewControllers/EMBAMainViewController.h; sourceTree = "<group>"; };
+		A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBAMainViewController.m; path = ../ViewControllers/EMBAMainViewController.m; sourceTree = "<group>"; };
 		A8A468211A1D121E001FFFFF /* TWTSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTSideMenuViewController.h; sourceTree = "<group>"; };
 		A8A468221A1D121E001FFFFF /* TWTSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTSideMenuViewController.m; sourceTree = "<group>"; };
 		A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASettingsViewController.h; sourceTree = "<group>"; };
 		A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASettingsViewController.m; sourceTree = "<group>"; };
+		A8C9278C1A262CD300426D48 /* EMBAChangeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAChangeRootViewController.h; sourceTree = "<group>"; };
+		A8C9278D1A262CD300426D48 /* EMBAChangeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAChangeRootViewController.m; sourceTree = "<group>"; };
+		A8C927901A262DA600426D48 /* EMBASchoolfellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMBASchoolfellow\U0010ViewController.h"; sourceTree = "<group>"; };
+		A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMBASchoolfellow\U0010ViewController.m"; sourceTree = "<group>"; };
+		A8C927931A262DB500426D48 /* EMBAMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineViewController.h; sourceTree = "<group>"; };
+		A8C927941A262DB500426D48 /* EMBAMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineViewController.m; sourceTree = "<group>"; };
+		A8C927961A262DCE00426D48 /* EMBATogetherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBATogetherViewController.h; sourceTree = "<group>"; };
+		A8C927971A262DCE00426D48 /* EMBATogetherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBATogetherViewController.m; sourceTree = "<group>"; };
+		A8C9279B1A2636C900426D48 /* together_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = together_icon.png; sourceTree = "<group>"; };
+		A8C9279C1A2636C900426D48 /* mine_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_icon.png; sourceTree = "<group>"; };
+		A8C9279D1A2636C900426D48 /* message_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_icon.png; sourceTree = "<group>"; };
+		A8C9279E1A2636C900426D48 /* school_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = school_icon.png; sourceTree = "<group>"; };
+		A8C927A31A26375D00426D48 /* message_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_icon@2x.png"; sourceTree = "<group>"; };
+		A8C927A41A26375D00426D48 /* mine_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_icon@2x.png"; sourceTree = "<group>"; };
+		A8C927A51A26375D00426D48 /* school_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "school_icon@2x.png"; sourceTree = "<group>"; };
+		A8C927A61A26375D00426D48 /* together_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "together_icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +284,8 @@
 		A8367D0819FAA00E00ED14CA = {
 			isa = PBXGroup;
 			children = (
+				A8C9278F1A262D3D00426D48 /* TabBarControllers */,
+				A8C9278B1A262CBF00426D48 /* ChangeRoot */,
 				A8A4681D1A1D0EC9001FFFFF /* ViewControllers */,
 				A825EE2F19FAA16F0044F48D /* ThirdLibrary */,
 				A8367D4919FAA03700ED14CA /* images */,
@@ -329,7 +363,17 @@
 		A8367D4919FAA03700ED14CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A8C9279B1A2636C900426D48 /* together_icon.png */,
+				A8C9279C1A2636C900426D48 /* mine_icon.png */,
+				A8C9279D1A2636C900426D48 /* message_icon.png */,
+				A8C9279E1A2636C900426D48 /* school_icon.png */,
+				A8C927A31A26375D00426D48 /* message_icon@2x.png */,
+				A8C927A41A26375D00426D48 /* mine_icon@2x.png */,
+				A8C927A51A26375D00426D48 /* school_icon@2x.png */,
+				A8C927A61A26375D00426D48 /* together_icon@2x.png */,
 				A8367D4B19FAA04500ED14CA /* success.png */,
+				A869AEE31A2382C500ABDB4B /* OpenBar.png */,
+				A869AEE41A2382C500ABDB4B /* OpenBar@2x.png */,
 				A8367D4C19FAA04500ED14CA /* bg.png */,
 				A8367D4D19FAA04500ED14CA /* lock.png */,
 				A8367D4E19FAA04500ED14CA /* user.png */,
@@ -401,14 +445,36 @@
 			children = (
 				589D691B1A209578002EAB1F /* EMBAForgetPwdViewController.h */,
 				589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */,
-				A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */,
-				A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */,
 				A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */,
 				A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */,
 				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
 				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8C9278B1A262CBF00426D48 /* ChangeRoot */ = {
+			isa = PBXGroup;
+			children = (
+				A8C9278C1A262CD300426D48 /* EMBAChangeRootViewController.h */,
+				A8C9278D1A262CD300426D48 /* EMBAChangeRootViewController.m */,
+			);
+			path = ChangeRoot;
+			sourceTree = "<group>";
+		};
+		A8C9278F1A262D3D00426D48 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */,
+				A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */,
+				A8C927901A262DA600426D48 /* EMBASchoolfellowViewController.h */,
+				A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */,
+				A8C927931A262DB500426D48 /* EMBAMineViewController.h */,
+				A8C927941A262DB500426D48 /* EMBAMineViewController.m */,
+				A8C927961A262DCE00426D48 /* EMBATogetherViewController.h */,
+				A8C927971A262DCE00426D48 /* EMBATogetherViewController.m */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,11 +554,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				589D690F1A207E91002EAB1F /* setting_switch_on@2x.png in Resources */,
+				A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */,
+				A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */,
 				589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */,
+				A8C927A11A2636C900426D48 /* message_icon.png in Resources */,
+				A8C9279F1A2636C900426D48 /* together_icon.png in Resources */,
+				A8C927A71A26375D00426D48 /* message_icon@2x.png in Resources */,
 				589D691A1A2091D9002EAB1F /* backButtonIcon@2x.png in Resources */,
 				589D69061A207E91002EAB1F /* left_about@2x.png in Resources */,
 				A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */,
 				A8367D5119FAA04500ED14CA /* lock.png in Resources */,
+				A8C927A21A2636C900426D48 /* school_icon.png in Resources */,
 				A8367D5219FAA04500ED14CA /* user.png in Resources */,
 				589D690C1A207E91002EAB1F /* personalInfo_delete@2x.png in Resources */,
 				589D69091A207E91002EAB1F /* left_logout@2x.png in Resources */,
@@ -501,11 +573,15 @@
 				589D690B1A207E91002EAB1F /* noCollectPrompt@2x.png in Resources */,
 				589D690D1A207E91002EAB1F /* personalInfo_SArrow@2x.png in Resources */,
 				A8367D5019FAA04500ED14CA /* bg.png in Resources */,
+				A8C927A91A26375D00426D48 /* school_icon@2x.png in Resources */,
 				A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */,
 				589D690A1A207E91002EAB1F /* left_systemsetting@2x.png in Resources */,
 				589D69101A207E91002EAB1F /* setting_switch@2x.png in Resources */,
+				A869AEE61A2382C500ABDB4B /* OpenBar@2x.png in Resources */,
+				A8C927A01A2636C900426D48 /* mine_icon.png in Resources */,
 				589D690E1A207E91002EAB1F /* setting_switch_off@2x.png in Resources */,
 				589D69121A2088B0002EAB1F /* iOS-defaultHead0@2x.png in Resources */,
+				A8C927A81A26375D00426D48 /* mine_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,18 +606,21 @@
 				A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */,
 				A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */,
 				A8A468181A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m in Sources */,
+				A8C9278E1A262CD300426D48 /* EMBAChangeRootViewController.m in Sources */,
 				589D691D1A209578002EAB1F /* EMBAForgetPwdViewController.m in Sources */,
 				A8A467FA1A1D0309001FFFFF /* WTURLSessionManager.m in Sources */,
 				A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */,
 				A8A467F61A1D0309001FFFFF /* WTDataSaver.m in Sources */,
 				A8A467F81A1D0309001FFFFF /* WTRequestCenter.m in Sources */,
 				A8A468161A1D0319001FFFFF /* UIWebView+WTRequestCenter.m in Sources */,
+				A8C927981A262DCE00426D48 /* EMBATogetherViewController.m in Sources */,
 				A8A468151A1D0319001FFFFF /* UIImageView+WTRequestCenter.m in Sources */,
 				A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */,
 				A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */,
 				A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */,
 				589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */,
 				A8A468141A1D0319001FFFFF /* UIImage+WTRequestCenter.m in Sources */,
+				A8C927921A262DA600426D48 /* EMBASchoolfellowViewController.m in Sources */,
 				A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */,
 				A8A468121A1D0319001FFFFF /* UIColor+WTRequestCenter.m in Sources */,
 				A8367D2A19FAA00E00ED14CA /* Sunflower.xcdatamodeld in Sources */,
@@ -551,6 +630,7 @@
 				A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */,
 				A8A467F91A1D0309001FFFFF /* WTURLRequestOperation.m in Sources */,
 				A8A468101A1D0319001FFFFF /* UIAlertView+WTRequestCenter.m in Sources */,
+				A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */,
 				A8A468111A1D0319001FFFFF /* UIButton+WTRequestCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

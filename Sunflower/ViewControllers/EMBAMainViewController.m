@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.tabBarItem.image = [UIImage imageNamed:@"message_icon.png"];
     }
     return self;
 }
@@ -28,12 +28,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor yellowColor];
-
-    
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"Open" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
+        
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     self.navigationItem.leftBarButtonItem = openItem;
+    
+    
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 568-64-49) style:UITableViewStylePlain];
+    _mainTableView.delegate = self;
+    _mainTableView.dataSource  = self;
+    _mainTableView.tableFooterView = [UIView new];
+    [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.view addSubview:_mainTableView];
+}
+
+#pragma mark -
+#pragma mark UITableViewDataSource -
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 64;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:@"message_icon.png"];
+    return cell;
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate -
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)openButtonPressed

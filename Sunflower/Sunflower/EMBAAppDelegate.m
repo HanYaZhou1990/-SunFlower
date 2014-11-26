@@ -19,14 +19,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     EMBALoginViewController *lVC = [[EMBALoginViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lVC];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage initWithColor:UIColorFromRGB(0x4c4c4c)] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage:[UIImage initWithColor:[UIColor clearColor]]];
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    _tabBarController = [[UITabBarController alloc] init];
+    _tabBarController.tabBar.tintColor = UIColorFromRGB(0x09bb07);
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
++ (EMBAAppDelegate *)shareAppDelegate{
+    return (EMBAAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application{}
