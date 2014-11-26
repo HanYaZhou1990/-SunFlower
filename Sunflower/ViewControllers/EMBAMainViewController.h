@@ -9,6 +9,8 @@
 #import "EMBAFatherViewController.h"
 #import "TWTSideMenuViewController.h"
 
-@interface EMBAMainViewController : EMBAFatherViewController
-//
+@interface EMBAMainViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView   *mainTableView;
+
 @end
