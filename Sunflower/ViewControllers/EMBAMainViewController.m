@@ -21,6 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.tabBarItem.image = [UIImage imageNamed:@"message_icon.png"];
+        
     }
     return self;
 }
