@@ -30,6 +30,7 @@
 
 - (void)setLeftNavigationBarItem
 {
+    /*
     _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _backButton.frame = CGRectMake(0, 0, 170, 26);
     UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backButtonIcon.png"] highlightedImage:[UIImage imageNamed:@"backButtonIcon.png"]];
@@ -43,13 +44,26 @@
     [_backButton addSubview:_barlabel];
     [_backButton addTarget:self action:@selector(popPreViewController) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
-    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;*/
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
+    self.navigationItem.leftBarButtonItem = openItem;
 }
-
+- (void)openButtonPressed
+{
+//    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[[UINavigationController alloc] initWithRootViewController:[EMBASettingsViewController new]] mainViewController:[EMBAChangeRootViewController loginSuccess]];
+    self.sideMenuViewController.shadowColor = [UIColor blackColor];
+    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+    self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+    [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+}
+/*
 - (void)popPreViewController
 {
     
 }
+ */
 /*
 #pragma mark - Navigation
 

@@ -7,6 +7,7 @@
 //
 
 #import "EMBAFatherViewController.h"
+#import "TWTSideMenuViewController.h"
 
 @interface EMBASettingsViewController : EMBAFatherViewController<UITableViewDataSource, UITableViewDelegate>
 

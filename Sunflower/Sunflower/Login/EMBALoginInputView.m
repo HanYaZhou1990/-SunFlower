@@ -60,8 +60,8 @@
     CGContextMoveToPoint(context, 20, rect.size.height/2);//设置线的坐标点
     CGContextAddLineToPoint(context, rect.size.width-20,rect.size.height/2);//设置线的结束点
     
-    CGContextSetLineCap(context, kCGLineCapSquare);//设置线条样式
-    CGContextSetLineWidth(context, 0.5);//线的宽度
+    CGContextSetLineCap(context, kCGLineCapButt);//设置线条样式
+    CGContextSetLineWidth(context, 1.0);//线的宽度
     CGContextStrokePath(context);//链接上边的坐标点
     [super drawRect:rect];
 }

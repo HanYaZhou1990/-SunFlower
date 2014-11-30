@@ -75,7 +75,7 @@
 //    [WTRequestCenter postWithURL:@"http://www.vpengo.com/login" parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
 //        NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
 //        if (jsonDic[@"sessionId"]) {
-            self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
+            self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[[UINavigationController alloc] initWithRootViewController:[EMBASettingsViewController new]] mainViewController:[EMBAChangeRootViewController loginSuccess]];
             self.sideMenuViewController.shadowColor = [UIColor blackColor];
             self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
             self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;

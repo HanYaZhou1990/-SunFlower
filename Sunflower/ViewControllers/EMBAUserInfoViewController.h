@@ -7,7 +7,12 @@
 //
 
 #import "EMBAFatherViewController.h"
+#import "TWTSideMenuViewController.h"
+#import "EMBASettingsViewController.h"
+#import "EMBAChangeRootViewController.h"
 
 @interface EMBAUserInfoViewController : EMBAFatherViewController
+
+@property (strong, nonatomic) TWTSideMenuViewController *sideMenuViewController;
 
 @end

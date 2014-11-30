@@ -118,7 +118,10 @@
 - (void)sectionheaderClicked
 {
     NSLog(@"昵称点击");
-    EMBAUserInfoViewController *userInfoVC = [[EMBAUserInfoViewController alloc] init];
-    [self.navigationController pushViewController:userInfoVC animated:YES];
+//    EMBAUserInfoViewController *userInfoVC = [[EMBAUserInfoViewController alloc] init];
+//    [self.navigationController pushViewController:userInfoVC animated:YES];
+    
+    UINavigationController *userInfoVC = [[UINavigationController alloc] initWithRootViewController:[[EMBAUserInfoViewController alloc] init]];
+    [self.sideMenuViewController setMainViewController:userInfoVC animated:YES closeMenu:YES];
 }
 @end

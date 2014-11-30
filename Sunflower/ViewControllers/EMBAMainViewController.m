@@ -35,11 +35,11 @@
     self.navigationItem.leftBarButtonItem = openItem;
     
     
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 568-64-49) style:UITableViewStylePlain];
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT-TABBAR_HEIGHT) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
     _mainTableView.dataSource  = self;
     _mainTableView.tableFooterView = [UIView new];
-    [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [_mainTableView registerClass:[EMBAMainCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_mainTableView];
 }
 
@@ -58,7 +58,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    EMBAMainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:@"message_icon.png"];
     return cell;
 }
