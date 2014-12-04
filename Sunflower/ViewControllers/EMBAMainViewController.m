@@ -20,8 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.tabBarItem.image = [UIImage imageNamed:@"message_icon.png"];
-        
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:[UIImage imageNamed:@"message_icon.png"] tag:0];
     }
     return self;
 }

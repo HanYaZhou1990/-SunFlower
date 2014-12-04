@@ -17,6 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     EMBALoginViewController *lVC = [[EMBALoginViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lVC];
     _tabBarController = [[UITabBarController alloc] init];

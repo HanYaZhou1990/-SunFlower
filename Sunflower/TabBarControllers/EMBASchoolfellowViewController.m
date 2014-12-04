@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.tabBarItem.image = [UIImage imageNamed:@"school_icon.png"];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"校友" image:[UIImage imageNamed:@"school_icon.png"] tag:1];
     }
     return self;
 }

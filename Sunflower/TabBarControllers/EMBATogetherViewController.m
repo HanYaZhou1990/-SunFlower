@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.tabBarItem.image = [UIImage imageNamed:@"together_icon.png"];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"必成汇" image:[UIImage imageNamed:@"together_icon.png"] tag:0];
     }
     return self;
 }
