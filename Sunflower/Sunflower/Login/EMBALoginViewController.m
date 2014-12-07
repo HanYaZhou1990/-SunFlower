@@ -31,13 +31,22 @@
     imageView.image = [UIImage imageNamed:@"bg.png"];
     [self.view addSubview:imageView];
     
-    _inputView = [[EMBALoginInputView alloc] initWithFrame:CGRectMake(26, self.view.bounds.size.height/2, 268, 92)];
-    _inputView.backgroundColor = [UIColor clearColor];
+    /*最下边的签名*/
+    UILabel *signatureLable = [[UILabel alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 60, SCREEN_WIDTH, 60)];
+    signatureLable.text = @"2014@EMBA设计团队";
+    signatureLable.font = [UIFont systemFontOfSize:11];
+    signatureLable.textAlignment = NSTextAlignmentCenter;
+    signatureLable.textColor = UIColorFromRGB(0x939393);
+    [self.view addSubview:signatureLable];
     
+    /*两个输入框统一放到了一个view上*/
+    _inputView = [[EMBALoginInputView alloc] initWithFrame:CGRectMake(26, SCREEN_HEIGHT/2-22, 268, 92)];
+    _inputView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_inputView];
     
+    /***登录***/
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    loginButton.frame = CGRectMake(26, 400, 268, 46);
+    loginButton.frame = CGRectMake(26, CGRectGetMaxY(_inputView.frame) + 20, 268, 46);
     [loginButton setBackgroundImage:[UIImage initWithColor:UIColorFromRGB(0x00b41a)] forState:UIControlStateNormal];
     loginButton.layer.cornerRadius = 46/2;
     loginButton.clipsToBounds = YES;
@@ -48,7 +57,7 @@
     [self.view addSubview:loginButton];
     
     UIButton *forgetPwd = [UIButton buttonWithType:UIButtonTypeCustom];
-    forgetPwd.frame = CGRectMake((SCREEN_WIDTH-100)/2, loginButton.frame.size.height+loginButton.frame.origin.y+10, 100, 40);
+    forgetPwd.frame = CGRectMake((SCREEN_WIDTH-100)/2, CGRectGetMaxY(loginButton.frame)+10, 100, 40);
     forgetPwd.titleLabel.font = [UIFont systemFontOfSize:14];
     [forgetPwd setTitle:@"忘记密码？" forState:UIControlStateNormal];
     [forgetPwd setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

@@ -24,10 +24,24 @@
 
 @implementation EMBAForgetPwdViewController
 
+- (void)changeTitleViewTextColor
+{
+    UIColor *color = UIColorFromRGB(0xffffff);
+    UIFont *font = [UIFont systemFontOfSize:15];
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:color,UITextAttributeTextColor,font,UITextAttributeFont, nil];
+    self.navigationController.navigationBar.titleTextAttributes = dic;
+#else
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:color,NSForegroundColorAttributeName,font,NSFontAttributeName, nil];
+    self.navigationController.navigationBar.titleTextAttributes = dic;
+#endif
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self changeTitleViewTextColor];
     self.title = @"忘记密码";
     
     self.view.backgroundColor = UIColorFromRGB(0xf6f6f6);
@@ -44,18 +58,15 @@
 {
     //设置uinavigationbar button
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(0, 0, 100, 26);
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backButtonIcon.png"]];
-    imageview.frame = CGRectMake(0, 0, 24, 24);
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(24, 0, 60, 26)];
-    [label setFont:[UIFont systemFontOfSize:18]];
-    [label setTextColor:[UIColor whiteColor]];
-    [label setText:@"返回"];
-    [label setBackgroundColor:[UIColor clearColor]];
-    [backButton addSubview:imageview];
-    [backButton addSubview:label];
+    backButton.frame = CGRectMake(0, 0, 60, 44);
+    
+    [backButton setImage:[UIImage imageNamed:@"backButtonIcon.png"] forState:UIControlStateNormal];
+    backButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);/***上／左／下／右***/
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(14, -8, 10, 0);
     [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
     self.navigationItem.leftBarButtonItem=leftBarButton;
 }
 -(void)backAction
@@ -65,19 +76,20 @@
 
 -(void)setRightBarItem
 {
-    rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightButton.frame = CGRectMake(0, 0, 39, 19);
-    rightButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    [rightButton setTitle:@"提交" forState:UIControlStateNormal];
-    [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [rightButton addTarget:self action:@selector(rightBarAction) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarAction)];
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xffffff),UITextAttributeTextColor,[UIFont systemFontOfSize:16],,UITextAttributeFont, nil];
+    self.navigationController.navigationBar.titleTextAttributes = dic;
+#else
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xffffff),NSForegroundColorAttributeName,[UIFont systemFontOfSize:16],NSFontAttributeName, nil];
+    self.navigationController.navigationBar.titleTextAttributes = dic;
+#endif
+    
+    [rightBar setTitleTextAttributes:dic forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = rightBar;
 }
 -(void)rightBarAction
 {
-//    NSLog(@"提交");//发送请求 完成后切换界面
-    
     rightButton.hidden = YES;
     editView.hidden = YES;
     finishView.hidden = NO;
