@@ -56,7 +56,7 @@
 
 -(void)setLeftBarItem
 {
-    //设置uinavigationbar button
+    //设置uinavigationbar button/*新尝试出来的方案，不知道会不会出问题*/
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame = CGRectMake(0, 0, 60, 44);
     

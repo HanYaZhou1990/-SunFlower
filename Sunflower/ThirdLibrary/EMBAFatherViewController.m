@@ -23,7 +23,7 @@
         [[UINavigationBar appearance] setShadowImage:[UIImage initWithColor:[UIColor clearColor]]];
         
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+//        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     }
     return self;
 }
