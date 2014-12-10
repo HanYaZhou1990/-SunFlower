@@ -81,7 +81,6 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     return 50;
 }
 
@@ -106,7 +105,8 @@
     myselfName.text = @"金秀贤";
     [sectionHeaderBtn addSubview:myselfName];
     
-    UILabel *separationLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 99.5, SCREEN_WIDTH, 0.5)];
+    /*UILable:UIView  所以如果是同样的效果，我会选择使用UIView*/
+    UIView *separationLine = [[UIView alloc] initWithFrame:CGRectMake(0, 99.5, SCREEN_WIDTH, 0.5)];
     separationLine.backgroundColor = RGBA(70, 70, 70, 1);
     [sectionHeaderBtn addSubview:separationLine];
     
@@ -124,4 +124,53 @@
     UINavigationController *userInfoVC = [[UINavigationController alloc] initWithRootViewController:[[EMBAUserInfoViewController alloc] init]];
     [self.sideMenuViewController setMainViewController:userInfoVC animated:YES closeMenu:YES];
 }
+
+#pragma mark -
+#pragma mark UITableViewDelegate -
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+        /*我的收藏*/
+        UINavigationController *myCollectionVC = [[UINavigationController alloc] initWithRootViewController:[[EMBAMyCollectionViewController alloc] init]];
+        [self.sideMenuViewController setMainViewController:myCollectionVC animated:YES closeMenu:YES];
+        }
+            break;
+        case 1:
+        {
+        /*系统设置*/
+        UINavigationController *systemSetVC = [[UINavigationController alloc] initWithRootViewController:[[EMBASystemSetViewController alloc] init]];
+        [systemSetVC.navigationBar setTitleTextAttributes:@{UIColorFromRGB(0xF0F0F0): UITextAttributeTextColor}];
+        [self.sideMenuViewController setMainViewController:systemSetVC animated:YES closeMenu:YES];
+        }
+            break;
+        case 2:
+        {
+        /*联系我们*/
+        UINavigationController *contactUsVC = [[UINavigationController alloc] initWithRootViewController:[[EMBAContactUsViewController alloc] init]];
+        [self.sideMenuViewController setMainViewController:contactUsVC animated:YES closeMenu:YES];
+        }
+            break;
+        case 3:
+        {
+        /*关于*/
+        UINavigationController *aboutUsVC = [[UINavigationController alloc] initWithRootViewController:[[EMBAAboutViewController alloc] init]];
+        [self.sideMenuViewController setMainViewController:aboutUsVC animated:YES closeMenu:YES];
+        }
+            break;
+        case 4:
+        {
+        /*退出*/
+        
+        }
+            break;
+            
+            
+        default:
+            break;
+    }
+}
+
 @end

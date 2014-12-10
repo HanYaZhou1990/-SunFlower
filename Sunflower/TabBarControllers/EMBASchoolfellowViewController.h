@@ -9,6 +9,6 @@
 #import "EMBAFatherViewController.h"
 #import "TWTSideMenuViewController.h"
 
-@interface EMBASchoolfellow_ViewController : EMBAFatherViewController
+@interface EMBASchoolfellow_ViewController : EMBAFatherViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

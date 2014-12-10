@@ -33,8 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
         
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
@@ -73,7 +71,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     EMBAMainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:@"message_icon.png"];
     return cell;
 }
 
@@ -81,7 +78,9 @@
 #pragma mark UITableViewDelegate -
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewController:[EMBAMessageViewController new] animated:YES];
+    EMBAMessageViewController *messageViewController = [[EMBAMessageViewController alloc] init];
+    messageViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:messageViewController animated:YES];
 }
 
 - (void)openButtonPressed

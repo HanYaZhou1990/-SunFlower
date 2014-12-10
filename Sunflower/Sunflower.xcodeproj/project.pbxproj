@@ -90,13 +90,32 @@
 		CF5021FF1A2B56C2004BA44D /* Collection_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */; };
 		CF5CF8151A38231700A3C2D2 /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5CF8121A38231700A3C2D2 /* libEaseMobClientSDKLite.a */; };
 		CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8141A38231700A3C2D2 /* EaseMob.bundle */; };
+		CF5CF8271A385CAF00A3C2D2 /* selfChat.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8231A385CAF00A3C2D2 /* selfChat.png */; };
+		CF5CF8281A385CAF00A3C2D2 /* selfChat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8241A385CAF00A3C2D2 /* selfChat@2x.png */; };
+		CF5CF8291A385CAF00A3C2D2 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8251A385CAF00A3C2D2 /* other.png */; };
+		CF5CF82A1A385CAF00A3C2D2 /* other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8261A385CAF00A3C2D2 /* other@2x.png */; };
+		CF5CF82D1A38840800A3C2D2 /* EMBAMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5CF82C1A38840800A3C2D2 /* EMBAMyCollectionViewController.m */; };
 		CF5E32741A35FF1900460F22 /* EMBAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E32731A35FF1900460F22 /* EMBAMessageViewController.m */; };
 		CF5E32771A3607DB00460F22 /* EMBAMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */; };
 		CF5E327C1A3608A900460F22 /* EMBAMessageFram.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */; };
+		CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */; };
 		CFD19E6B1A34ADAD00B07ECF /* Search_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E691A34ADAD00B07ECF /* Search_Bar.png */; };
 		CFD19E6C1A34ADAD00B07ECF /* Search_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6A1A34ADAD00B07ECF /* Search_Bar@2x.png */; };
 		CFD19E6F1A34ADEB00B07ECF /* collect_bar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6D1A34ADEB00B07ECF /* collect_bar_icon.png */; };
 		CFD19E701A34ADEB00B07ECF /* collect_bar_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6E1A34ADEB00B07ECF /* collect_bar_icon@2x.png */; };
+		CFDE4BAF1A3886CE001B3BBA /* EMBAClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BAE1A3886CE001B3BBA /* EMBAClassesViewController.m */; };
+		CFDE4BB61A3887B6001B3BBA /* 同乡.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB01A3887B6001B3BBA /* 同乡.png */; };
+		CFDE4BB71A3887B6001B3BBA /* 同乡@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */; };
+		CFDE4BB81A3887B6001B3BBA /* 班级.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB21A3887B6001B3BBA /* 班级.png */; };
+		CFDE4BB91A3887B6001B3BBA /* 班级@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB31A3887B6001B3BBA /* 班级@2x.png */; };
+		CFDE4BBA1A3887B6001B3BBA /* 行业.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB41A3887B6001B3BBA /* 行业.png */; };
+		CFDE4BBB1A3887B6001B3BBA /* 行业@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB51A3887B6001B3BBA /* 行业@2x.png */; };
+		CFDE4BC61A388D29001B3BBA /* EMBASystemSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BC51A388D29001B3BBA /* EMBASystemSetViewController.m */; };
+		CFDE4BC91A388D7A001B3BBA /* EMBAContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BC81A388D7A001B3BBA /* EMBAContactUsViewController.m */; };
+		CFDE4BCC1A388D95001B3BBA /* EMBAAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BCB1A388D95001B3BBA /* EMBAAboutViewController.m */; };
+		CFDE4BD31A38984F001B3BBA /* EMBASegumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BD21A38984F001B3BBA /* EMBASegumentView.m */; };
+		CFDE4BDB1A38B5EE001B3BBA /* EMBACollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */; };
+		CFDE4BDD1A38BBEE001B3BBA /* noCollection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,16 +325,43 @@
 		CF5CF8101A38231700A3C2D2 /* EMErrorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMErrorDefs.h; sourceTree = "<group>"; };
 		CF5CF8121A38231700A3C2D2 /* libEaseMobClientSDKLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDKLite.a; sourceTree = "<group>"; };
 		CF5CF8141A38231700A3C2D2 /* EaseMob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseMob.bundle; sourceTree = "<group>"; };
+		CF5CF8231A385CAF00A3C2D2 /* selfChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selfChat.png; sourceTree = "<group>"; };
+		CF5CF8241A385CAF00A3C2D2 /* selfChat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selfChat@2x.png"; sourceTree = "<group>"; };
+		CF5CF8251A385CAF00A3C2D2 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
+		CF5CF8261A385CAF00A3C2D2 /* other@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "other@2x.png"; sourceTree = "<group>"; };
+		CF5CF82B1A38840800A3C2D2 /* EMBAMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyCollectionViewController.h; sourceTree = "<group>"; };
+		CF5CF82C1A38840800A3C2D2 /* EMBAMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyCollectionViewController.m; sourceTree = "<group>"; };
 		CF5E32721A35FF1900460F22 /* EMBAMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageViewController.h; sourceTree = "<group>"; };
 		CF5E32731A35FF1900460F22 /* EMBAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageViewController.m; sourceTree = "<group>"; };
 		CF5E32751A3607DB00460F22 /* EMBAMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageCell.h; sourceTree = "<group>"; };
 		CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageCell.m; sourceTree = "<group>"; };
 		CF5E327A1A3608A900460F22 /* EMBAMessageFram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageFram.h; sourceTree = "<group>"; };
 		CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageFram.m; sourceTree = "<group>"; };
+		CFA1D4ED1A38CEB6001E0182 /* EMBASystemSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASystemSettingCell.h; sourceTree = "<group>"; };
+		CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSettingCell.m; sourceTree = "<group>"; };
 		CFD19E691A34ADAD00B07ECF /* Search_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_Bar.png; sourceTree = "<group>"; };
 		CFD19E6A1A34ADAD00B07ECF /* Search_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search_Bar@2x.png"; sourceTree = "<group>"; };
 		CFD19E6D1A34ADEB00B07ECF /* collect_bar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collect_bar_icon.png; sourceTree = "<group>"; };
 		CFD19E6E1A34ADEB00B07ECF /* collect_bar_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect_bar_icon@2x.png"; sourceTree = "<group>"; };
+		CFDE4BAD1A3886CE001B3BBA /* EMBAClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAClassesViewController.h; sourceTree = "<group>"; };
+		CFDE4BAE1A3886CE001B3BBA /* EMBAClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAClassesViewController.m; sourceTree = "<group>"; };
+		CFDE4BB01A3887B6001B3BBA /* 同乡.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同乡.png"; sourceTree = "<group>"; };
+		CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同乡@2x.png"; sourceTree = "<group>"; };
+		CFDE4BB21A3887B6001B3BBA /* 班级.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "班级.png"; sourceTree = "<group>"; };
+		CFDE4BB31A3887B6001B3BBA /* 班级@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "班级@2x.png"; sourceTree = "<group>"; };
+		CFDE4BB41A3887B6001B3BBA /* 行业.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "行业.png"; sourceTree = "<group>"; };
+		CFDE4BB51A3887B6001B3BBA /* 行业@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "行业@2x.png"; sourceTree = "<group>"; };
+		CFDE4BC41A388D29001B3BBA /* EMBASystemSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASystemSetViewController.h; sourceTree = "<group>"; };
+		CFDE4BC51A388D29001B3BBA /* EMBASystemSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSetViewController.m; sourceTree = "<group>"; };
+		CFDE4BC71A388D7A001B3BBA /* EMBAContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAContactUsViewController.h; sourceTree = "<group>"; };
+		CFDE4BC81A388D7A001B3BBA /* EMBAContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAContactUsViewController.m; sourceTree = "<group>"; };
+		CFDE4BCA1A388D95001B3BBA /* EMBAAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAAboutViewController.h; sourceTree = "<group>"; };
+		CFDE4BCB1A388D95001B3BBA /* EMBAAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAAboutViewController.m; sourceTree = "<group>"; };
+		CFDE4BD11A38984F001B3BBA /* EMBASegumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASegumentView.h; sourceTree = "<group>"; };
+		CFDE4BD21A38984F001B3BBA /* EMBASegumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASegumentView.m; sourceTree = "<group>"; };
+		CFDE4BD91A38B5EE001B3BBA /* EMBACollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBACollectionCell.h; sourceTree = "<group>"; };
+		CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACollectionCell.m; sourceTree = "<group>"; };
+		CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noCollection@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +529,12 @@
 		A8367D4919FAA03700ED14CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CFDE4BB01A3887B6001B3BBA /* 同乡.png */,
+				CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */,
+				CFDE4BB21A3887B6001B3BBA /* 班级.png */,
+				CFDE4BB31A3887B6001B3BBA /* 班级@2x.png */,
+				CFDE4BB41A3887B6001B3BBA /* 行业.png */,
+				CFDE4BB51A3887B6001B3BBA /* 行业@2x.png */,
 				CFD19E6D1A34ADEB00B07ECF /* collect_bar_icon.png */,
 				CFD19E6E1A34ADEB00B07ECF /* collect_bar_icon@2x.png */,
 				CFD19E691A34ADAD00B07ECF /* Search_Bar.png */,
@@ -575,12 +627,15 @@
 		A8A4681D1A1D0EC9001FFFFF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CFDE4BBE1A388C73001B3BBA /* 个人中心 */,
+				CFDE4BBF1A388C8B001B3BBA /* 我的收藏 */,
+				CFDE4BC31A388CB1001B3BBA /* 系统设置 */,
+				CFDE4BC21A388CAE001B3BBA /* 联系我们 */,
+				CFDE4BC11A388CAA001B3BBA /* 关于 */,
 				589D691B1A209578002EAB1F /* EMBAForgetPwdViewController.h */,
 				589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */,
 				A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */,
 				A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */,
-				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
-				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -601,6 +656,8 @@
 				CF5021EA1A2B31A7004BA44D /* Main */,
 				A8C927901A262DA600426D48 /* EMBASchoolfellowViewController.h */,
 				A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */,
+				CFDE4BAD1A3886CE001B3BBA /* EMBAClassesViewController.h */,
+				CFDE4BAE1A3886CE001B3BBA /* EMBAClassesViewController.m */,
 				A8C927931A262DB500426D48 /* EMBAMineViewController.h */,
 				A8C927941A262DB500426D48 /* EMBAMineViewController.m */,
 				A8C927961A262DCE00426D48 /* EMBATogetherViewController.h */,
@@ -844,8 +901,64 @@
 				CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */,
 				CF5E327A1A3608A900460F22 /* EMBAMessageFram.h */,
 				CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */,
+				CF5CF8231A385CAF00A3C2D2 /* selfChat.png */,
+				CF5CF8241A385CAF00A3C2D2 /* selfChat@2x.png */,
+				CF5CF8251A385CAF00A3C2D2 /* other.png */,
+				CF5CF8261A385CAF00A3C2D2 /* other@2x.png */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		CFDE4BBE1A388C73001B3BBA /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
+				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
+			);
+			name = "个人中心";
+			sourceTree = "<group>";
+		};
+		CFDE4BBF1A388C8B001B3BBA /* 我的收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */,
+				CF5CF82B1A38840800A3C2D2 /* EMBAMyCollectionViewController.h */,
+				CF5CF82C1A38840800A3C2D2 /* EMBAMyCollectionViewController.m */,
+				CFDE4BD91A38B5EE001B3BBA /* EMBACollectionCell.h */,
+				CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */,
+				CFDE4BD11A38984F001B3BBA /* EMBASegumentView.h */,
+				CFDE4BD21A38984F001B3BBA /* EMBASegumentView.m */,
+			);
+			name = "我的收藏";
+			sourceTree = "<group>";
+		};
+		CFDE4BC11A388CAA001B3BBA /* 关于 */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE4BCA1A388D95001B3BBA /* EMBAAboutViewController.h */,
+				CFDE4BCB1A388D95001B3BBA /* EMBAAboutViewController.m */,
+			);
+			name = "关于";
+			sourceTree = "<group>";
+		};
+		CFDE4BC21A388CAE001B3BBA /* 联系我们 */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE4BC71A388D7A001B3BBA /* EMBAContactUsViewController.h */,
+				CFDE4BC81A388D7A001B3BBA /* EMBAContactUsViewController.m */,
+			);
+			name = "联系我们";
+			sourceTree = "<group>";
+		};
+		CFDE4BC31A388CB1001B3BBA /* 系统设置 */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE4BC41A388D29001B3BBA /* EMBASystemSetViewController.h */,
+				CFDE4BC51A388D29001B3BBA /* EMBASystemSetViewController.m */,
+				CFA1D4ED1A38CEB6001E0182 /* EMBASystemSettingCell.h */,
+				CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */,
+			);
+			name = "系统设置";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -930,11 +1043,14 @@
 				A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */,
 				589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */,
 				A8C927A11A2636C900426D48 /* message_icon.png in Resources */,
+				CFDE4BBA1A3887B6001B3BBA /* 行业.png in Resources */,
 				CF5021FF1A2B56C2004BA44D /* Collection_Bar@2x.png in Resources */,
+				CF5CF8281A385CAF00A3C2D2 /* selfChat@2x.png in Resources */,
 				A8C9279F1A2636C900426D48 /* together_icon.png in Resources */,
 				A8C927A71A26375D00426D48 /* message_icon@2x.png in Resources */,
 				589D691A1A2091D9002EAB1F /* backButtonIcon@2x.png in Resources */,
 				589D69061A207E91002EAB1F /* left_about@2x.png in Resources */,
+				CF5CF82A1A385CAF00A3C2D2 /* other@2x.png in Resources */,
 				CFD19E701A34ADEB00B07ECF /* collect_bar_icon@2x.png in Resources */,
 				CF5021F01A2B542D004BA44D /* 1.png in Resources */,
 				A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */,
@@ -942,7 +1058,9 @@
 				CF5021F81A2B547D004BA44D /* newMessage1.png in Resources */,
 				A8C927A21A2636C900426D48 /* school_icon.png in Resources */,
 				CFD19E6C1A34ADAD00B07ECF /* Search_Bar@2x.png in Resources */,
+				CFDE4BDD1A38BBEE001B3BBA /* noCollection@2x.png in Resources */,
 				CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */,
+				CFDE4BB61A3887B6001B3BBA /* 同乡.png in Resources */,
 				CF5021F91A2B547D004BA44D /* newMessage1@2x.png in Resources */,
 				A8367D5219FAA04500ED14CA /* user.png in Resources */,
 				589D690C1A207E91002EAB1F /* personalInfo_delete@2x.png in Resources */,
@@ -956,13 +1074,19 @@
 				A8367D5019FAA04500ED14CA /* bg.png in Resources */,
 				A8C927A91A26375D00426D48 /* school_icon@2x.png in Resources */,
 				CFD19E6B1A34ADAD00B07ECF /* Search_Bar.png in Resources */,
+				CFDE4BB71A3887B6001B3BBA /* 同乡@2x.png in Resources */,
 				A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */,
 				589D690A1A207E91002EAB1F /* left_systemsetting@2x.png in Resources */,
 				589D69101A207E91002EAB1F /* setting_switch@2x.png in Resources */,
 				A869AEE61A2382C500ABDB4B /* OpenBar@2x.png in Resources */,
+				CFDE4BB81A3887B6001B3BBA /* 班级.png in Resources */,
 				A8C927A01A2636C900426D48 /* mine_icon.png in Resources */,
 				589D690E1A207E91002EAB1F /* setting_switch_off@2x.png in Resources */,
+				CF5CF8271A385CAF00A3C2D2 /* selfChat.png in Resources */,
+				CF5CF8291A385CAF00A3C2D2 /* other.png in Resources */,
 				589D69121A2088B0002EAB1F /* iOS-defaultHead0@2x.png in Resources */,
+				CFDE4BB91A3887B6001B3BBA /* 班级@2x.png in Resources */,
+				CFDE4BBB1A3887B6001B3BBA /* 行业@2x.png in Resources */,
 				CF5021FE1A2B56C2004BA44D /* Collection_Bar.png in Resources */,
 				CF5021F11A2B542D004BA44D /* 1@2x.png in Resources */,
 				A8C927A81A26375D00426D48 /* mine_icon@2x.png in Resources */,
@@ -984,6 +1108,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFDE4BAF1A3886CE001B3BBA /* EMBAClassesViewController.m in Sources */,
 				A8A468171A1D0319001FFFFF /* WTImageViewer.m in Sources */,
 				A8367D2319FAA00E00ED14CA /* main.m in Sources */,
 				A8A468131A1D0319001FFFFF /* UIDevice+WTRequestCenter.m in Sources */,
@@ -995,7 +1120,11 @@
 				A8A467FA1A1D0309001FFFFF /* WTURLSessionManager.m in Sources */,
 				A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */,
 				A8A467F61A1D0309001FFFFF /* WTDataSaver.m in Sources */,
+				CF5CF82D1A38840800A3C2D2 /* EMBAMyCollectionViewController.m in Sources */,
 				A8A467F81A1D0309001FFFFF /* WTRequestCenter.m in Sources */,
+				CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */,
+				CFDE4BDB1A38B5EE001B3BBA /* EMBACollectionCell.m in Sources */,
+				CFDE4BCC1A388D95001B3BBA /* EMBAAboutViewController.m in Sources */,
 				A8A468161A1D0319001FFFFF /* UIWebView+WTRequestCenter.m in Sources */,
 				A8C927981A262DCE00426D48 /* EMBATogetherViewController.m in Sources */,
 				A8A468151A1D0319001FFFFF /* UIImageView+WTRequestCenter.m in Sources */,
@@ -1014,10 +1143,13 @@
 				A8367D2719FAA00E00ED14CA /* EMBAAppDelegate.m in Sources */,
 				CF5E32741A35FF1900460F22 /* EMBAMessageViewController.m in Sources */,
 				A8A467F71A1D0309001FFFFF /* WTDataWriteOpeation.m in Sources */,
+				CFDE4BC91A388D7A001B3BBA /* EMBAContactUsViewController.m in Sources */,
+				CFDE4BC61A388D29001B3BBA /* EMBASystemSetViewController.m in Sources */,
 				A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */,
 				A8A467F91A1D0309001FFFFF /* WTURLRequestOperation.m in Sources */,
 				A8A468101A1D0319001FFFFF /* UIAlertView+WTRequestCenter.m in Sources */,
 				A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */,
+				CFDE4BD31A38984F001B3BBA /* EMBASegumentView.m in Sources */,
 				A8A468111A1D0319001FFFFF /* UIButton+WTRequestCenter.m in Sources */,
 				CF5E32771A3607DB00460F22 /* EMBAMessageCell.m in Sources */,
 			);

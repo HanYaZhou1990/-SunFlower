@@ -65,7 +65,7 @@
 }
 
 - (void)layoutSubviews{
-    NSLog(@"%@",NSStringFromCGRect(self.frame));
+    [super layoutSubviews];
 }
 
 - (void)awakeFromNib{}

@@ -57,12 +57,13 @@
     backButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);/***上／左／下／右***/
     [backButton setTitle:@"返回" forState:UIControlStateNormal];
     backButton.contentEdgeInsets = UIEdgeInsetsMake(14, -8, 10, 0);
-    [backButton addTarget:self action:@selector(openButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [backButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(openButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
     self.navigationItem.leftBarButtonItem=leftBarButton;
 }
-- (void)openButtonPressed
+- (void)openButtonPressed:(UIButton *)sender
 {
     self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
     self.sideMenuViewController.shadowColor = [UIColor blackColor];

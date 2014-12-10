@@ -12,5 +12,7 @@
 @interface EMBAMessageViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView               *messageTableView;/* 聊天表*/
+/*!消息数组*/
+@property (nonatomic, strong) NSArray                   *messageArray;
 
 @end
