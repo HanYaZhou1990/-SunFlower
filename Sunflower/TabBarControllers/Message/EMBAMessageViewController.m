@@ -74,11 +74,11 @@
     return contentSize.height + 20 + kTime_ContentMargin + kContent_TimeMargin + kContentTop + kContentBottom ;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPathP {
-    EMBAMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPathP];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EMBAMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     EMBAMessageFram *messageFram = [[EMBAMessageFram alloc] init];
     EMBAMessage *message = [[EMBAMessage alloc] init];
-    message.dictionary =  _messageArray[indexPathP.row];
+    message.dictionary =  _messageArray[indexPath.row];
     messageFram.message = message;
     cell.messageFram = messageFram;
     return cell;

@@ -23,7 +23,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     if (self.settingType == EMBASystemSettingCellTypeSwitch) {
-        UISwitch*  switchButton = [[UISwitch alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-70, 10, 50, 44)];
+        UISwitch*  switchButton = [[UISwitch alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-70, 6, 50, 0)];
         [switchButton addTarget:self action:@selector(beiwangluSetAwoke:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:switchButton];
     }else {

@@ -98,6 +98,9 @@
     EMBASystemSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = _settingMenuAry[indexPath.section][@"rotTitle"][indexPath.row][@"name"];
     cell.settingType = [_settingMenuAry[indexPath.section][@"rotTitle"][indexPath.row][@"type"] intValue];
+    if(indexPath.section ==2 && indexPath.row == 2){
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     return cell;
 }
 
