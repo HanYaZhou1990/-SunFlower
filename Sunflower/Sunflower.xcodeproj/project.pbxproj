@@ -95,9 +95,9 @@
 		CF5CF8291A385CAF00A3C2D2 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8251A385CAF00A3C2D2 /* other.png */; };
 		CF5CF82A1A385CAF00A3C2D2 /* other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8261A385CAF00A3C2D2 /* other@2x.png */; };
 		CF5CF82D1A38840800A3C2D2 /* EMBAMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5CF82C1A38840800A3C2D2 /* EMBAMyCollectionViewController.m */; };
-		CF5E32741A35FF1900460F22 /* EMBAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E32731A35FF1900460F22 /* EMBAMessageViewController.m */; };
 		CF5E32771A3607DB00460F22 /* EMBAMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */; };
 		CF5E327C1A3608A900460F22 /* EMBAMessageFram.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */; };
+		CF62D7231A39EEC90087E95C /* EMBAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF62D7221A39EEC90087E95C /* EMBAMessageViewController.m */; };
 		CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */; };
 		CFD19E6B1A34ADAD00B07ECF /* Search_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E691A34ADAD00B07ECF /* Search_Bar.png */; };
 		CFD19E6C1A34ADAD00B07ECF /* Search_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6A1A34ADAD00B07ECF /* Search_Bar@2x.png */; };
@@ -332,11 +332,11 @@
 		CF5CF82B1A38840800A3C2D2 /* EMBAMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyCollectionViewController.h; sourceTree = "<group>"; };
 		CF5CF82C1A38840800A3C2D2 /* EMBAMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyCollectionViewController.m; sourceTree = "<group>"; };
 		CF5E32721A35FF1900460F22 /* EMBAMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageViewController.h; sourceTree = "<group>"; };
-		CF5E32731A35FF1900460F22 /* EMBAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageViewController.m; sourceTree = "<group>"; };
 		CF5E32751A3607DB00460F22 /* EMBAMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageCell.h; sourceTree = "<group>"; };
 		CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageCell.m; sourceTree = "<group>"; };
 		CF5E327A1A3608A900460F22 /* EMBAMessageFram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageFram.h; sourceTree = "<group>"; };
 		CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageFram.m; sourceTree = "<group>"; };
+		CF62D7221A39EEC90087E95C /* EMBAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageViewController.m; sourceTree = "<group>"; };
 		CFA1D4ED1A38CEB6001E0182 /* EMBASystemSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASystemSettingCell.h; sourceTree = "<group>"; };
 		CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSettingCell.m; sourceTree = "<group>"; };
 		CFD19E691A34ADAD00B07ECF /* Search_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_Bar.png; sourceTree = "<group>"; };
@@ -896,7 +896,7 @@
 			isa = PBXGroup;
 			children = (
 				CF5E32721A35FF1900460F22 /* EMBAMessageViewController.h */,
-				CF5E32731A35FF1900460F22 /* EMBAMessageViewController.m */,
+				CF62D7221A39EEC90087E95C /* EMBAMessageViewController.m */,
 				CF5E32751A3607DB00460F22 /* EMBAMessageCell.h */,
 				CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */,
 				CF5E327A1A3608A900460F22 /* EMBAMessageFram.h */,
@@ -1141,9 +1141,9 @@
 				A8367D2A19FAA00E00ED14CA /* Sunflower.xcdatamodeld in Sources */,
 				A825EE3D19FAA5080044F48D /* HYZ+Color.m in Sources */,
 				A8367D2719FAA00E00ED14CA /* EMBAAppDelegate.m in Sources */,
-				CF5E32741A35FF1900460F22 /* EMBAMessageViewController.m in Sources */,
 				A8A467F71A1D0309001FFFFF /* WTDataWriteOpeation.m in Sources */,
 				CFDE4BC91A388D7A001B3BBA /* EMBAContactUsViewController.m in Sources */,
+				CF62D7231A39EEC90087E95C /* EMBAMessageViewController.m in Sources */,
 				CFDE4BC61A388D29001B3BBA /* EMBASystemSetViewController.m in Sources */,
 				A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */,
 				A8A467F91A1D0309001FFFFF /* WTURLRequestOperation.m in Sources */,
