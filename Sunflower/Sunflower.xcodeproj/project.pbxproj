@@ -79,6 +79,7 @@
 		A8C927A81A26375D00426D48 /* mine_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A41A26375D00426D48 /* mine_icon@2x.png */; };
 		A8C927A91A26375D00426D48 /* school_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A51A26375D00426D48 /* school_icon@2x.png */; };
 		A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A61A26375D00426D48 /* together_icon@2x.png */; };
+		CF0428EE1A35E16700AFD040 /* EMBAPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0428ED1A35E16700AFD040 /* EMBAPersonalViewController.m */; };
 		CF5021ED1A2B31D5004BA44D /* EMBAMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5021EC1A2B31D5004BA44D /* EMBAMainCell.m */; };
 		CF5021F01A2B542D004BA44D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021EE1A2B542D004BA44D /* 1.png */; };
 		CF5021F11A2B542D004BA44D /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021EF1A2B542D004BA44D /* 1@2x.png */; };
@@ -88,6 +89,7 @@
 		CF5021F91A2B547D004BA44D /* newMessage1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021F51A2B547D004BA44D /* newMessage1@2x.png */; };
 		CF5021FE1A2B56C2004BA44D /* Collection_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FA1A2B56C2004BA44D /* Collection_Bar.png */; };
 		CF5021FF1A2B56C2004BA44D /* Collection_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */; };
+<<<<<<< Updated upstream
 		CF5CF8151A38231700A3C2D2 /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5CF8121A38231700A3C2D2 /* libEaseMobClientSDKLite.a */; };
 		CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8141A38231700A3C2D2 /* EaseMob.bundle */; };
 		CF5CF8271A385CAF00A3C2D2 /* selfChat.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8231A385CAF00A3C2D2 /* selfChat.png */; };
@@ -116,6 +118,12 @@
 		CFDE4BD31A38984F001B3BBA /* EMBASegumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BD21A38984F001B3BBA /* EMBASegumentView.m */; };
 		CFDE4BDB1A38B5EE001B3BBA /* EMBACollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */; };
 		CFDE4BDD1A38BBEE001B3BBA /* noCollection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */; };
+=======
+		CF5022001A2B56C2004BA44D /* Search_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FC1A2B56C2004BA44D /* Search_Bar.png */; };
+		CF5022011A2B56C2004BA44D /* Search_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FD1A2B56C2004BA44D /* Search_Bar@2x.png */; };
+		CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */; };
+		CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */; };
+>>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +243,8 @@
 		A8C927A41A26375D00426D48 /* mine_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_icon@2x.png"; sourceTree = "<group>"; };
 		A8C927A51A26375D00426D48 /* school_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "school_icon@2x.png"; sourceTree = "<group>"; };
 		A8C927A61A26375D00426D48 /* together_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "together_icon@2x.png"; sourceTree = "<group>"; };
+		CF0428EC1A35E16700AFD040 /* EMBAPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalViewController.h; sourceTree = "<group>"; };
+		CF0428ED1A35E16700AFD040 /* EMBAPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalViewController.m; sourceTree = "<group>"; };
 		CF5021EB1A2B31D5004BA44D /* EMBAMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMainCell.h; sourceTree = "<group>"; };
 		CF5021EC1A2B31D5004BA44D /* EMBAMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMainCell.m; sourceTree = "<group>"; };
 		CF5021EE1A2B542D004BA44D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -245,6 +255,7 @@
 		CF5021F51A2B547D004BA44D /* newMessage1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newMessage1@2x.png"; sourceTree = "<group>"; };
 		CF5021FA1A2B56C2004BA44D /* Collection_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Collection_Bar.png; sourceTree = "<group>"; };
 		CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Collection_Bar@2x.png"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		CF5CF7B91A38231700A3C2D2 /* IChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IChatManagerDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BB1A38231700A3C2D2 /* EMChatManagerBuddyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerBuddyDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BC1A38231700A3C2D2 /* EMChatManagerChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerChatDelegate.h; sourceTree = "<group>"; };
@@ -362,6 +373,14 @@
 		CFDE4BD91A38B5EE001B3BBA /* EMBACollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBACollectionCell.h; sourceTree = "<group>"; };
 		CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACollectionCell.m; sourceTree = "<group>"; };
 		CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noCollection@2x.png"; sourceTree = "<group>"; };
+=======
+		CF5021FC1A2B56C2004BA44D /* Search_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_Bar.png; sourceTree = "<group>"; };
+		CF5021FD1A2B56C2004BA44D /* Search_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search_Bar@2x.png"; sourceTree = "<group>"; };
+		CFB287BD1A39D67C004801EF /* EMBAPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalCell.h; sourceTree = "<group>"; };
+		CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalCell.m; sourceTree = "<group>"; };
+		CFB287C01A39E248004801EF /* EMBAPersonalEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalEditViewController.h; sourceTree = "<group>"; };
+		CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalEditViewController.m; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,6 +655,17 @@
 				589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */,
 				A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */,
 				A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */,
+<<<<<<< Updated upstream
+=======
+				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
+				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
+				CF0428EC1A35E16700AFD040 /* EMBAPersonalViewController.h */,
+				CF0428ED1A35E16700AFD040 /* EMBAPersonalViewController.m */,
+				CFB287BD1A39D67C004801EF /* EMBAPersonalCell.h */,
+				CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */,
+				CFB287C01A39E248004801EF /* EMBAPersonalEditViewController.h */,
+				CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */,
+>>>>>>> Stashed changes
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1131,7 +1161,10 @@
 				A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */,
 				A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */,
 				A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */,
+				CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */,
 				589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */,
+				CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */,
+				CF0428EE1A35E16700AFD040 /* EMBAPersonalViewController.m in Sources */,
 				A8A468141A1D0319001FFFFF /* UIImage+WTRequestCenter.m in Sources */,
 				CF5E327C1A3608A900460F22 /* EMBAMessageFram.m in Sources */,
 				A8C927921A262DA600426D48 /* EMBASchoolfellowViewController.m in Sources */,
