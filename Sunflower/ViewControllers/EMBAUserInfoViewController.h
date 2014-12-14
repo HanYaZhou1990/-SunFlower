@@ -10,9 +10,14 @@
 #import "TWTSideMenuViewController.h"
 #import "EMBASettingsViewController.h"
 #import "EMBAChangeRootViewController.h"
+#import "EMBAPersonalEditViewController.h"
 
-@interface EMBAUserInfoViewController : EMBAFatherViewController
+@interface EMBAUserInfoViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic) TWTSideMenuViewController *sideMenuViewController;
+
+@property (nonatomic, strong)UITableView             * tableView;
+@property (nonatomic, strong)NSArray                 * titleArray;
+@property (nonatomic, strong)NSArray                 * subArray;
 
 @end
