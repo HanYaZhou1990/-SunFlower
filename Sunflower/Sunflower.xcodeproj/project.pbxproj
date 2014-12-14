@@ -89,7 +89,7 @@
 		CF5021F91A2B547D004BA44D /* newMessage1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021F51A2B547D004BA44D /* newMessage1@2x.png */; };
 		CF5021FE1A2B56C2004BA44D /* Collection_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FA1A2B56C2004BA44D /* Collection_Bar.png */; };
 		CF5021FF1A2B56C2004BA44D /* Collection_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */; };
-<<<<<<< Updated upstream
+
 		CF5CF8151A38231700A3C2D2 /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5CF8121A38231700A3C2D2 /* libEaseMobClientSDKLite.a */; };
 		CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8141A38231700A3C2D2 /* EaseMob.bundle */; };
 		CF5CF8271A385CAF00A3C2D2 /* selfChat.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8231A385CAF00A3C2D2 /* selfChat.png */; };
@@ -118,12 +118,10 @@
 		CFDE4BD31A38984F001B3BBA /* EMBASegumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BD21A38984F001B3BBA /* EMBASegumentView.m */; };
 		CFDE4BDB1A38B5EE001B3BBA /* EMBACollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */; };
 		CFDE4BDD1A38BBEE001B3BBA /* noCollection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */; };
-=======
 		CF5022001A2B56C2004BA44D /* Search_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FC1A2B56C2004BA44D /* Search_Bar.png */; };
 		CF5022011A2B56C2004BA44D /* Search_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FD1A2B56C2004BA44D /* Search_Bar@2x.png */; };
 		CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */; };
 		CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */; };
->>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,7 +253,7 @@
 		CF5021F51A2B547D004BA44D /* newMessage1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newMessage1@2x.png"; sourceTree = "<group>"; };
 		CF5021FA1A2B56C2004BA44D /* Collection_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Collection_Bar.png; sourceTree = "<group>"; };
 		CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Collection_Bar@2x.png"; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
+
 		CF5CF7B91A38231700A3C2D2 /* IChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IChatManagerDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BB1A38231700A3C2D2 /* EMChatManagerBuddyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerBuddyDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BC1A38231700A3C2D2 /* EMChatManagerChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerChatDelegate.h; sourceTree = "<group>"; };
@@ -373,14 +371,13 @@
 		CFDE4BD91A38B5EE001B3BBA /* EMBACollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBACollectionCell.h; sourceTree = "<group>"; };
 		CFDE4BDA1A38B5EE001B3BBA /* EMBACollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACollectionCell.m; sourceTree = "<group>"; };
 		CFDE4BDC1A38BBEE001B3BBA /* noCollection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noCollection@2x.png"; sourceTree = "<group>"; };
-=======
 		CF5021FC1A2B56C2004BA44D /* Search_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_Bar.png; sourceTree = "<group>"; };
 		CF5021FD1A2B56C2004BA44D /* Search_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search_Bar@2x.png"; sourceTree = "<group>"; };
 		CFB287BD1A39D67C004801EF /* EMBAPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalCell.h; sourceTree = "<group>"; };
 		CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalCell.m; sourceTree = "<group>"; };
 		CFB287C01A39E248004801EF /* EMBAPersonalEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalEditViewController.h; sourceTree = "<group>"; };
 		CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalEditViewController.m; sourceTree = "<group>"; };
->>>>>>> Stashed changes
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -655,8 +652,6 @@
 				589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */,
 				A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */,
 				A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */,
-<<<<<<< Updated upstream
-=======
 				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
 				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
 				CF0428EC1A35E16700AFD040 /* EMBAPersonalViewController.h */,
@@ -665,7 +660,6 @@
 				CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */,
 				CFB287C01A39E248004801EF /* EMBAPersonalEditViewController.h */,
 				CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */,
->>>>>>> Stashed changes
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
