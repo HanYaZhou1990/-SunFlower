@@ -8,7 +8,13 @@
 
 #import "EMBAFatherViewController.h"
 #import "TWTSideMenuViewController.h"
+#import "EMBAMineTopCell.h"
+#import "EMBAMineHeaderView.h"
+#import "EMBAImageProcessing.h"
+#import "UIImage+Color.h"
 
-@interface EMBAMineViewController : EMBAFatherViewController
+@interface EMBAMineViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView    *mineTableView;
 
 @end
