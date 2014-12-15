@@ -103,6 +103,7 @@
 		CF7872A31A3F532A00271A1D /* EMBAImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872A21A3F532A00271A1D /* EMBAImageProcessing.m */; };
 		CF7872A61A3F586600271A1D /* NSObject+CleanString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872A51A3F586600271A1D /* NSObject+CleanString.m */; };
 		CF7872AC1A3F5A0B00271A1D /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872AB1A3F5A0B00271A1D /* UIImage+Color.m */; };
+		CF7872AF1A3F5FD900271A1D /* EMBAMineMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872AE1A3F5FD900271A1D /* EMBAMineMenuView.m */; };
 		CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */; };
 		CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */; };
 		CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */; };
@@ -354,6 +355,8 @@
 		CF7872A51A3F586600271A1D /* NSObject+CleanString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CleanString.m"; sourceTree = "<group>"; };
 		CF7872AA1A3F5A0B00271A1D /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		CF7872AB1A3F5A0B00271A1D /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		CF7872AD1A3F5FD900271A1D /* EMBAMineMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineMenuView.h; sourceTree = "<group>"; };
+		CF7872AE1A3F5FD900271A1D /* EMBAMineMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineMenuView.m; sourceTree = "<group>"; };
 		CFA1D4ED1A38CEB6001E0182 /* EMBASystemSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASystemSettingCell.h; sourceTree = "<group>"; };
 		CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSettingCell.m; sourceTree = "<group>"; };
 		CFB287BD1A39D67C004801EF /* EMBAPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalCell.h; sourceTree = "<group>"; };
@@ -946,6 +949,8 @@
 				CF7872981A3F4A0300271A1D /* EMBAMineTopCell.m */,
 				CF78729C1A3F4E5000271A1D /* EMBAMineHeaderView.h */,
 				CF78729D1A3F4E5000271A1D /* EMBAMineHeaderView.m */,
+				CF7872AD1A3F5FD900271A1D /* EMBAMineMenuView.h */,
+				CF7872AE1A3F5FD900271A1D /* EMBAMineMenuView.m */,
 				CF7872A11A3F532A00271A1D /* EMBAImageProcessing.h */,
 				CF7872A21A3F532A00271A1D /* EMBAImageProcessing.m */,
 				CF7872A41A3F586600271A1D /* NSObject+CleanString.h */,
@@ -1206,6 +1211,7 @@
 				A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */,
 				A8A467F91A1D0309001FFFFF /* WTURLRequestOperation.m in Sources */,
 				A8A468101A1D0319001FFFFF /* UIAlertView+WTRequestCenter.m in Sources */,
+				CF7872AF1A3F5FD900271A1D /* EMBAMineMenuView.m in Sources */,
 				A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */,
 				CFDE4BD31A38984F001B3BBA /* EMBASegumentView.m in Sources */,
 				A8A468111A1D0319001FFFFF /* UIButton+WTRequestCenter.m in Sources */,

@@ -18,6 +18,9 @@
             _headerImageView = [[UIImageView alloc] init];
             _headerImageView.image = headerImage;
             [self.contentView addSubview:_headerImageView];
+        }else{
+            self.contentView.layer.borderColor = [UIColorFromRGB(0xC8C7CC) CGColor];
+            self.contentView.layer.borderWidth = 0.5;
         }
         _titleLable = [[UILabel alloc] init];
         _titleLable.font = [UIFont systemFontOfSize:13];

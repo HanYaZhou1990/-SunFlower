@@ -23,12 +23,22 @@
     return self;
 }
 
+- (void)barItemClick:(UIBarButtonItem *)barButtonItem{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     self.navigationItem.leftBarButtonItem = openItem;
     
+    UIBarButtonItem *searchBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Search_Bar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
+    searchBarItem.tag = 20;
+    UIBarButtonItem* collectBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"collect_bar_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
+    collectBarItem.tag = 21;
+    
+    self.navigationItem.rightBarButtonItems = @[collectBarItem,searchBarItem];
     
     _mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStylePlain];
     _mineTableView.dataSource = self;
@@ -37,7 +47,7 @@
     [_mineTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     /*需要重新初始化，放弃registClass方法*/
 //    [_mineTableView registerClass:[EMBAMineHeaderView class] forHeaderFooterViewReuseIdentifier:@"headerView"];
-    
+    _mineTableView.tableFooterView = [UIView new];
     [self.view addSubview:_mineTableView];
     
 }
@@ -72,19 +82,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
+    }else if (section == 1){
+        return 1;
     }else{
-        return 3;
+        return 2;
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 //    EMBAMineHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerView"];
     if (section == 1) {
-        EMBAMineHeaderView *view = [[EMBAMineHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 35) withHeaderImage:[EMBAImageProcessing changeImage:[UIImage imageNamed:@"bg.png"]] withText:nil];
+        EMBAMineHeaderView *view = [[EMBAMineHeaderView alloc] initWithFrame:CGRectZero withHeaderImage:[EMBAImageProcessing changeImage:[UIImage imageNamed:@"bg.png"]] withText:nil];
         view.titleLable.text = @"EMBA课程";
         return view;
     }else{
-        EMBAMineHeaderView *view = [[EMBAMineHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 35) withHeaderImage:nil withText:nil];
+        EMBAMineHeaderView *view = [[EMBAMineHeaderView alloc] initWithFrame:CGRectZero withHeaderImage:nil withText:nil];
         view.titleLable.text = @"将至课程";
         return view;
     }
@@ -104,6 +116,9 @@
 
 #pragma mark -
 #pragma mark UITableViewDelegate -
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 - (void)didReceiveMemoryWarning{[super didReceiveMemoryWarning];}
 @end
