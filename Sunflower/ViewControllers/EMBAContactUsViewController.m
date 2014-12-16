@@ -41,14 +41,11 @@
     
     self.navigationItem.leftBarButtonItem=leftBarButton;
     
-    
-    UILabel *titileLabel = [[UILabel alloc]init];
-    titileLabel.text = @"联系我们";
-    [titileLabel sizeToFit];
-    titileLabel.font = [UIFont systemFontOfSize:16.0];
-    titileLabel.textAlignment = NSTextAlignmentCenter;
-    titileLabel.textColor = UIColorFromRGB(0xFFFFFF);
-    self.navigationItem.titleView = titileLabel;
+    self.title = @"联系我们";
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     UIColorFromRGB(0xFFFFFF), UITextAttributeTextColor,
+                                                                     [UIFont systemFontOfSize:16.0], UITextAttributeFont,
+                                                                     nil]];
 }
 
 - (void)openButtonPressed:(UIButton *)sender

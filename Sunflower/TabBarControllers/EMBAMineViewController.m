@@ -40,13 +40,15 @@
     
     self.navigationItem.rightBarButtonItems = @[collectBarItem,searchBarItem];
     
-    _mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStylePlain];
+    _mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStyleGrouped];
     _mineTableView.dataSource = self;
     _mineTableView.delegate = self;
-    [_mineTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [_mineTableView registerClass:[EMBAMineMenuCell class] forCellReuseIdentifier:@"mineMenuCell"];
+    [_mineTableView registerClass:[EMBAMineCell class] forCellReuseIdentifier:@"cell"];
     /*需要重新初始化，放弃registClass方法*/
 //    [_mineTableView registerClass:[EMBAMineHeaderView class] forHeaderFooterViewReuseIdentifier:@"headerView"];
     _mineTableView.tableFooterView = [UIView new];
+    _mineTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_mineTableView];
     
     
@@ -65,11 +67,23 @@
 #pragma mark -
 #pragma mark UITableViewDataSource -
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 64;
+    if (indexPath.section == 0) {
+        return 64;
+    }else{
+        return 100;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 35;
+    if (section == 0) {
+        return 35;
+    }else {
+        return 38;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -99,7 +113,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        EMBAMineMenuCell *menuCell = [tableView dequeueReusableCellWithIdentifier:@"mineMenuCell" forIndexPath:indexPath];
+        menuCell.delegate = self;
+        return menuCell;
+    }
+    EMBAMineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     return cell;
 }
 
@@ -107,6 +126,40 @@
 #pragma mark UITableViewDelegate -
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark -
+#pragma mark EMBAMineMenuCellDelegate -
+- (void)view:(UIView *)view didSelectIndex:(NSInteger)indexOfButton{
+    switch (indexOfButton) {
+        case 0:
+        {
+        EMBAMyClassViewController *classViewController = [[EMBAMyClassViewController alloc] init];
+        classViewController.hidesBottomBarWhenPushed = YES;
+        classViewController.title = @"我的班级";
+        [self.navigationController pushViewController:classViewController animated:YES];
+        }
+            break;
+        case 1:
+        {
+        EMBAMyLessonViewController *lessonViewController = [[EMBAMyLessonViewController alloc] init];
+        lessonViewController.hidesBottomBarWhenPushed = YES;
+        lessonViewController.title = @"我的课程";
+        [self.navigationController pushViewController:lessonViewController animated:YES];
+        }
+            break;
+        case 2:
+        {
+        EMBAMyActivityViewController *activityViewController = [[EMBAMyActivityViewController alloc] init];
+        activityViewController.hidesBottomBarWhenPushed = YES;
+        activityViewController.title = @"我的活动";
+        [self.navigationController pushViewController:activityViewController animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning{[super didReceiveMemoryWarning];}

@@ -40,7 +40,7 @@
     UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
     self.navigationItem.leftBarButtonItem=leftBarButton;
-    
+/*
     UILabel *titileLabel = [[UILabel alloc]init];
     titileLabel.text = @"设置";
     [titileLabel sizeToFit];
@@ -48,6 +48,12 @@
     titileLabel.textAlignment = NSTextAlignmentCenter;
     titileLabel.textColor = UIColorFromRGB(0xFFFFFF);
     self.navigationItem.titleView = titileLabel;
+ */
+    self.title = @"设置";
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     UIColorFromRGB(0xFFFFFF), UITextAttributeTextColor,
+                                                                     [UIFont systemFontOfSize:16.0], UITextAttributeFont,
+                                                                     nil]];
     
     _settingtableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStylePlain];
     _settingtableView.dataSource = self;

@@ -40,13 +40,11 @@
     
     self.navigationItem.leftBarButtonItem=leftBarButton;
     
-    UILabel *titileLabel = [[UILabel alloc]init];
-    titileLabel.text = @"关于";
-    [titileLabel sizeToFit];
-    titileLabel.font = [UIFont systemFontOfSize:16.0];
-    titileLabel.textAlignment = NSTextAlignmentCenter;
-    titileLabel.textColor = UIColorFromRGB(0xFFFFFF);
-    self.navigationItem.titleView = titileLabel;
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     UIColorFromRGB(0xFFFFFF), UITextAttributeTextColor,
+                                                                     [UIFont systemFontOfSize:16.0], UITextAttributeFont,
+                                                                     nil]];
+    self.title = @"关于";
 }
 
 - (void)openButtonPressed:(UIButton *)sender

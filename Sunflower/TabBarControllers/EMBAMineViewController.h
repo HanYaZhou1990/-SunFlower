@@ -12,8 +12,13 @@
 #import "EMBAImageProcessing.h"
 #import "UIImage+Color.h"
 #import "ExpandHeader.h"
+#import "EMBAMineMenuCell.h"
+#import "EMBAMineCell.h"
+#import "EMBAMyClassViewController.h"
+#import "EMBAMyLessonViewController.h"
+#import "EMBAMyActivityViewController.h"
 
-@interface EMBAMineViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
+@interface EMBAMineViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate,EMBAMineMenuCellDelegate>
 
 @property (nonatomic, strong) UITableView    *mineTableView;
 @property (nonatomic, strong) ExpandHeader    *header;
