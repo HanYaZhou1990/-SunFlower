@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF59A9D91A408D8C005C6529 /* ExpandHeader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF59A9D81A408D8C005C6529 /* ExpandHeader.h */; };
+		CF59A9DB1A408D8C005C6529 /* ExpandHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59A9DA1A408D8C005C6529 /* ExpandHeader.m */; };
+		CF59A9E11A408D8C005C6529 /* libExpandHeader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF59A9D51A408D8C005C6529 /* libExpandHeader.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF59A9E21A408D8C005C6529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF59A9CD1A408D8C005C6529 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF59A9D41A408D8C005C6529;
+			remoteInfo = ExpandHeader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CF59A9D31A408D8C005C6529 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				CF59A9D91A408D8C005C6529 /* ExpandHeader.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CF59A9D51A408D8C005C6529 /* libExpandHeader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libExpandHeader.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59A9D81A408D8C005C6529 /* ExpandHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpandHeader.h; sourceTree = "<group>"; };
+		CF59A9DA1A408D8C005C6529 /* ExpandHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpandHeader.m; sourceTree = "<group>"; };
+		CF59A9E01A408D8C005C6529 /* ExpandHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59A9E61A408D8C005C6529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF59A9D21A408D8C005C6529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59A9DD1A408D8C005C6529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF59A9E11A408D8C005C6529 /* libExpandHeader.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF59A9CC1A408D8C005C6529 = {
+			isa = PBXGroup;
+			children = (
+				CF59A9D71A408D8C005C6529 /* ExpandHeader */,
+				CF59A9E41A408D8C005C6529 /* ExpandHeaderTests */,
+				CF59A9D61A408D8C005C6529 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF59A9D61A408D8C005C6529 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF59A9D51A408D8C005C6529 /* libExpandHeader.a */,
+				CF59A9E01A408D8C005C6529 /* ExpandHeaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF59A9D71A408D8C005C6529 /* ExpandHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CF59A9D81A408D8C005C6529 /* ExpandHeader.h */,
+				CF59A9DA1A408D8C005C6529 /* ExpandHeader.m */,
+			);
+			path = ExpandHeader;
+			sourceTree = "<group>";
+		};
+		CF59A9E41A408D8C005C6529 /* ExpandHeaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF59A9E51A408D8C005C6529 /* Supporting Files */,
+			);
+			path = ExpandHeaderTests;
+			sourceTree = "<group>";
+		};
+		CF59A9E51A408D8C005C6529 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF59A9E61A408D8C005C6529 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF59A9D41A408D8C005C6529 /* ExpandHeader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF59A9E91A408D8C005C6529 /* Build configuration list for PBXNativeTarget "ExpandHeader" */;
+			buildPhases = (
+				CF59A9D11A408D8C005C6529 /* Sources */,
+				CF59A9D21A408D8C005C6529 /* Frameworks */,
+				CF59A9D31A408D8C005C6529 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpandHeader;
+			productName = ExpandHeader;
+			productReference = CF59A9D51A408D8C005C6529 /* libExpandHeader.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CF59A9DF1A408D8C005C6529 /* ExpandHeaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF59A9EC1A408D8C005C6529 /* Build configuration list for PBXNativeTarget "ExpandHeaderTests" */;
+			buildPhases = (
+				CF59A9DC1A408D8C005C6529 /* Sources */,
+				CF59A9DD1A408D8C005C6529 /* Frameworks */,
+				CF59A9DE1A408D8C005C6529 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF59A9E31A408D8C005C6529 /* PBXTargetDependency */,
+			);
+			name = ExpandHeaderTests;
+			productName = ExpandHeaderTests;
+			productReference = CF59A9E01A408D8C005C6529 /* ExpandHeaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF59A9CD1A408D8C005C6529 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "韩亚周";
+				TargetAttributes = {
+					CF59A9D41A408D8C005C6529 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					CF59A9DF1A408D8C005C6529 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = CF59A9D01A408D8C005C6529 /* Build configuration list for PBXProject "ExpandHeader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF59A9CC1A408D8C005C6529;
+			productRefGroup = CF59A9D61A408D8C005C6529 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF59A9D41A408D8C005C6529 /* ExpandHeader */,
+				CF59A9DF1A408D8C005C6529 /* ExpandHeaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF59A9DE1A408D8C005C6529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF59A9D11A408D8C005C6529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF59A9DB1A408D8C005C6529 /* ExpandHeader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF59A9DC1A408D8C005C6529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF59A9E31A408D8C005C6529 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF59A9D41A408D8C005C6529 /* ExpandHeader */;
+			targetProxy = CF59A9E21A408D8C005C6529 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF59A9E71A408D8C005C6529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF59A9E81A408D8C005C6529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF59A9EA1A408D8C005C6529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CF59A9EB1A408D8C005C6529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CF59A9ED1A408D8C005C6529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ExpandHeaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF59A9EE1A408D8C005C6529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ExpandHeaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF59A9D01A408D8C005C6529 /* Build configuration list for PBXProject "ExpandHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59A9E71A408D8C005C6529 /* Debug */,
+				CF59A9E81A408D8C005C6529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF59A9E91A408D8C005C6529 /* Build configuration list for PBXNativeTarget "ExpandHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59A9EA1A408D8C005C6529 /* Debug */,
+				CF59A9EB1A408D8C005C6529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF59A9EC1A408D8C005C6529 /* Build configuration list for PBXNativeTarget "ExpandHeaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF59A9ED1A408D8C005C6529 /* Debug */,
+				CF59A9EE1A408D8C005C6529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF59A9CD1A408D8C005C6529 /* Project object */;
+}

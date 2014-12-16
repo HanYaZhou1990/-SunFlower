@@ -88,6 +88,8 @@
 		CF5021F91A2B547D004BA44D /* newMessage1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021F51A2B547D004BA44D /* newMessage1@2x.png */; };
 		CF5021FE1A2B56C2004BA44D /* Collection_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FA1A2B56C2004BA44D /* Collection_Bar.png */; };
 		CF5021FF1A2B56C2004BA44D /* Collection_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */; };
+		CF59A9C81A408404005C6529 /* CURRENT.png in Resources */ = {isa = PBXBuildFile; fileRef = CF59A9C71A408404005C6529 /* CURRENT.png */; };
+		CF59A9F81A408E65005C6529 /* libExpandHeader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF59A9F51A408E4D005C6529 /* libExpandHeader.a */; };
 		CF5CF8151A38231700A3C2D2 /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5CF8121A38231700A3C2D2 /* libEaseMobClientSDKLite.a */; };
 		CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8141A38231700A3C2D2 /* EaseMob.bundle */; };
 		CF5CF8271A385CAF00A3C2D2 /* selfChat.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8231A385CAF00A3C2D2 /* selfChat.png */; };
@@ -98,7 +100,6 @@
 		CF5E32771A3607DB00460F22 /* EMBAMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E32761A3607DB00460F22 /* EMBAMessageCell.m */; };
 		CF5E327C1A3608A900460F22 /* EMBAMessageFram.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */; };
 		CF62D7231A39EEC90087E95C /* EMBAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF62D7221A39EEC90087E95C /* EMBAMessageViewController.m */; };
-		CF7872991A3F4A0300271A1D /* EMBAMineTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872981A3F4A0300271A1D /* EMBAMineTopCell.m */; };
 		CF78729E1A3F4E5000271A1D /* EMBAMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF78729D1A3F4E5000271A1D /* EMBAMineHeaderView.m */; };
 		CF7872A31A3F532A00271A1D /* EMBAImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872A21A3F532A00271A1D /* EMBAImageProcessing.m */; };
 		CF7872A61A3F586600271A1D /* NSObject+CleanString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872A51A3F586600271A1D /* NSObject+CleanString.m */; };
@@ -133,6 +134,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = A8367D1019FAA00E00ED14CA;
 			remoteInfo = Sunflower;
+		};
+		CF59A9F41A408E4D005C6529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF59A9EF1A408E4D005C6529 /* ExpandHeader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF59A9D51A408D8C005C6529;
+			remoteInfo = ExpandHeader;
+		};
+		CF59A9F61A408E4D005C6529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF59A9EF1A408E4D005C6529 /* ExpandHeader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF59A9E01A408D8C005C6529;
+			remoteInfo = ExpandHeaderTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -253,6 +268,8 @@
 		CF5021F51A2B547D004BA44D /* newMessage1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newMessage1@2x.png"; sourceTree = "<group>"; };
 		CF5021FA1A2B56C2004BA44D /* Collection_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Collection_Bar.png; sourceTree = "<group>"; };
 		CF5021FB1A2B56C2004BA44D /* Collection_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Collection_Bar@2x.png"; sourceTree = "<group>"; };
+		CF59A9C71A408404005C6529 /* CURRENT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CURRENT.png; sourceTree = "<group>"; };
+		CF59A9EF1A408E4D005C6529 /* ExpandHeader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ExpandHeader.xcodeproj; path = ../../ExpandHeader/ExpandHeader.xcodeproj; sourceTree = "<group>"; };
 		CF5CF7B91A38231700A3C2D2 /* IChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IChatManagerDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BB1A38231700A3C2D2 /* EMChatManagerBuddyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerBuddyDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BC1A38231700A3C2D2 /* EMChatManagerChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerChatDelegate.h; sourceTree = "<group>"; };
@@ -345,8 +362,6 @@
 		CF5E327A1A3608A900460F22 /* EMBAMessageFram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMessageFram.h; sourceTree = "<group>"; };
 		CF5E327B1A3608A900460F22 /* EMBAMessageFram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageFram.m; sourceTree = "<group>"; };
 		CF62D7221A39EEC90087E95C /* EMBAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMessageViewController.m; sourceTree = "<group>"; };
-		CF7872971A3F4A0300271A1D /* EMBAMineTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineTopCell.h; sourceTree = "<group>"; };
-		CF7872981A3F4A0300271A1D /* EMBAMineTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineTopCell.m; sourceTree = "<group>"; };
 		CF78729C1A3F4E5000271A1D /* EMBAMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineHeaderView.h; sourceTree = "<group>"; };
 		CF78729D1A3F4E5000271A1D /* EMBAMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineHeaderView.m; sourceTree = "<group>"; };
 		CF7872A11A3F532A00271A1D /* EMBAImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAImageProcessing.h; sourceTree = "<group>"; };
@@ -393,6 +408,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF59A9F81A408E65005C6529 /* libExpandHeader.a in Frameworks */,
 				A825EE4519FAA8DB0044F48D /* QuartzCore.framework in Frameworks */,
 				A8367D1719FAA00E00ED14CA /* CoreGraphics.framework in Frameworks */,
 				A8367D1B19FAA00E00ED14CA /* CoreData.framework in Frameworks */,
@@ -553,6 +569,7 @@
 		A8367D4919FAA03700ED14CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CF59A9C71A408404005C6529 /* CURRENT.png */,
 				CFDE4BB01A3887B6001B3BBA /* 同乡.png */,
 				CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */,
 				CFDE4BB21A3887B6001B3BBA /* 班级.png */,
@@ -695,6 +712,15 @@
 				CF5021EC1A2B31D5004BA44D /* EMBAMainCell.m */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		CF59A9F01A408E4D005C6529 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF59A9F51A408E4D005C6529 /* libExpandHeader.a */,
+				CF59A9F71A408E4D005C6529 /* ExpandHeaderTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF5CF7B41A38231700A3C2D2 /* EaseMobSDK */ = {
@@ -943,10 +969,9 @@
 		CF7872961A3F452000271A1D /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				CF59A9EF1A408E4D005C6529 /* ExpandHeader.xcodeproj */,
 				A8C927931A262DB500426D48 /* EMBAMineViewController.h */,
 				A8C927941A262DB500426D48 /* EMBAMineViewController.m */,
-				CF7872971A3F4A0300271A1D /* EMBAMineTopCell.h */,
-				CF7872981A3F4A0300271A1D /* EMBAMineTopCell.m */,
 				CF78729C1A3F4E5000271A1D /* EMBAMineHeaderView.h */,
 				CF78729D1A3F4E5000271A1D /* EMBAMineHeaderView.m */,
 				CF7872AD1A3F5FD900271A1D /* EMBAMineMenuView.h */,
@@ -1080,6 +1105,12 @@
 			mainGroup = A8367D0819FAA00E00ED14CA;
 			productRefGroup = A8367D1219FAA00E00ED14CA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF59A9F01A408E4D005C6529 /* Products */;
+					ProjectRef = CF59A9EF1A408E4D005C6529 /* ExpandHeader.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A8367D1019FAA00E00ED14CA /* Sunflower */,
@@ -1087,6 +1118,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF59A9F51A408E4D005C6529 /* libExpandHeader.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpandHeader.a;
+			remoteRef = CF59A9F41A408E4D005C6529 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF59A9F71A408E4D005C6529 /* ExpandHeaderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExpandHeaderTests.xctest;
+			remoteRef = CF59A9F61A408E4D005C6529 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A8367D0F19FAA00E00ED14CA /* Resources */ = {
@@ -1098,6 +1146,7 @@
 				A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */,
 				A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */,
 				589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */,
+				CF59A9C81A408404005C6529 /* CURRENT.png in Resources */,
 				A8C927A11A2636C900426D48 /* message_icon.png in Resources */,
 				CFDE4BBA1A3887B6001B3BBA /* 行业.png in Resources */,
 				CF5021FF1A2B56C2004BA44D /* Collection_Bar@2x.png in Resources */,
@@ -1192,7 +1241,6 @@
 				CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */,
 				589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */,
 				CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */,
-				CF7872991A3F4A0300271A1D /* EMBAMineTopCell.m in Sources */,
 				A8A468141A1D0319001FFFFF /* UIImage+WTRequestCenter.m in Sources */,
 				CF5E327C1A3608A900460F22 /* EMBAMessageFram.m in Sources */,
 				A8C927921A262DA600426D48 /* EMBASchoolfellowViewController.m in Sources */,
@@ -1334,6 +1382,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../ExpandHeader/ExpandHeader\"",
+				);
 				INFOPLIST_FILE = "Sunflower/Sunflower-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -1352,6 +1405,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sunflower/Sunflower-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../ExpandHeader/ExpandHeader\"",
+				);
 				INFOPLIST_FILE = "Sunflower/Sunflower-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (

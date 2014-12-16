@@ -43,12 +43,17 @@
     _mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStylePlain];
     _mineTableView.dataSource = self;
     _mineTableView.delegate = self;
-    [_mineTableView registerClass:[EMBAMineTopCell class] forCellReuseIdentifier:@"topCell"];
     [_mineTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     /*需要重新初始化，放弃registClass方法*/
 //    [_mineTableView registerClass:[EMBAMineHeaderView class] forHeaderFooterViewReuseIdentifier:@"headerView"];
     _mineTableView.tableFooterView = [UIView new];
     [self.view addSubview:_mineTableView];
+    
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 140)];
+    [imageView setImage:[UIImage imageNamed:@"CURRENT.png"]];
+    
+    _header = [ExpandHeader expandWithScrollView:_mineTableView expandView:imageView];
     
 }
 
@@ -60,29 +65,19 @@
 #pragma mark -
 #pragma mark UITableViewDataSource -
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section== 0) {
-        return 140;
-    }else{
-        return 64;
-    }
+    return 64;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section== 0) {
-        return 0;
-    }else{
-        return 35;
-    }
+    return 35;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 1;
-    }else if (section == 1){
+    if (section == 0){
         return 1;
     }else{
         return 2;
@@ -91,8 +86,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 //    EMBAMineHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerView"];
-    if (section == 1) {
-        EMBAMineHeaderView *view = [[EMBAMineHeaderView alloc] initWithFrame:CGRectZero withHeaderImage:[EMBAImageProcessing changeImage:[UIImage imageNamed:@"bg.png"]] withText:nil];
+    if (section == 0) {
+        EMBAMineHeaderView *view = [[EMBAMineHeaderView alloc] initWithFrame:CGRectZero withHeaderImage:[EMBAImageProcessing changeImage:[UIImage imageNamed:@"CURRENT.png"]] withText:nil];
         view.titleLable.text = @"EMBA课程";
         return view;
     }else{
@@ -104,14 +99,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-        EMBAMineTopCell *topCell = [tableView dequeueReusableCellWithIdentifier:@"topCell" forIndexPath:indexPath];
-        topCell.topImage = [UIImage imageNamed:@"bg.png"];
-        return topCell;
-    }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        return cell;
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    return cell;
 }
 
 #pragma mark -
