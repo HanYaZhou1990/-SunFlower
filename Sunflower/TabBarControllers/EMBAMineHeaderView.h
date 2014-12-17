@@ -19,6 +19,10 @@
 */
 @property (nonatomic, strong) UILabel               *titleLable;
 /*!
+ 用户名
+*/
+@property (nonatomic, strong) UILabel               *nameLable;
+/*!
  初始化的时候，直接去分区头有没有图片，两种初始化方法，初始化的时候，区头"带"图片
  目前会使用此方法
 */

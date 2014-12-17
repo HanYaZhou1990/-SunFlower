@@ -14,6 +14,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.layer.borderColor = [UIColorFromRGB(0xC8C7CC) CGColor];
+        self.layer.borderWidth = 0.5;
         [self drawUIWithArray:btnInformation rect:frame];
     }
     return self;
@@ -66,7 +68,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-            // Initialization code
+        // Initialization code
     }
     return self;
 }
@@ -74,13 +76,16 @@
  - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, rect.size.height-1, rect.size.width, 1)];
-    
-    [self addSubview:view];
     if (self.selected) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, rect.size.height-2, rect.size.width, 2)];
         view.backgroundColor = UIColorFromRGB(0xFFAB48);
+        [self addSubview:view];
     }else{
-        view.backgroundColor = UIColorFromRGB(0xD9D9D9);
+        for (UIView *view in self.subviews) {
+            if ([view isKindOfClass:[UIView class]]) {
+                view.frame = CGRectZero;
+            }
+        }
     }
 }
 

@@ -45,12 +45,14 @@
         _nameLable.backgroundColor = [UIColor clearColor];
         _nameLable.textColor = UIColorFromRGB(0x333333);
         _nameLable.text = @"用户或者群组名字";
+        _nameLable.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:_nameLable];
         
         _contentLable = [[UILabel alloc] initWithFrame:CGRectMake(LEFT_RIGHT_TOP_WIDTH*2+HEADER_WIDTH_HEIGHT, 10 + LABLE_HEIGHT, SCREEN_WIDTH - LEFT_RIGHT_TOP_WIDTH*3-HEADER_WIDTH_HEIGHT, LABLE_HEIGHT)];
         _contentLable.backgroundColor = [UIColor clearColor];
         _contentLable.text = @"这里是最后一次的聊天内容";
         _contentLable.textColor = UIColorFromRGB(0x999999);
+        _contentLable.font = [UIFont systemFontOfSize:13];
         [self.contentView addSubview:_contentLable];
         
         _timeLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - LEFT_RIGHT_TOP_WIDTH - HEADER_WIDTH_HEIGHT - 4 , 5, HEADER_WIDTH_HEIGHT+4 , LABLE_HEIGHT)];
@@ -58,7 +60,7 @@
         _timeLable.textAlignment = NSTextAlignmentCenter;
         _timeLable.text = @"10:14";
         _timeLable.textColor = UIColorFromRGB(0x999999);
-        _timeLable.font = [UIFont systemFontOfSize:15.f];
+        _timeLable.font = [UIFont systemFontOfSize:12.f];
         [self.contentView addSubview:_timeLable];
     }
     return self;

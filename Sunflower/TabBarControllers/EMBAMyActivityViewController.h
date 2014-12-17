@@ -7,7 +7,15 @@
 //
 
 #import "EMBAFatherViewController.h"
+#import "EMBASegumentView.h"
+#import "EMBAMyLessonCell.h"
 
-@interface EMBAMyActivityViewController : EMBAFatherViewController
+@interface EMBAMyActivityViewController : EMBAFatherViewController<EMBASegumentViewDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) EMBASegumentView                      *segumentView;
+
+@property (nonatomic, strong) UITableView                           *myActivityTableView;
+
+@property (nonatomic, strong) NSArray                               *titleArray;
 
 @end

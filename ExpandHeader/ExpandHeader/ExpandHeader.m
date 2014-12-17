@@ -29,15 +29,13 @@
 }
 
 - (void)expandWithScrollView:(UIScrollView*)scrollView expandView:(UIView*)expandView{
-    
-    
     __expandHeight = CGRectGetHeight(expandView.frame);
     
     __scrollView = scrollView;
     __scrollView.contentInset = UIEdgeInsetsMake(__expandHeight, 0, 0, 0);
     [__scrollView insertSubview:expandView atIndex:0];
     [__scrollView addObserver:self forKeyPath:HYZExpandContentOffset options:NSKeyValueObservingOptionNew context:nil];
-    [__scrollView setContentOffset:CGPointMake(0, -140)];
+    [__scrollView setContentOffset:CGPointMake(0, -CGRectGetHeight(expandView.frame))];
     
     __expandView = expandView;
     

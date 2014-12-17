@@ -18,6 +18,13 @@
             _headerImageView = [[UIImageView alloc] init];
             _headerImageView.image = headerImage;
             [self.contentView addSubview:_headerImageView];
+            
+            _nameLable = [[UILabel alloc] init];
+            _nameLable.text = @"韩亚周";
+            _nameLable.font = [UIFont systemFontOfSize:18];
+            [_nameLable setTextColor:UIColorFromRGB(0xFFFFFF)];
+            [self.contentView addSubview:_nameLable];
+            
         }else{
             self.contentView.layer.borderColor = [UIColorFromRGB(0xC8C7CC) CGColor];
             self.contentView.layer.borderWidth = 0.5;
@@ -47,7 +54,7 @@
         _headerImageView.frame = CGRectMake(15, -41, 60, 60);
         _titleLable.font = [UIFont systemFontOfSize:12];
         style.firstLineHeadIndent = 7;//首行缩进
-        
+        _nameLable.frame = CGRectMake(CGRectGetMaxX(_headerImageView.frame)+7, -36, SCREEN_WIDTH-CGRectGetMaxX(_headerImageView.frame)-7, 30);
     }else{
         style.firstLineHeadIndent = 15;//首行缩进
     }

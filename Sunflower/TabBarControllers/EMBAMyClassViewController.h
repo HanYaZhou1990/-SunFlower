@@ -7,7 +7,14 @@
 //
 
 #import "EMBAFatherViewController.h"
+#import "EMBAMineHeaderView.h"
+#import "EMBAAnnouncementCell.h"
+#import "EMBACalculation.h"
+#import "EMBAMyClassHeaderView.h"
+#import "EMBAMainCell.h"
 
-@interface EMBAMyClassViewController : EMBAFatherViewController
+@interface EMBAMyClassViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView                    *myClassTableView;
 
 @end

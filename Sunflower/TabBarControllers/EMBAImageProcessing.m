@@ -25,4 +25,22 @@
     UIGraphicsEndImageContext();
     return newimg;
 }
+
++ (UIImage*)fixImage:(UIImage*) image{
+    UIGraphicsBeginImageContext(image.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, 8);
+    CGContextSetStrokeColorWithColor(context, UIColorFromRGB(0xC8C7CC).CGColor);
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    CGContextAddEllipseInRect(context, rect);
+    CGContextClip(context);
+    
+    [image drawInRect:rect];
+    CGContextAddEllipseInRect(context, rect);
+    CGContextStrokePath(context);
+    UIImage *newimg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newimg;
+}
+
 @end

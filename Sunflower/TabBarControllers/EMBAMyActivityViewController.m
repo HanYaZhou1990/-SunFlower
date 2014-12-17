@@ -17,24 +17,162 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*返回按钮*/
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 0, 60, 44);
+    
+    [backButton setImage:[UIImage imageNamed:@"backButtonIcon.png"] forState:UIControlStateNormal];
+    backButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);/***上／左／下／右***/
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(14, -8, 10, 0);
+    [backButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(backItemClicked:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    self.navigationItem.leftBarButtonItem=leftBarButton;
+    
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      UIColorFromRGB(0xFFFFFF), UITextAttributeTextColor,
                                                                      [UIFont systemFontOfSize:16.0], UITextAttributeFont,
-                                                                     nil]];}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+                                                                     nil]];
+    
+    _segumentView = [[EMBASegumentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) btnInformation:@[
+                                                                                                                @[@"10月",@"10月"],
+                                                                                                                @[@"11月",@"11月"],
+                                                                                                                @[@"12月",@"12月"],
+                                                                                                                @[@"1月",@"1月"],
+                                                                                                                @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
+    _segumentView.delegate = self;
+    
+    _myActivityTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStylePlain];
+    _myActivityTableView.dataSource = self;
+    _myActivityTableView.delegate = self;
+    [_myActivityTableView registerClass:[EMBAMyLessonCell class] forCellReuseIdentifier:@"cell"];
+    [_myActivityTableView registerClass:[EMBAMyLessonTwoCell class] forCellReuseIdentifier:@"twocell"];
+    _myActivityTableView.tableFooterView = [UIView new];
+    _myActivityTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:_myActivityTableView];
+    
+    
+    _titleArray = @[@[@[@"12.15",@"周一"]],
+                    @[@[@"12.19",@"周五"]],
+                    @[@[@"12.21",@"周日"]],
+                    @[@[@"12.21",@"周日"],@[@"12.21",@"周日"]],
+                    @[@[@"12.22",@"周一"],@[@"12.22",@"周一"]],
+                    ];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)backItemClicked:(UIButton *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
+#pragma mark -
+#pragma mark EMBAMineMenuCellDelegate -
+- (void)view:(UIView *)view didSelectIndex:(NSInteger)indexOfButton{
+    switch (indexOfButton) {
+        case 0:
+        {
+        _titleArray = @[@[@[@"12.15",@"周一"]],
+                        @[@[@"12.16",@"周二"],@[@"12.16",@"周二"]],
+                        @[@[@"12.17",@"周三"],@[@"12.17",@"周三"]],
+                        @[@[@"12.18",@"周四"],@[@"12.18",@"周四"]],
+                        @[@[@"12.19",@"周五"]],
+                        @[@[@"12.20",@"周六"],@[@"2.20",@"周六"]],
+                        @[@[@"12.21",@"周日"]],
+                        @[@[@"12.21",@"周日"],@[@"12.21",@"周日"]],
+                        @[@[@"12.22",@"周一"],@[@"12.22",@"周一"]],
+                        ];
+        [_myActivityTableView reloadData];
+        }
+            break;
+        case 1:
+        {
+        _titleArray = @[@[@[@"12.15",@"周一"]],
+                        @[@[@"12.16",@"周二"],@[@"12.16",@"周二"]],
+                        @[@[@"12.22",@"周一"],@[@"12.22",@"周一"]],
+                        ];
+        [_myActivityTableView reloadData];
+        }
+            break;
+        case 2:
+        {
+        _titleArray = @[@[@[@"12.15",@"周一"]]];
+        [_myActivityTableView reloadData];
+        }
+            break;
+        case 3:
+        {
+        _titleArray = @[@[@[@"12.15",@"周一"]],
+                        @[@[@"12.16",@"周二"],@[@"12.16",@"周二"]],
+                        @[@[@"12.17",@"周三"],@[@"12.17",@"周三"]],
+                        @[@[@"12.18",@"周四"],@[@"12.18",@"周四"]],
+                        @[@[@"12.19",@"周五"]],
+                        @[@[@"12.20",@"周六"],@[@"2.20",@"周六"]],
+                        @[@[@"12.21",@"周日"]],
+                        @[@[@"12.21",@"周日"],@[@"12.21",@"周日"]],
+                        @[@[@"12.22",@"周一"],@[@"12.22",@"周一"]],
+                        @[@[@"12.15",@"周一"]],
+                        @[@[@"12.16",@"周二"],@[@"12.16",@"周二"]],
+                        @[@[@"12.17",@"周三"],@[@"12.17",@"周三"]],
+                        @[@[@"12.18",@"周四"],@[@"12.18",@"周四"]],
+                        @[@[@"12.19",@"周五"]],
+                        @[@[@"12.20",@"周六"],@[@"2.20",@"周六"]],
+                        @[@[@"12.21",@"周日"]],
+                        @[@[@"12.21",@"周日"],@[@"12.21",@"周日"]],
+                        @[@[@"12.22",@"周一"],@[@"12.22",@"周一"]],
+                        ];
+        [_myActivityTableView reloadData];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark -
+#pragma mark UITableViewDataSource -
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_titleArray[indexPath.row] count]>1) {
+        return 130;
+    }else{
+        return 65;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 44;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return _segumentView;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _titleArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_titleArray[indexPath.row] count]>1) {
+        EMBAMyLessonTwoCell *twoCell = [tableView dequeueReusableCellWithIdentifier:@"twocell" forIndexPath:indexPath];
+        twoCell.titleArray = _titleArray[indexPath.row];
+        return twoCell;
+    }else{
+        EMBAMyLessonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        cell.titleArray = _titleArray[indexPath.row];
+        return cell;
+    }
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate -
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    /*修改cell被选中时的颜色*/
+    EMBAMyLessonCell *cell = (EMBAMyLessonCell *)[tableView cellForRowAtIndexPath:indexPath];
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+    cell.selectedBackgroundView.backgroundColor = UIColorFromRGB(0xFCF6D3);
+}
+
+- (void)didReceiveMemoryWarning {[super didReceiveMemoryWarning];}
 
 @end
