@@ -8,6 +8,8 @@
 
 #import "EMBAFatherViewController.h"
 #import "TWTSideMenuViewController.h"
+#import "EMBAAddGroupViewController.h"
+#import "EMBACreatGroupViewController.h"
 
 @interface EMBASchoolfellow_ViewController : EMBAFatherViewController
 

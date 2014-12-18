@@ -16,6 +16,8 @@
     if (self) {
         
         self.backgroundColor = UIColorFromRGB(0xfafef6);
+        self.layer.borderColor = UIColorFromRGB(0xC8C7CC).CGColor;
+        self.layer.borderWidth = 0.5;
         
         _firstImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 28, 28)];
         _firstImageView.image = [UIImage imageNamed:@"1.png"];
@@ -62,6 +64,7 @@
         _timeLable.textColor = UIColorFromRGB(0x999999);
         _timeLable.font = [UIFont systemFontOfSize:12.f];
         [self.contentView addSubview:_timeLable];
+        
     }
     return self;
 }

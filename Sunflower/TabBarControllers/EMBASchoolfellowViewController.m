@@ -161,11 +161,6 @@
     }
     [_tableView reloadData];
 }
-//加入群点击
--(void)footerButtonClick
-{
-    NSLog(@"点击加入一个群");
-}
 
 #pragma mark -
 #pragma mark UITableViewDataSource
@@ -259,22 +254,28 @@
 {
     return 85;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    if (section == 0)
-    {
-        UIButton *footerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        footerButton.frame = CGRectMake((SCREEN_WIDTH-143)/2, 20, 143, 45);
-        [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateNormal];
-        [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateHighlighted];
-        [footerButton addTarget:self action:@selector(footerButtonClick) forControlEvents:UIControlEventTouchUpInside];
-        
-        UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 85)];
-        [footView setBackgroundColor:[UIColor clearColor]];
-        [footView addSubview:footerButton];
-        return footView;
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 85)];
+    [footView setBackgroundColor:[UIColor clearColor]];
+    
+    UIButton *creatButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [creatButton setImage:[UIImage imageNamed:@"creadOneGroup.png"] forState:UIControlStateNormal];
+    [creatButton setImage:[UIImage imageNamed:@"creadOneGroup.png"] forState:UIControlStateHighlighted];
+    [creatButton addTarget:self action:@selector(creatGroupButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [footView addSubview:creatButton];
+    
+    UIButton *footerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateNormal];
+    [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateHighlighted];
+    [footerButton addTarget:self action:@selector(addOneGroupButtonclicked:) forControlEvents:UIControlEventTouchUpInside];
+    [footView addSubview:footerButton];
+    if (_typeIndex == 0 || _typeIndex == 1) {
+        creatButton.frame = CGRectMake(15, 20, 142, 45);
+        footerButton.frame = CGRectMake(CGRectGetMaxX(creatButton.frame)+6, 20, 142, 45);
+    }else{
+    footerButton.frame = CGRectMake((SCREEN_WIDTH-142)/2, 20, 142, 45);
     }
-    return nil;
+    return footView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -282,12 +283,25 @@
     if (_dataSource.count>0)
     {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//         EMBASchoolFellowEntity *embaSchoolFellow = [_dataSource objectAtIndex:indexPath.row];
-        
     }
 }
 
+#pragma mark -
+#pragma mark footer view 上的button点击事件 -
 
+- (void)creatGroupButtonClicked:(UIButton *)sender{
+    EMBACreatGroupViewController *creatViewController = [[EMBACreatGroupViewController alloc] init];
+    creatViewController.title = @"创建一个群";
+    creatViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:creatViewController animated:YES];
+}
+
+- (void)addOneGroupButtonclicked:(UIButton *)sender{
+    EMBAAddGroupViewController *addViewController = [[EMBAAddGroupViewController alloc] init];
+    addViewController.title = @"加入一个群";
+    addViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:addViewController animated:YES];
+}
 
 - (void)openButtonPressed
 {
