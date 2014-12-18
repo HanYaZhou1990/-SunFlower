@@ -17,6 +17,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = UIColorFromRGB(0xC8C7CC);
+        self.layer.borderColor = UIColorFromRGB(0xC8C7CC).CGColor;
+        self.layer.borderWidth = 0.5;
         
         menuView = [[EMBAMineMenuView alloc] init];
         menuView.delegate = self;
