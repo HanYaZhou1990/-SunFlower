@@ -35,6 +35,16 @@
     _cellImages = [[NSArray alloc] initWithObjects:@"left_collect",@"left_systemsetting", @"left_contactus", @"left_about", @"left_logout", nil];
     
     self.view.backgroundColor = UIColorFromRGB(0x353535);
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage initWithColor:UIColorFromRGB(0x353535)]];
+    backgroundImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    CGRect imageViewRect = [[UIScreen mainScreen] bounds];
+    imageViewRect.size.width += 589;
+    backgroundImageView.frame = imageViewRect;
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:backgroundImageView];
+    
     UITableView *leftBarTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT - 20) style:UITableViewStyleGrouped];
     leftBarTableView.delegate = self;
     leftBarTableView.dataSource = self;
