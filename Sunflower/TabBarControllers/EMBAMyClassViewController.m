@@ -109,7 +109,7 @@
     EMBAMainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.backgroundColor = UIColorFromRGB(0xFFFFFF);
     cell.layer.borderColor = UIColorFromRGB(0xC8C7CC).CGColor;
-    cell.layer.borderWidth = 0.25;
+    cell.layer.borderWidth = 0.5;
     cell.timeLable.text = @"学习委员";
     cell.timeLable.adjustsFontSizeToFitWidth = YES;
     cell.firstImageView.hidden = YES;

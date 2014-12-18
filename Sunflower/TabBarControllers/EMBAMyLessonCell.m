@@ -70,7 +70,7 @@
         self.backgroundColor = UIColorFromRGB(0xFFFFFF);
         
         self.contentView.layer.borderColor = [UIColorFromRGB(0xC8C7CC) CGColor];
-        self.contentView.layer.borderWidth = 0.25;
+        self.contentView.layer.borderWidth = 0.5;
         
         
         _lessonTopLable = [[EMBAMyLessonLable alloc] init];
