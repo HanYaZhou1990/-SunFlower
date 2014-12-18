@@ -40,7 +40,11 @@
     
     _dataSource = [[NSMutableArray alloc]init];
     
-    segumentView = [[EMBASegumentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) btnInformation:@[                                                                          @[@"班级",@"班级"],                                                                        @[@"行业",@"行业"],                                                                      @[@"同乡",@"同乡"],                                                                                                                                              @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
+    segumentView = [[EMBASegumentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) btnInformation:@[
+                @[@"班级",@"班级"],
+                @[@"行业",@"行业"],
+                @[@"同乡",@"同乡"],
+                @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
     segumentView.delegate = self;
     [self.view addSubview:segumentView];
     
@@ -226,10 +230,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-    headView.backgroundColor = [UIColor clearColor];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 12, SCREEN_WIDTH, 16)];
+    UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.backgroundColor = [UIColor clearColor];
     if (_dataSource.count>0)
@@ -242,9 +243,7 @@
     }
     titleLabel.textColor = UIColorFromRGB(0x666666);
     titleLabel.font = [UIFont systemFontOfSize:14.0];
-    [headView addSubview:titleLabel];
-    
-    return headView;
+    return titleLabel;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -253,7 +252,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 40;
+    return 30;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section

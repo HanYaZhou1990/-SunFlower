@@ -33,6 +33,7 @@
         [button setTitleColor:UIColorFromRGB(0xFFAB48) forState:UIControlStateSelected];
         [button setBackgroundImage:[informationArrry lastObject][1] forState:UIControlStateNormal];
         [button setBackgroundImage:[informationArrry lastObject][1] forState:UIControlStateSelected];
+        [button setBackgroundImage:[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
         [button setMultipleTouchEnabled:YES];
         if (i == [[informationArrry lastObject][0] intValue]) {button.selected = YES;}
