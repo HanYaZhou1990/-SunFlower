@@ -9,6 +9,7 @@
 #import "EMBAFatherViewController.h"
 #import "EMBASegumentView.h"
 #import "EMBAMyLessonCell.h"
+#import "EMBAMyActivityDetailViewController.h"
 
 @interface EMBAMyActivityViewController : EMBAFatherViewController<EMBASegumentViewDelegate,UITableViewDataSource,UITableViewDelegate>
 

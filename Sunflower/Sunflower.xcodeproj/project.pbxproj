@@ -19,7 +19,6 @@
 		589D690F1A207E91002EAB1F /* setting_switch_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69041A207E91002EAB1F /* setting_switch_on@2x.png */; };
 		589D69101A207E91002EAB1F /* setting_switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69051A207E91002EAB1F /* setting_switch@2x.png */; };
 		589D69121A2088B0002EAB1F /* iOS-defaultHead0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69111A2088B0002EAB1F /* iOS-defaultHead0@2x.png */; };
-		589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */; };
 		589D691A1A2091D9002EAB1F /* backButtonIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D69191A2091D9002EAB1F /* backButtonIcon@2x.png */; };
 		589D691D1A209578002EAB1F /* EMBAForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */; };
 		A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3219FAA17D0044F48D /* MySqlite.m */; };
@@ -68,7 +67,6 @@
 		A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A468221A1D121E001FFFFF /* TWTSideMenuViewController.m */; };
 		A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */; };
 		A8C9278E1A262CD300426D48 /* EMBAChangeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9278D1A262CD300426D48 /* EMBAChangeRootViewController.m */; };
-		A8C927921A262DA600426D48 /* EMBASchoolfellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */; };
 		A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C927941A262DB500426D48 /* EMBAMineViewController.m */; };
 		A8C927981A262DCE00426D48 /* EMBATogetherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C927971A262DCE00426D48 /* EMBATogetherViewController.m */; };
 		A8C9279F1A2636C900426D48 /* together_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C9279B1A2636C900426D48 /* together_icon.png */; };
@@ -98,9 +96,6 @@
 		CF59AA061A409C67005C6529 /* myLesson.png in Resources */ = {isa = PBXBuildFile; fileRef = CF59AA001A409C67005C6529 /* myLesson.png */; };
 		CF59AA071A409C67005C6529 /* myLesson@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF59AA011A409C67005C6529 /* myLesson@2x.png */; };
 		CF59AA0A1A40A60B005C6529 /* EMBAMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59AA091A40A60B005C6529 /* EMBAMineCell.m */; };
-		CF59AA101A40AE8A005C6529 /* EMBAMyClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59AA0F1A40AE8A005C6529 /* EMBAMyClassViewController.m */; };
-		CF59AA131A40AE9B005C6529 /* EMBAMyLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59AA121A40AE9B005C6529 /* EMBAMyLessonViewController.m */; };
-		CF59AA161A40AEA7005C6529 /* EMBAMyActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF59AA151A40AEA7005C6529 /* EMBAMyActivityViewController.m */; };
 		CF5CF8151A38231700A3C2D2 /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5CF8121A38231700A3C2D2 /* libEaseMobClientSDKLite.a */; };
 		CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8141A38231700A3C2D2 /* EaseMob.bundle */; };
 		CF5CF8271A385CAF00A3C2D2 /* selfChat.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5CF8231A385CAF00A3C2D2 /* selfChat.png */; };
@@ -116,21 +111,30 @@
 		CF7872A61A3F586600271A1D /* NSObject+CleanString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872A51A3F586600271A1D /* NSObject+CleanString.m */; };
 		CF7872AC1A3F5A0B00271A1D /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872AB1A3F5A0B00271A1D /* UIImage+Color.m */; };
 		CF7872AF1A3F5FD900271A1D /* EMBAMineMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7872AE1A3F5FD900271A1D /* EMBAMineMenuView.m */; };
-		CF88F42C1A41CCF20009DCED /* EMBAAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88F42B1A41CCF20009DCED /* EMBAAnnouncementCell.m */; };
 		CF88F4331A41D7CB0009DCED /* EMBACalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88F4321A41D7CB0009DCED /* EMBACalculation.m */; };
-		CF88F4361A41DA050009DCED /* EMBAMyClassHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88F4351A41DA050009DCED /* EMBAMyClassHeaderView.m */; };
-		CF88F43B1A41ED250009DCED /* EMBAMyLessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88F43A1A41ED250009DCED /* EMBAMyLessonCell.m */; };
-		CF88F43E1A41F3BB0009DCED /* EMBAMyLessonLable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88F43D1A41F3BB0009DCED /* EMBAMyLessonLable.m */; };
 		CF88F4411A41FFBB0009DCED /* To.png in Resources */ = {isa = PBXBuildFile; fileRef = CF88F43F1A41FFBB0009DCED /* To.png */; };
 		CF88F4421A41FFBB0009DCED /* To@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF88F4401A41FFBB0009DCED /* To@2x.png */; };
+		CFA16E7B1A42EECC000E46D7 /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */; };
+		CFA16E7C1A42EECC000E46D7 /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E781A42EECC000E46D7 /* EMBAPersonalEditViewController.m */; };
+		CFA16E7D1A42EECC000E46D7 /* EMBAUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */; };
+		CFA16E851A42EF7D000E46D7 /* addOneGroup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA16E7E1A42EF7D000E46D7 /* addOneGroup@2x.png */; };
+		CFA16E861A42EF7D000E46D7 /* EMBASchoolFellowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E801A42EF7D000E46D7 /* EMBASchoolFellowEntity.m */; };
+		CFA16E871A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E821A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m */; };
+		CFA16E881A42EF7D000E46D7 /* EMBASchoolfellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E841A42EF7D000E46D7 /* EMBASchoolfellowViewController.m */; };
+		CFA16E901A42F01B000E46D7 /* EMBAMyClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E8B1A42F01B000E46D7 /* EMBAMyClassViewController.m */; };
+		CFA16E911A42F01B000E46D7 /* EMBAAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E8D1A42F01B000E46D7 /* EMBAAnnouncementCell.m */; };
+		CFA16E921A42F01B000E46D7 /* EMBAMyClassHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E8F1A42F01B000E46D7 /* EMBAMyClassHeaderView.m */; };
+		CFA16E9B1A42F025000E46D7 /* EMBAMyLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E941A42F025000E46D7 /* EMBAMyLessonViewController.m */; };
+		CFA16E9C1A42F025000E46D7 /* EMBAMyLessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E961A42F025000E46D7 /* EMBAMyLessonCell.m */; };
+		CFA16E9D1A42F025000E46D7 /* EMBAMyLessonLable.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E981A42F025000E46D7 /* EMBAMyLessonLable.m */; };
+		CFA16E9E1A42F025000E46D7 /* EMBAMyLessonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E9A1A42F025000E46D7 /* EMBAMyLessonDetailViewController.m */; };
+		CFA16EA31A42F02E000E46D7 /* EMBAMyActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16EA01A42F02E000E46D7 /* EMBAMyActivityViewController.m */; };
+		CFA16EA41A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16EA21A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m */; };
 		CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */; };
-		CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */; };
-		CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */; };
 		CFD19E6B1A34ADAD00B07ECF /* Search_Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E691A34ADAD00B07ECF /* Search_Bar.png */; };
 		CFD19E6C1A34ADAD00B07ECF /* Search_Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6A1A34ADAD00B07ECF /* Search_Bar@2x.png */; };
 		CFD19E6F1A34ADEB00B07ECF /* collect_bar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6D1A34ADEB00B07ECF /* collect_bar_icon.png */; };
 		CFD19E701A34ADEB00B07ECF /* collect_bar_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD19E6E1A34ADEB00B07ECF /* collect_bar_icon@2x.png */; };
-		CFDE4BAF1A3886CE001B3BBA /* EMBAClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE4BAE1A3886CE001B3BBA /* EMBAClassesViewController.m */; };
 		CFDE4BB61A3887B6001B3BBA /* 同乡.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB01A3887B6001B3BBA /* 同乡.png */; };
 		CFDE4BB71A3887B6001B3BBA /* 同乡@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */; };
 		CFDE4BB81A3887B6001B3BBA /* 班级.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB21A3887B6001B3BBA /* 班级.png */; };
@@ -182,8 +186,6 @@
 		589D69041A207E91002EAB1F /* setting_switch_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_switch_on@2x.png"; sourceTree = "<group>"; };
 		589D69051A207E91002EAB1F /* setting_switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_switch@2x.png"; sourceTree = "<group>"; };
 		589D69111A2088B0002EAB1F /* iOS-defaultHead0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-defaultHead0@2x.png"; sourceTree = "<group>"; };
-		589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAUserInfoViewController.h; sourceTree = "<group>"; };
-		589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAUserInfoViewController.m; sourceTree = "<group>"; };
 		589D69191A2091D9002EAB1F /* backButtonIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButtonIcon@2x.png"; sourceTree = "<group>"; };
 		589D691B1A209578002EAB1F /* EMBAForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAForgetPwdViewController.h; sourceTree = "<group>"; };
 		589D691C1A209578002EAB1F /* EMBAForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAForgetPwdViewController.m; sourceTree = "<group>"; };
@@ -262,8 +264,6 @@
 		A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASettingsViewController.m; sourceTree = "<group>"; };
 		A8C9278C1A262CD300426D48 /* EMBAChangeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAChangeRootViewController.h; sourceTree = "<group>"; };
 		A8C9278D1A262CD300426D48 /* EMBAChangeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAChangeRootViewController.m; sourceTree = "<group>"; };
-		A8C927901A262DA600426D48 /* EMBASchoolfellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMBASchoolfellow\U0010ViewController.h"; sourceTree = "<group>"; };
-		A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMBASchoolfellow\U0010ViewController.m"; sourceTree = "<group>"; };
 		A8C927931A262DB500426D48 /* EMBAMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineViewController.h; sourceTree = "<group>"; };
 		A8C927941A262DB500426D48 /* EMBAMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineViewController.m; sourceTree = "<group>"; };
 		A8C927961A262DCE00426D48 /* EMBATogetherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBATogetherViewController.h; sourceTree = "<group>"; };
@@ -298,12 +298,6 @@
 		CF59AA011A409C67005C6529 /* myLesson@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myLesson@2x.png"; sourceTree = "<group>"; };
 		CF59AA081A40A60B005C6529 /* EMBAMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineCell.h; sourceTree = "<group>"; };
 		CF59AA091A40A60B005C6529 /* EMBAMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineCell.m; sourceTree = "<group>"; };
-		CF59AA0E1A40AE8A005C6529 /* EMBAMyClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyClassViewController.h; sourceTree = "<group>"; };
-		CF59AA0F1A40AE8A005C6529 /* EMBAMyClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyClassViewController.m; sourceTree = "<group>"; };
-		CF59AA111A40AE9B005C6529 /* EMBAMyLessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonViewController.h; sourceTree = "<group>"; };
-		CF59AA121A40AE9B005C6529 /* EMBAMyLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonViewController.m; sourceTree = "<group>"; };
-		CF59AA141A40AEA7005C6529 /* EMBAMyActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyActivityViewController.h; sourceTree = "<group>"; };
-		CF59AA151A40AEA7005C6529 /* EMBAMyActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyActivityViewController.m; sourceTree = "<group>"; };
 		CF5CF7B91A38231700A3C2D2 /* IChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IChatManagerDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BB1A38231700A3C2D2 /* EMChatManagerBuddyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerBuddyDelegate.h; sourceTree = "<group>"; };
 		CF5CF7BC1A38231700A3C2D2 /* EMChatManagerChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerChatDelegate.h; sourceTree = "<group>"; };
@@ -406,30 +400,47 @@
 		CF7872AB1A3F5A0B00271A1D /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		CF7872AD1A3F5FD900271A1D /* EMBAMineMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMineMenuView.h; sourceTree = "<group>"; };
 		CF7872AE1A3F5FD900271A1D /* EMBAMineMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMineMenuView.m; sourceTree = "<group>"; };
-		CF88F42A1A41CCF20009DCED /* EMBAAnnouncementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAAnnouncementCell.h; sourceTree = "<group>"; };
-		CF88F42B1A41CCF20009DCED /* EMBAAnnouncementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAAnnouncementCell.m; sourceTree = "<group>"; };
 		CF88F4311A41D7CB0009DCED /* EMBACalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBACalculation.h; sourceTree = "<group>"; };
 		CF88F4321A41D7CB0009DCED /* EMBACalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACalculation.m; sourceTree = "<group>"; };
-		CF88F4341A41DA050009DCED /* EMBAMyClassHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyClassHeaderView.h; sourceTree = "<group>"; };
-		CF88F4351A41DA050009DCED /* EMBAMyClassHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyClassHeaderView.m; sourceTree = "<group>"; };
-		CF88F4391A41ED250009DCED /* EMBAMyLessonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonCell.h; sourceTree = "<group>"; };
-		CF88F43A1A41ED250009DCED /* EMBAMyLessonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonCell.m; sourceTree = "<group>"; };
-		CF88F43C1A41F3BB0009DCED /* EMBAMyLessonLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonLable.h; sourceTree = "<group>"; };
-		CF88F43D1A41F3BB0009DCED /* EMBAMyLessonLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonLable.m; sourceTree = "<group>"; };
 		CF88F43F1A41FFBB0009DCED /* To.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = To.png; sourceTree = "<group>"; };
 		CF88F4401A41FFBB0009DCED /* To@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "To@2x.png"; sourceTree = "<group>"; };
+		CFA16E751A42EECC000E46D7 /* EMBAPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalCell.h; sourceTree = "<group>"; };
+		CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalCell.m; sourceTree = "<group>"; };
+		CFA16E771A42EECC000E46D7 /* EMBAPersonalEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalEditViewController.h; sourceTree = "<group>"; };
+		CFA16E781A42EECC000E46D7 /* EMBAPersonalEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalEditViewController.m; sourceTree = "<group>"; };
+		CFA16E791A42EECC000E46D7 /* EMBAUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAUserInfoViewController.h; sourceTree = "<group>"; };
+		CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAUserInfoViewController.m; sourceTree = "<group>"; };
+		CFA16E7E1A42EF7D000E46D7 /* addOneGroup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addOneGroup@2x.png"; sourceTree = "<group>"; };
+		CFA16E7F1A42EF7D000E46D7 /* EMBASchoolFellowEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASchoolFellowEntity.h; sourceTree = "<group>"; };
+		CFA16E801A42EF7D000E46D7 /* EMBASchoolFellowEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASchoolFellowEntity.m; sourceTree = "<group>"; };
+		CFA16E811A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASchoolFellowTableViewCell.h; sourceTree = "<group>"; };
+		CFA16E821A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASchoolFellowTableViewCell.m; sourceTree = "<group>"; };
+		CFA16E831A42EF7D000E46D7 /* EMBASchoolfellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMBASchoolfellow\U0010ViewController.h"; sourceTree = "<group>"; };
+		CFA16E841A42EF7D000E46D7 /* EMBASchoolfellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMBASchoolfellow\U0010ViewController.m"; sourceTree = "<group>"; };
+		CFA16E8A1A42F01B000E46D7 /* EMBAMyClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyClassViewController.h; sourceTree = "<group>"; };
+		CFA16E8B1A42F01B000E46D7 /* EMBAMyClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyClassViewController.m; sourceTree = "<group>"; };
+		CFA16E8C1A42F01B000E46D7 /* EMBAAnnouncementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAAnnouncementCell.h; sourceTree = "<group>"; };
+		CFA16E8D1A42F01B000E46D7 /* EMBAAnnouncementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAAnnouncementCell.m; sourceTree = "<group>"; };
+		CFA16E8E1A42F01B000E46D7 /* EMBAMyClassHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyClassHeaderView.h; sourceTree = "<group>"; };
+		CFA16E8F1A42F01B000E46D7 /* EMBAMyClassHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyClassHeaderView.m; sourceTree = "<group>"; };
+		CFA16E931A42F025000E46D7 /* EMBAMyLessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonViewController.h; sourceTree = "<group>"; };
+		CFA16E941A42F025000E46D7 /* EMBAMyLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonViewController.m; sourceTree = "<group>"; };
+		CFA16E951A42F025000E46D7 /* EMBAMyLessonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonCell.h; sourceTree = "<group>"; };
+		CFA16E961A42F025000E46D7 /* EMBAMyLessonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonCell.m; sourceTree = "<group>"; };
+		CFA16E971A42F025000E46D7 /* EMBAMyLessonLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonLable.h; sourceTree = "<group>"; };
+		CFA16E981A42F025000E46D7 /* EMBAMyLessonLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonLable.m; sourceTree = "<group>"; };
+		CFA16E991A42F025000E46D7 /* EMBAMyLessonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyLessonDetailViewController.h; sourceTree = "<group>"; };
+		CFA16E9A1A42F025000E46D7 /* EMBAMyLessonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyLessonDetailViewController.m; sourceTree = "<group>"; };
+		CFA16E9F1A42F02E000E46D7 /* EMBAMyActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyActivityViewController.h; sourceTree = "<group>"; };
+		CFA16EA01A42F02E000E46D7 /* EMBAMyActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyActivityViewController.m; sourceTree = "<group>"; };
+		CFA16EA11A42F02E000E46D7 /* EMBAMyActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMyActivityDetailViewController.h; sourceTree = "<group>"; };
+		CFA16EA21A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyActivityDetailViewController.m; sourceTree = "<group>"; };
 		CFA1D4ED1A38CEB6001E0182 /* EMBASystemSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASystemSettingCell.h; sourceTree = "<group>"; };
 		CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSettingCell.m; sourceTree = "<group>"; };
-		CFB287BD1A39D67C004801EF /* EMBAPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalCell.h; sourceTree = "<group>"; };
-		CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalCell.m; sourceTree = "<group>"; };
-		CFB287C01A39E248004801EF /* EMBAPersonalEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalEditViewController.h; sourceTree = "<group>"; };
-		CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalEditViewController.m; sourceTree = "<group>"; };
 		CFD19E691A34ADAD00B07ECF /* Search_Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search_Bar.png; sourceTree = "<group>"; };
 		CFD19E6A1A34ADAD00B07ECF /* Search_Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search_Bar@2x.png"; sourceTree = "<group>"; };
 		CFD19E6D1A34ADEB00B07ECF /* collect_bar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collect_bar_icon.png; sourceTree = "<group>"; };
 		CFD19E6E1A34ADEB00B07ECF /* collect_bar_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect_bar_icon@2x.png"; sourceTree = "<group>"; };
-		CFDE4BAD1A3886CE001B3BBA /* EMBAClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAClassesViewController.h; sourceTree = "<group>"; };
-		CFDE4BAE1A3886CE001B3BBA /* EMBAClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAClassesViewController.m; sourceTree = "<group>"; };
 		CFDE4BB01A3887B6001B3BBA /* 同乡.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同乡.png"; sourceTree = "<group>"; };
 		CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同乡@2x.png"; sourceTree = "<group>"; };
 		CFDE4BB21A3887B6001B3BBA /* 班级.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "班级.png"; sourceTree = "<group>"; };
@@ -780,8 +791,10 @@
 		CF59AA0B1A40AE4E005C6529 /* 我的活动 */ = {
 			isa = PBXGroup;
 			children = (
-				CF59AA141A40AEA7005C6529 /* EMBAMyActivityViewController.h */,
-				CF59AA151A40AEA7005C6529 /* EMBAMyActivityViewController.m */,
+				CFA16E9F1A42F02E000E46D7 /* EMBAMyActivityViewController.h */,
+				CFA16EA01A42F02E000E46D7 /* EMBAMyActivityViewController.m */,
+				CFA16EA11A42F02E000E46D7 /* EMBAMyActivityDetailViewController.h */,
+				CFA16EA21A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m */,
 			);
 			name = "我的活动";
 			sourceTree = "<group>";
@@ -789,12 +802,14 @@
 		CF59AA0C1A40AE5B005C6529 /* 我的课程 */ = {
 			isa = PBXGroup;
 			children = (
-				CF59AA111A40AE9B005C6529 /* EMBAMyLessonViewController.h */,
-				CF59AA121A40AE9B005C6529 /* EMBAMyLessonViewController.m */,
-				CF88F4391A41ED250009DCED /* EMBAMyLessonCell.h */,
-				CF88F43A1A41ED250009DCED /* EMBAMyLessonCell.m */,
-				CF88F43C1A41F3BB0009DCED /* EMBAMyLessonLable.h */,
-				CF88F43D1A41F3BB0009DCED /* EMBAMyLessonLable.m */,
+				CFA16E931A42F025000E46D7 /* EMBAMyLessonViewController.h */,
+				CFA16E941A42F025000E46D7 /* EMBAMyLessonViewController.m */,
+				CFA16E951A42F025000E46D7 /* EMBAMyLessonCell.h */,
+				CFA16E961A42F025000E46D7 /* EMBAMyLessonCell.m */,
+				CFA16E971A42F025000E46D7 /* EMBAMyLessonLable.h */,
+				CFA16E981A42F025000E46D7 /* EMBAMyLessonLable.m */,
+				CFA16E991A42F025000E46D7 /* EMBAMyLessonDetailViewController.h */,
+				CFA16E9A1A42F025000E46D7 /* EMBAMyLessonDetailViewController.m */,
 			);
 			name = "我的课程";
 			sourceTree = "<group>";
@@ -802,12 +817,12 @@
 		CF59AA0D1A40AE5E005C6529 /* 我的班级 */ = {
 			isa = PBXGroup;
 			children = (
-				CF59AA0E1A40AE8A005C6529 /* EMBAMyClassViewController.h */,
-				CF59AA0F1A40AE8A005C6529 /* EMBAMyClassViewController.m */,
-				CF88F42A1A41CCF20009DCED /* EMBAAnnouncementCell.h */,
-				CF88F42B1A41CCF20009DCED /* EMBAAnnouncementCell.m */,
-				CF88F4341A41DA050009DCED /* EMBAMyClassHeaderView.h */,
-				CF88F4351A41DA050009DCED /* EMBAMyClassHeaderView.m */,
+				CFA16E8A1A42F01B000E46D7 /* EMBAMyClassViewController.h */,
+				CFA16E8B1A42F01B000E46D7 /* EMBAMyClassViewController.m */,
+				CFA16E8C1A42F01B000E46D7 /* EMBAAnnouncementCell.h */,
+				CFA16E8D1A42F01B000E46D7 /* EMBAAnnouncementCell.m */,
+				CFA16E8E1A42F01B000E46D7 /* EMBAMyClassHeaderView.h */,
+				CFA16E8F1A42F01B000E46D7 /* EMBAMyClassHeaderView.m */,
 			);
 			name = "我的班级";
 			sourceTree = "<group>";
@@ -1047,10 +1062,13 @@
 		CF7872951A3F451000271A1D /* SchoolFellow */ = {
 			isa = PBXGroup;
 			children = (
-				A8C927901A262DA600426D48 /* EMBASchoolfellowViewController.h */,
-				A8C927911A262DA600426D48 /* EMBASchoolfellowViewController.m */,
-				CFDE4BAD1A3886CE001B3BBA /* EMBAClassesViewController.h */,
-				CFDE4BAE1A3886CE001B3BBA /* EMBAClassesViewController.m */,
+				CFA16E7E1A42EF7D000E46D7 /* addOneGroup@2x.png */,
+				CFA16E831A42EF7D000E46D7 /* EMBASchoolfellowViewController.h */,
+				CFA16E841A42EF7D000E46D7 /* EMBASchoolfellowViewController.m */,
+				CFA16E811A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.h */,
+				CFA16E821A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m */,
+				CFA16E7F1A42EF7D000E46D7 /* EMBASchoolFellowEntity.h */,
+				CFA16E801A42EF7D000E46D7 /* EMBASchoolFellowEntity.m */,
 			);
 			name = SchoolFellow;
 			sourceTree = "<group>";
@@ -1087,12 +1105,12 @@
 		CFDE4BBE1A388C73001B3BBA /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
-				589D69161A208D85002EAB1F /* EMBAUserInfoViewController.h */,
-				589D69171A208D85002EAB1F /* EMBAUserInfoViewController.m */,
-				CFB287BD1A39D67C004801EF /* EMBAPersonalCell.h */,
-				CFB287BE1A39D67C004801EF /* EMBAPersonalCell.m */,
-				CFB287C01A39E248004801EF /* EMBAPersonalEditViewController.h */,
-				CFB287C11A39E248004801EF /* EMBAPersonalEditViewController.m */,
+				CFA16E791A42EECC000E46D7 /* EMBAUserInfoViewController.h */,
+				CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */,
+				CFA16E751A42EECC000E46D7 /* EMBAPersonalCell.h */,
+				CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */,
+				CFA16E771A42EECC000E46D7 /* EMBAPersonalEditViewController.h */,
+				CFA16E781A42EECC000E46D7 /* EMBAPersonalEditViewController.m */,
 			);
 			name = "个人中心";
 			sourceTree = "<group>";
@@ -1240,6 +1258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				589D690F1A207E91002EAB1F /* setting_switch_on@2x.png in Resources */,
+				CFA16E851A42EF7D000E46D7 /* addOneGroup@2x.png in Resources */,
 				CFD19E6F1A34ADEB00B07ECF /* collect_bar_icon.png in Resources */,
 				A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */,
 				CF59AA051A409C67005C6529 /* myClass@2x.png in Resources */,
@@ -1319,16 +1338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF59AA101A40AE8A005C6529 /* EMBAMyClassViewController.m in Sources */,
-				CF88F4361A41DA050009DCED /* EMBAMyClassHeaderView.m in Sources */,
-				CFDE4BAF1A3886CE001B3BBA /* EMBAClassesViewController.m in Sources */,
-				CF59AA131A40AE9B005C6529 /* EMBAMyLessonViewController.m in Sources */,
+				CFA16E881A42EF7D000E46D7 /* EMBASchoolfellowViewController.m in Sources */,
 				A8A468171A1D0319001FFFFF /* WTImageViewer.m in Sources */,
 				A8367D2319FAA00E00ED14CA /* main.m in Sources */,
+				CFA16E7C1A42EECC000E46D7 /* EMBAPersonalEditViewController.m in Sources */,
 				CF7872AC1A3F5A0B00271A1D /* UIImage+Color.m in Sources */,
 				A8A468131A1D0319001FFFFF /* UIDevice+WTRequestCenter.m in Sources */,
 				A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */,
+				CFA16E921A42F01B000E46D7 /* EMBAMyClassHeaderView.m in Sources */,
 				A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */,
+				CFA16EA41A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m in Sources */,
 				A8A468181A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m in Sources */,
 				CF88F4331A41D7CB0009DCED /* EMBACalculation.m in Sources */,
 				CF59A9FB1A40929D005C6529 /* EMBAMineMenuCell.m in Sources */,
@@ -1336,40 +1355,42 @@
 				589D691D1A209578002EAB1F /* EMBAForgetPwdViewController.m in Sources */,
 				A8A467FA1A1D0309001FFFFF /* WTURLSessionManager.m in Sources */,
 				A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */,
+				CFA16E7B1A42EECC000E46D7 /* EMBAPersonalCell.m in Sources */,
 				A8A467F61A1D0309001FFFFF /* WTDataSaver.m in Sources */,
+				CFA16EA31A42F02E000E46D7 /* EMBAMyActivityViewController.m in Sources */,
 				CF5CF82D1A38840800A3C2D2 /* EMBAMyCollectionViewController.m in Sources */,
 				A8A467F81A1D0309001FFFFF /* WTRequestCenter.m in Sources */,
 				CF7872A31A3F532A00271A1D /* EMBAImageProcessing.m in Sources */,
 				CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */,
+				CFA16E7D1A42EECC000E46D7 /* EMBAUserInfoViewController.m in Sources */,
+				CFA16E901A42F01B000E46D7 /* EMBAMyClassViewController.m in Sources */,
 				CFDE4BDB1A38B5EE001B3BBA /* EMBACollectionCell.m in Sources */,
+				CFA16E9D1A42F025000E46D7 /* EMBAMyLessonLable.m in Sources */,
 				CFDE4BCC1A388D95001B3BBA /* EMBAAboutViewController.m in Sources */,
 				A8A468161A1D0319001FFFFF /* UIWebView+WTRequestCenter.m in Sources */,
-				CF88F43E1A41F3BB0009DCED /* EMBAMyLessonLable.m in Sources */,
 				A8C927981A262DCE00426D48 /* EMBATogetherViewController.m in Sources */,
 				A8A468151A1D0319001FFFFF /* UIImageView+WTRequestCenter.m in Sources */,
 				A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */,
 				A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */,
 				A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */,
-				CFB287C21A39E248004801EF /* EMBAPersonalEditViewController.m in Sources */,
-				589D69181A208D85002EAB1F /* EMBAUserInfoViewController.m in Sources */,
-				CF88F43B1A41ED250009DCED /* EMBAMyLessonCell.m in Sources */,
-				CFB287BF1A39D67C004801EF /* EMBAPersonalCell.m in Sources */,
+				CFA16E9C1A42F025000E46D7 /* EMBAMyLessonCell.m in Sources */,
 				A8A468141A1D0319001FFFFF /* UIImage+WTRequestCenter.m in Sources */,
-				CF59AA161A40AEA7005C6529 /* EMBAMyActivityViewController.m in Sources */,
 				CF59AA0A1A40A60B005C6529 /* EMBAMineCell.m in Sources */,
 				CF5E327C1A3608A900460F22 /* EMBAMessageFram.m in Sources */,
-				A8C927921A262DA600426D48 /* EMBASchoolfellowViewController.m in Sources */,
 				A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */,
 				A8A468121A1D0319001FFFFF /* UIColor+WTRequestCenter.m in Sources */,
 				CF5021ED1A2B31D5004BA44D /* EMBAMainCell.m in Sources */,
 				CF78729E1A3F4E5000271A1D /* EMBAMineHeaderView.m in Sources */,
 				A8367D2A19FAA00E00ED14CA /* Sunflower.xcdatamodeld in Sources */,
-				CF88F42C1A41CCF20009DCED /* EMBAAnnouncementCell.m in Sources */,
+				CFA16E871A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m in Sources */,
 				A825EE3D19FAA5080044F48D /* HYZ+Color.m in Sources */,
+				CFA16E911A42F01B000E46D7 /* EMBAAnnouncementCell.m in Sources */,
 				A8367D2719FAA00E00ED14CA /* EMBAAppDelegate.m in Sources */,
 				A8A467F71A1D0309001FFFFF /* WTDataWriteOpeation.m in Sources */,
 				CFDE4BC91A388D7A001B3BBA /* EMBAContactUsViewController.m in Sources */,
+				CFA16E9B1A42F025000E46D7 /* EMBAMyLessonViewController.m in Sources */,
 				CF7872A61A3F586600271A1D /* NSObject+CleanString.m in Sources */,
+				CFA16E9E1A42F025000E46D7 /* EMBAMyLessonDetailViewController.m in Sources */,
 				CF62D7231A39EEC90087E95C /* EMBAMessageViewController.m in Sources */,
 				CFDE4BC61A388D29001B3BBA /* EMBASystemSetViewController.m in Sources */,
 				A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */,
@@ -1379,6 +1400,7 @@
 				A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */,
 				CFDE4BD31A38984F001B3BBA /* EMBASegumentView.m in Sources */,
 				A8A468111A1D0319001FFFFF /* UIButton+WTRequestCenter.m in Sources */,
+				CFA16E861A42EF7D000E46D7 /* EMBASchoolFellowEntity.m in Sources */,
 				CF5E32771A3607DB00460F22 /* EMBAMessageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

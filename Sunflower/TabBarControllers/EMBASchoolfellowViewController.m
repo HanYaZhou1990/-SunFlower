@@ -7,25 +7,19 @@
 //
 
 #import "EMBASchoolfellowViewController.h"
-#import "EMBAClassesViewController.h"
-
-@interface EMBASchoolfellow_ViewController ()
+#import "EMBASchoolFellowEntity.h"
+#import "EMBASchoolFellowTableViewCell.h"
+#import "EMBASegumentView.h"
+@interface EMBASchoolfellow_ViewController ()<UITableViewDelegate,UITableViewDataSource,EMBASegumentViewDelegate>
 {
-    NSMutableDictionary *_vcDic;
-    int  _currentIndex;
-    UIView *_contentView;
-    NSArray *_classArray;
+    EMBASegumentView  *segumentView;
+    NSMutableArray    *_dataSource;
+    UITableView       *_tableView;
     
-    UITableView *_tableView;
-    
-    BOOL isOpen[3];
+    int               _typeIndex;//班级0 行业1 同乡2 标识符
 }
 @end
 
-
-#define  CLASSTAG 1
-#define  VOCATION 2
-#define  SAME 3
 @implementation EMBASchoolfellow_ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,153 +34,261 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     self.navigationItem.leftBarButtonItem = openItem;
     
+    _dataSource = [[NSMutableArray alloc]init];
+    
+    segumentView = [[EMBASegumentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) btnInformation:@[                                                                          @[@"班级",@"班级"],                                                                        @[@"行业",@"行业"],                                                                      @[@"同乡",@"同乡"],                                                                                                                                              @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
+    segumentView.delegate = self;
+    [self.view addSubview:segumentView];
     
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
-    
-    UIImageView *segmentImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 194, 29)];
-    segmentImageView.center =  CGPointMake(self.view.center.x, 30);
-    segmentImageView.tag = 10;
-    segmentImageView.image = [UIImage imageNamed:@"班级.png"];
-    segmentImageView.userInteractionEnabled = YES;
-    [self.view addSubview:segmentImageView];
-    
-    for (int i = 0; i < 3; i++) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.tag=i+1;
-        btn.frame = CGRectMake(i*65, 0, 65, 29);
-        [btn addTarget:self action:@selector(menuClick:) forControlEvents:UIControlEventTouchUpInside];
-        [segmentImageView addSubview:btn];
-    }
-    
-    
-    _contentView = [[UIView alloc] initWithFrame:CGRectMake(0,55, 320, 568-55-49)];
-    _contentView.backgroundColor = [UIColor purpleColor];
-    [self.view addSubview:_contentView];
-    
-    
-    
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, 320, 568-55-49) style:UITableViewStyleGrouped];
-    _tableView.delegate = self;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT-44) style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
-    _tableView.rowHeight = 130/2;
-    [_contentView addSubview:_tableView];
+    _tableView.delegate = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:_tableView];
     
-//    NSMutableArray *dataArray = [[NSMutableArray alloc] initWithCapacity:0];
-//
-////    存对象用  封装联系人的对象 对象中存联系的信息
-//    [dataArray addObject:];
+    _typeIndex = 0;
     
-    
-    _classArray = @[@"2013届1班",@"2013届2班",@"2013届3班"];
-    
-    
+    [self getDataSource];
+ 
 }
 
 
-- (void)menuClick:(UIButton *)btn
+#pragma mark -
+#pragma mark EMBAMineMenuCellDelegate -
+- (void)view:(UIView *)view didSelectIndex:(NSInteger)indexOfButton
 {
-    
-    UIImageView *imageView = (UIImageView *)[self.view viewWithTag:10];
-    
-    switch (btn.tag) {
-        case CLASSTAG:
+    switch (indexOfButton)
+    {
+        case 0:
         {
-        imageView.image = [UIImage imageNamed:@"班级.png"];
+            _typeIndex=0;
         }
             break;
-        case VOCATION:
+        case 1:
         {
-        imageView.image = [UIImage imageNamed:@"行业.png"];
-        }
+             _typeIndex=1;
+         }
             break;
-        case SAME:
+        case 2:
         {
-        imageView.image = [UIImage imageNamed:@"同乡.png"];
+           _typeIndex=2;
         }
             break;
         default:
             break;
     }
     
+    //此处刷新表格数据源 有接口请求接口 没接口自动选择数据
+    [self getDataSource];
 }
 
+#pragma mark -
+#pragma mark 请求获得表格数据源
 
-#pragma 代理方法
+-(void)getDataSource
+{
+    if (_dataSource)
+    {
+         [_dataSource removeAllObjects];
+    }
+    if (_typeIndex==0)
+    {
+        //班级
+        EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassOne.headImage = @"";
+        embaSchoolFellowClassOne.titleString = @"三年级一班";
+        embaSchoolFellowClassOne.detailString = @"[赵默笙]今天要交物理作业";
+        embaSchoolFellowClassOne.timeString = @"18:35";
+        [_dataSource addObject:embaSchoolFellowClassOne];
+        
+        EMBASchoolFellowEntity *embaSchoolFellowClassTwo = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassTwo.headImage = @"";
+        embaSchoolFellowClassTwo.titleString = @"三年级二班";
+        embaSchoolFellowClassTwo.detailString = @"一生一代一双人";
+        embaSchoolFellowClassTwo.timeString = @"18:35";
+        [_dataSource addObject:embaSchoolFellowClassTwo];
+        
+    }
+    else if (_typeIndex==1)
+    {
+        //行业
+        EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassOne.headImage = @"";
+        embaSchoolFellowClassOne.titleString = @"郑州IT";
+        embaSchoolFellowClassOne.detailString = @"[韩亚周]有没有做ios开发的?";
+        embaSchoolFellowClassOne.timeString = @"18:35";
+        [_dataSource addObject:embaSchoolFellowClassOne];
+        
+        EMBASchoolFellowEntity *embaSchoolFellowClassTwo = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassTwo.headImage = @"";
+        embaSchoolFellowClassTwo.titleString = @"机电行业";
+        embaSchoolFellowClassTwo.detailString = @"挖掘机技术哪家强";
+        embaSchoolFellowClassTwo.timeString = @"14:32";
+        [_dataSource addObject:embaSchoolFellowClassTwo];
+        
+        EMBASchoolFellowEntity *embaSchoolFellowClassThree = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassThree.headImage = @"";
+        embaSchoolFellowClassThree.titleString = @"珠宝行业";
+        embaSchoolFellowClassThree.detailString = @"金鑫珠宝黄金大298元/克";
+        embaSchoolFellowClassThree.timeString = @"14:32";
+        [_dataSource addObject:embaSchoolFellowClassThree];
+    }
+    else if (_typeIndex==2)
+    {
+        //同乡
+        EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassOne.headImage = @"";
+        embaSchoolFellowClassOne.titleString = @"郑州老乡群";
+        embaSchoolFellowClassOne.detailString = @"[年级班主任]陪伴是最长情的告白!";
+        embaSchoolFellowClassOne.timeString = @"14:32";
+        [_dataSource addObject:embaSchoolFellowClassOne];
+        
+        EMBASchoolFellowEntity *embaSchoolFellowClassTwo = [[EMBASchoolFellowEntity alloc]init];
+        embaSchoolFellowClassTwo.headImage = @"";
+        embaSchoolFellowClassTwo.titleString = @"大同老乡群";
+        embaSchoolFellowClassTwo.detailString = @"陪伴是最长情的告白!";
+        embaSchoolFellowClassTwo.timeString = @"14:32";
+        [_dataSource addObject:embaSchoolFellowClassTwo];
+    }
+    [_tableView reloadData];
+}
+//加入群点击
+-(void)footerButtonClick
+{
+    NSLog(@"点击加入一个群");
+}
 
+#pragma mark -
+#pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    if (isOpen[section]) {
-        return 0;
+    if (_dataSource.count>0)
+    {
+        return _dataSource.count;
     }
-    return 5;
+    else
+        return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    if (!cell)
+    if (_dataSource.count==0)
+    {
+        UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellID];
+        if (!cell)
         {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 20, 35, 35)];
-        imageView.backgroundColor = [UIColor yellowColor];
-        [cell addSubview:imageView];
-        
-        UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(62, 20, 200, 35)];
-        lab.backgroundColor = [UIColor redColor];
-        [cell addSubview:lab];
-        
-        
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         }
-    
-    
-    return cell;
+        cell.backgroundView = nil;
+        cell.backgroundColor = [UIColor clearColor];
+        
+       cell.textLabel.frame =CGRectMake(0, 25, SCREEN_WIDTH, 15);
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.textLabel.text = @"您可以创建一个群或加入一个群";
+        cell.textLabel.textColor = UIColorFromRGB(0x999999);
+        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+    else
+    {
+        EMBASchoolFellowTableViewCell *cell =(EMBASchoolFellowTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+        if (!cell)
+        {
+            cell = [[EMBASchoolFellowTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        }
+        EMBASchoolFellowEntity *embaSchoolFellow = [_dataSource objectAtIndex:indexPath.row];
+        [cell setImage:embaSchoolFellow.headImage andTitleStr:embaSchoolFellow.titleString andDetailStr:embaSchoolFellow.detailString andTimeStr:embaSchoolFellow.timeString];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        
+        return cell;
+    }
+    return nil;
     
 }
+
+#pragma mark -
+#pragma mark UITableViewDelegate
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+    headView.backgroundColor = [UIColor clearColor];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-    view.backgroundColor = [UIColor grayColor];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 12, SCREEN_WIDTH, 16)];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.backgroundColor = [UIColor clearColor];
+    if (_dataSource.count>0)
+    {
+        titleLabel.text = @"我加入的群";
+    }
+    else
+    {
+        titleLabel.text = @"您还没有加入群哦";
+    }
+    titleLabel.textColor = UIColorFromRGB(0x666666);
+    titleLabel.font = [UIFont systemFontOfSize:14.0];
+    [headView addSubview:titleLabel];
     
-    
-    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 200, 30)];
-    lab.text = [_classArray objectAtIndex:section];
-    [view addSubview:lab];
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    btn.frame =CGRectMake(280, 15, 20, 20);
-    btn.tag = section;
-    [btn addTarget:self action:@selector(openOrClose:) forControlEvents:UIControlEventTouchUpInside];
-    [view addSubview:btn];
-    return view;
+    return headView;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 65;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 50;
+    return 40;
 }
 
-
-- (void)openOrClose:(UIButton *)btn
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    isOpen[btn.tag] = !isOpen[btn.tag];
-    [_tableView reloadSections:[NSIndexSet indexSetWithIndex:btn.tag] withRowAnimation:UITableViewRowAnimationFade];
+    return 85;
 }
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if (section == 0)
+    {
+        UIButton *footerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        footerButton.frame = CGRectMake((SCREEN_WIDTH-143)/2, 20, 143, 45);
+        [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateNormal];
+        [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateHighlighted];
+        [footerButton addTarget:self action:@selector(footerButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 85)];
+        [footView setBackgroundColor:[UIColor clearColor]];
+        [footView addSubview:footerButton];
+        return footView;
+    }
+    return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_dataSource.count>0)
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//         EMBASchoolFellowEntity *embaSchoolFellow = [_dataSource objectAtIndex:indexPath.row];
+        
+    }
+}
+
+
 
 - (void)openButtonPressed
 {

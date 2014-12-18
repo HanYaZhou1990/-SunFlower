@@ -37,11 +37,11 @@
                                                                      nil]];
     
     _segumentView = [[EMBASegumentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) btnInformation:@[
-                                                                                                                @[@"10月",@"10月"],
-                                                                                                                @[@"11月",@"11月"],
-                                                                                                                @[@"12月",@"12月"],
-                                                                                                                @[@"1月",@"1月"],
-                                                                                                                @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
+                    @[@"10月",@"10月"],
+                    @[@"11月",@"11月"],
+                    @[@"12月",@"12月"],
+                    @[@"1月",@"1月"],
+                    @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
     _segumentView.delegate = self;
     
     _myActivityTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStylePlain];
@@ -171,6 +171,10 @@
     EMBAMyLessonCell *cell = (EMBAMyLessonCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
     cell.selectedBackgroundView.backgroundColor = UIColorFromRGB(0xFCF6D3);
+    
+    EMBAMyActivityDetailViewController *detailViewController = [[EMBAMyActivityDetailViewController alloc] init];
+    detailViewController.title = @"活动详情";
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {[super didReceiveMemoryWarning];}

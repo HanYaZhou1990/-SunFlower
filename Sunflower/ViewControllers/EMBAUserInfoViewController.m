@@ -63,18 +63,22 @@
     
     self.navigationItem.leftBarButtonItem=leftBarButton;
     
+    self.title = @"金秀贤";
+    NSDictionary * attDic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,[UIFont systemFontOfSize:15],UITextAttributeFont, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:attDic];
     
-    _titleArray = @[@"dianhua",@"youxiang",@"dizhi",@"banji"];
-    _subArray = @[@"138......",@"23@123.com",@"zhongguohenanzhengzhou",@"sannianerban"];
+    _titleArray = @[@"电话",@"邮箱",@"地址",@"班级"];
+    _subArray = @[@"18877871122",@"18877871122@123.com",@"中国河南郑州",@"三年二班"];
     
-    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"bianji" style:UIBarButtonItemStylePlain target:Nil action:@selector(editRightBarItem)];
+    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editRightBarItem)];
     self.navigationItem.rightBarButtonItem = rightItem;
-    
     
         // Do any additional setup after loading the view.
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.tableFooterView = [UIView new];
+    _tableView.backgroundColor = UIColorFromRGB(0xe5e5e5);
     [self.view addSubview:_tableView];
     
 }
@@ -95,7 +99,15 @@
     }else{
         return 4;
     }
-    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 85;
+    }else{
+        return 65;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -105,28 +117,26 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
-    if (indexPath.section == 0) {
-        
-        cell.imageView.backgroundColor = [UIColor redColor];
-        cell.textLabel.text = @"XXXXXX";
-        cell.detailTextLabel.text = @"mmmmmmmmmmmmmmmmmmm";
-        
-        
-        
-        
-        
-        
-        
-        
-    }else{
-        
-        cell.textLabel.text = _titleArray[indexPath.row];
-        cell.detailTextLabel.text = _subArray[indexPath.row];
-        
-        
-    }
-    return cell;
+        if (indexPath.section == 0) {
+            EMBAPersonalCell * cell = [[EMBAPersonalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
+            cell.titleLabel.text = @"金秀贤";
+            cell.titleLabel.textColor = UIColorFromRGB(0x333333);
+            cell.detailLabel.text = @"汽车行业";
+            cell.detailLabel.textColor = UIColorFromRGB(0x999999);
+            cell.titleImgView.image  = [UIImage imageNamed:@"success.png"];
+            return cell;
+            
+        }else{
+            UITableViewCell * cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:Nil];
+            cell.textLabel.text = _titleArray[indexPath.row];
+            cell.textLabel.textColor = UIColorFromRGB(0x999999);
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            cell.detailTextLabel.text = _subArray[indexPath.row];
+            cell.detailTextLabel.textColor = UIColorFromRGB(0x333333);
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+           return cell;
+        }
+
 }
 
 - (void)editRightBarItem
@@ -134,5 +144,7 @@
     EMBAPersonalEditViewController * vc = [[EMBAPersonalEditViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark -
 
 @end

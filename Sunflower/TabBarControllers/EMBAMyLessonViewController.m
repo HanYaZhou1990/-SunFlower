@@ -148,6 +148,10 @@
     return 44;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 15;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return _segumentView;
 }
@@ -175,6 +179,10 @@
     EMBAMyLessonCell *cell = (EMBAMyLessonCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
     cell.selectedBackgroundView.backgroundColor = UIColorFromRGB(0xFCF6D3);
+    
+    EMBAMyLessonDetailViewController *detailViewController = [[EMBAMyLessonDetailViewController alloc] init];
+    detailViewController.title = @"课程详情";
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {[super didReceiveMemoryWarning];}

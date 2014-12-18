@@ -26,18 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"JinXiuXian ";
+    self.title = @"金秀贤";
     
-    _titleArray = @[@"dianhua",@"youxiang",@"dizhi",@"banji"];
-    _subArray = @[@"138......",@"23@123.com",@"zhongguohenanzhengzhou",@"sannianerban"];
+    _titleArray = @[@"电话",@"邮箱",@"地址",@"班级"];
+    _subArray = @[@"18788899987",@"18788899987@123.com",@"中国河南郑州市",@"三年二班"];
     
-    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"wancheng" style:UIBarButtonItemStylePlain target:Nil action:@selector(endRightBarItem)];
+    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:Nil action:@selector(endRightBarItem)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
     
 	_tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.tableFooterView = [UIView new];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
 }
 
@@ -45,17 +47,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
-    
 }
-
-
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if (indexPath.row == 0) {
         EMBAPersonalCell * cell = [[EMBAPersonalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
-        cell.titleLabel.text = @"JinXiuXian";
+        cell.titleLabel.text = @"金秀贤";
+        cell.detailLabel.text = @"汽";
+        cell.titleImgView.image = [UIImage imageNamed:@"success.png"];
+        cell.smallLineView.hidden = NO;
+        cell.longLineView.hidden = NO;
+        cell.deleteButton.hidden = NO;
         return cell;
         
     }else{
@@ -64,10 +67,7 @@
         contentCell.contentLabel.text = _subArray[indexPath.row-1];
         
         return contentCell;
-        
     }
-    
-    
 }
 
 #pragma mark - Click
