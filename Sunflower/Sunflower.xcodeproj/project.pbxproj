@@ -13,6 +13,7 @@
 		3EF9E7C01A44847F0011F182 /* icon-useMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7BC1A44847F0011F182 /* icon-useMessage@2x.png */; };
 		3EF9E7C11A44847F0011F182 /* sendMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7BD1A44847F0011F182 /* sendMessage@2x.png */; };
 		3EF9E7C31A448D710011F182 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF9E7C21A448D710011F182 /* MessageUI.framework */; };
+		3EF9E7C51A44A55D0011F182 /* userInfoIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7C41A44A55D0011F182 /* userInfoIcon@2x.png */; };
 		589D69061A207E91002EAB1F /* left_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FB1A207E91002EAB1F /* left_about@2x.png */; };
 		589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FC1A207E91002EAB1F /* left_collect@2x.png */; };
 		589D69081A207E91002EAB1F /* left_contactus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FD1A207E91002EAB1F /* left_contactus@2x.png */; };
@@ -197,6 +198,7 @@
 		3EF9E7BC1A44847F0011F182 /* icon-useMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-useMessage@2x.png"; sourceTree = "<group>"; };
 		3EF9E7BD1A44847F0011F182 /* sendMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sendMessage@2x.png"; sourceTree = "<group>"; };
 		3EF9E7C21A448D710011F182 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3EF9E7C41A44A55D0011F182 /* userInfoIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userInfoIcon@2x.png"; sourceTree = "<group>"; };
 		589D68FB1A207E91002EAB1F /* left_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_about@2x.png"; sourceTree = "<group>"; };
 		589D68FC1A207E91002EAB1F /* left_collect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_collect@2x.png"; sourceTree = "<group>"; };
 		589D68FD1A207E91002EAB1F /* left_contactus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_contactus@2x.png"; sourceTree = "<group>"; };
@@ -669,6 +671,7 @@
 		A8367D4919FAA03700ED14CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3EF9E7C41A44A55D0011F182 /* userInfoIcon@2x.png */,
 				3EF9E7BA1A44847F0011F182 /* icon-email@2x.png */,
 				3EF9E7BB1A44847F0011F182 /* icon-telephone@2x.png */,
 				3EF9E7BC1A44847F0011F182 /* icon-useMessage@2x.png */,
@@ -1325,6 +1328,7 @@
 			files = (
 				589D690F1A207E91002EAB1F /* setting_switch_on@2x.png in Resources */,
 				CFA16E851A42EF7D000E46D7 /* addOneGroup@2x.png in Resources */,
+				3EF9E7C51A44A55D0011F182 /* userInfoIcon@2x.png in Resources */,
 				CFD19E6F1A34ADEB00B07ECF /* collect_bar_icon.png in Resources */,
 				A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */,
 				3EF9E7B71A44684D0011F182 /* open_expand@2x.png in Resources */,
