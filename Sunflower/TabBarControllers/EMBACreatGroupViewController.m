@@ -91,7 +91,7 @@
 
 - (void)submitItemClicked:(UIBarButtonItem *)sender{
     EMBACreatSuccessViewController *successViewController = [[EMBACreatSuccessViewController alloc] init];
-    successViewController.title = @"创建群租成功";
+    successViewController.title = @"创建群组成功";
     [self.navigationController pushViewController:successViewController animated:YES];
 }
 

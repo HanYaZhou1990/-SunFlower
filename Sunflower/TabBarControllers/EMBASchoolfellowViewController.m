@@ -1,10 +1,10 @@
-//
-//  EMBASchoolfellowViewController.m
-//  Sunflower
-//
-//  Created by hanyazhou on 14-11-26.
-//  Copyright (c) 2014年 韩亚周. All rights reserved.
-//
+    //
+    //  EMBASchoolfellowViewController.m
+    //  Sunflower
+    //
+    //  Created by hanyazhou on 14-11-26.
+    //  Copyright (c) 2014年 韩亚周. All rights reserved.
+    //
 
 #import "EMBASchoolfellowViewController.h"
 #import "EMBASchoolFellowEntity.h"
@@ -41,10 +41,10 @@
     _dataSource = [[NSMutableArray alloc]init];
     
     segumentView = [[EMBASegumentView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) btnInformation:@[
-                @[@"班级",@"班级"],
-                @[@"行业",@"行业"],
-                @[@"同乡",@"同乡"],
-                @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
+                                                                                                               @[@"班级",@"班级"],
+                                                                                                               @[@"行业",@"行业"],
+                                                                                                               @[@"同乡",@"同乡"],
+                                                                                                               @[[NSString stringWithFormat:@"%d",0],[UIImage initWithColor:UIColorFromRGB(0xF6F6F6)]]]];
     segumentView.delegate = self;
     [self.view addSubview:segumentView];
     
@@ -58,7 +58,7 @@
     _typeIndex = 0;
     
     [self getDataSource];
- 
+    
 }
 
 
@@ -70,24 +70,24 @@
     {
         case 0:
         {
-            _typeIndex=0;
+        _typeIndex=0;
         }
-            break;
+        break;
         case 1:
         {
-             _typeIndex=1;
-         }
-            break;
+        _typeIndex=1;
+        }
+        break;
         case 2:
         {
-           _typeIndex=2;
+        _typeIndex=2;
         }
-            break;
+        break;
         default:
-            break;
+        break;
     }
     
-    //此处刷新表格数据源 有接口请求接口 没接口自动选择数据
+        //此处刷新表格数据源 有接口请求接口 没接口自动选择数据
     [self getDataSource];
 }
 
@@ -97,12 +97,12 @@
 -(void)getDataSource
 {
     if (_dataSource)
-    {
-         [_dataSource removeAllObjects];
-    }
+        {
+        [_dataSource removeAllObjects];
+        }
     if (_typeIndex==0)
-    {
-        //班级
+        {
+            //班级
         EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
         embaSchoolFellowClassOne.headImage = @"";
         embaSchoolFellowClassOne.titleString = @"三年级一班";
@@ -117,10 +117,10 @@
         embaSchoolFellowClassTwo.timeString = @"18:35";
         [_dataSource addObject:embaSchoolFellowClassTwo];
         
-    }
+        }
     else if (_typeIndex==1)
-    {
-        //行业
+        {
+            //行业
         EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
         embaSchoolFellowClassOne.headImage = @"";
         embaSchoolFellowClassOne.titleString = @"郑州IT";
@@ -141,10 +141,10 @@
         embaSchoolFellowClassThree.detailString = @"金鑫珠宝黄金大298元/克";
         embaSchoolFellowClassThree.timeString = @"14:32";
         [_dataSource addObject:embaSchoolFellowClassThree];
-    }
+        }
     else if (_typeIndex==2)
-    {
-        //同乡
+        {
+            //同乡
         EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
         embaSchoolFellowClassOne.headImage = @"";
         embaSchoolFellowClassOne.titleString = @"郑州老乡群";
@@ -158,7 +158,7 @@
         embaSchoolFellowClassTwo.detailString = @"陪伴是最长情的告白!";
         embaSchoolFellowClassTwo.timeString = @"14:32";
         [_dataSource addObject:embaSchoolFellowClassTwo];
-    }
+        }
     [_tableView reloadData];
 }
 
@@ -173,9 +173,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (_dataSource.count>0)
-    {
+        {
         return _dataSource.count;
-    }
+        }
     else
         return 1;
 }
@@ -185,16 +185,16 @@
     static NSString *cellID = @"cell";
     
     if (_dataSource.count==0)
-    {
+        {
         UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellID];
         if (!cell)
-        {
+            {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        }
+            }
         cell.backgroundView = nil;
         cell.backgroundColor = [UIColor clearColor];
         
-       cell.textLabel.frame =CGRectMake(0, 25, SCREEN_WIDTH, 15);
+        cell.textLabel.frame =CGRectMake(0, 25, SCREEN_WIDTH, 15);
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.textLabel.text = @"您可以创建一个群或加入一个群";
@@ -202,20 +202,20 @@
         cell.textLabel.font = [UIFont systemFontOfSize:14.0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-    }
+        }
     else
-    {
+        {
         EMBASchoolFellowTableViewCell *cell =(EMBASchoolFellowTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
         if (!cell)
-        {
+            {
             cell = [[EMBASchoolFellowTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        }
+            }
         EMBASchoolFellowEntity *embaSchoolFellow = [_dataSource objectAtIndex:indexPath.row];
         [cell setImage:embaSchoolFellow.headImage andTitleStr:embaSchoolFellow.titleString andDetailStr:embaSchoolFellow.detailString andTimeStr:embaSchoolFellow.timeString];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         return cell;
-    }
+        }
     return nil;
     
 }
@@ -229,13 +229,13 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.backgroundColor = [UIColor clearColor];
     if (_dataSource.count>0)
-    {
+        {
         titleLabel.text = @"我加入的群";
-    }
+        }
     else
-    {
+        {
         titleLabel.text = @"您还没有加入群哦";
-    }
+        }
     titleLabel.textColor = UIColorFromRGB(0x666666);
     titleLabel.font = [UIFont systemFontOfSize:14.0];
     return titleLabel;
@@ -269,21 +269,24 @@
     [footerButton setImage:[UIImage imageNamed:@"addOneGroup.png"] forState:UIControlStateHighlighted];
     [footerButton addTarget:self action:@selector(addOneGroupButtonclicked:) forControlEvents:UIControlEventTouchUpInside];
     [footView addSubview:footerButton];
-    if (_typeIndex == 0 || _typeIndex == 1) {
+    if (_typeIndex == 0 || _typeIndex == 1)
+        {
         creatButton.frame = CGRectMake(15, 20, 142, 45);
         footerButton.frame = CGRectMake(CGRectGetMaxX(creatButton.frame)+6, 20, 142, 45);
-    }else{
-    footerButton.frame = CGRectMake((SCREEN_WIDTH-142)/2, 20, 142, 45);
-    }
+        }
+    else
+        {
+        footerButton.frame = CGRectMake((SCREEN_WIDTH-142)/2, 20, 142, 45);
+        }
     return footView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_dataSource.count>0)
-    {
+        {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
+        }
 }
 
 #pragma mark -

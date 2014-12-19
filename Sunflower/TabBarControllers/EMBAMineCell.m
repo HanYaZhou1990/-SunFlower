@@ -51,6 +51,7 @@
 }
 
 - (void)layoutSubviews{
+    [super layoutSubviews];
     _nameLable.frame = CGRectMake(LEFT_RIGHT, TOP_BOTTOM_HEIGHT, SCREEN_WIDTH - LEFT_RIGHT*2 - SOMEBODY_WIDTH, TOP_BOTTOM_HEIGHT);
     _somebodyLable.frame = CGRectMake(CGRectGetMaxX(_nameLable.frame), TOP_BOTTOM_HEIGHT, SOMEBODY_WIDTH, TOP_BOTTOM_HEIGHT);
     _addressLable.frame = CGRectMake(LEFT_RIGHT, CGRectGetMaxY(_nameLable.frame)+10, SCREEN_WIDTH - LEFT_RIGHT*2, TOP_BOTTOM_HEIGHT);

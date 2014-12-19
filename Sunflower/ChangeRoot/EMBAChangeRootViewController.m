@@ -20,10 +20,10 @@
     
     UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:[EMBAMineViewController new]];
     
-    UINavigationController *togetherNav = [[UINavigationController alloc] initWithRootViewController:[EMBATogetherViewController new]];
+//    UINavigationController *togetherNav = [[UINavigationController alloc] initWithRootViewController:[EMBATogetherViewController new]];
     
     
-    [EMBAAppDelegate shareAppDelegate].tabBarController.viewControllers = @[mainNav,schoolNav,mineNav,togetherNav];
+    [EMBAAppDelegate shareAppDelegate].tabBarController.viewControllers = @[mainNav,schoolNav,mineNav];
 //    [EMBAAppDelegate shareAppDelegate].window.rootViewController = [EMBAAppDelegate shareAppDelegate].tabBarController;
     return [EMBAAppDelegate shareAppDelegate].tabBarController;
 }
