@@ -16,3 +16,11 @@
 @property (nonatomic,copy) NSString *timeString;
 
 @end
+
+@interface EMBASchoolFellowClassEntity : NSObject
+
+@property (nonatomic,copy) NSString *classId;
+@property (nonatomic,copy) NSString *className;
+@property (nonatomic,strong) NSMutableArray *classList;
+
+@end
