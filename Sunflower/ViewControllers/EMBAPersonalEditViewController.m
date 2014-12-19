@@ -51,26 +51,46 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *cellID = @"cell";
+    
+    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    
     if (indexPath.row == 0)
     {
-        EMBAPersonalCell * cell = [[EMBAPersonalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
-        cell.titleLabel.text = @"金秀贤";
-        cell.detailLabel.text = @"汽";
-        cell.titleImgView.image = [UIImage imageNamed:@"success.png"];
-        cell.smallLineView.hidden = NO;
-        cell.longLineView.hidden = NO;
-        cell.deleteButton.hidden = NO;
-        return cell;
+        UIImageView *titleImgView = [[UIImageView alloc]initWithFrame:CGRectMake(16, 16, 50, 50)];
+        titleImgView.layer.cornerRadius = titleImgView.frame.size.width/2;
+        titleImgView.image  = [UIImage imageNamed:@"bg.png"];
+        [cell.contentView addSubview:titleImgView];
         
+        UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 20, SCREEN_WIDTH-90, 20)];
+        titleLabel.font = [UIFont systemFontOfSize:15];
+        titleLabel.text = @"金秀贤";
+        titleLabel.textColor = UIColorFromRGB(0x333333);
+        [cell.contentView addSubview:titleLabel];
+        
+        UILabel *detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 45, SCREEN_WIDTH-90, 20)];
+        detailLabel.font = [UIFont systemFontOfSize:13];
+        detailLabel.text = @"汽车行业";
+        detailLabel.textColor = UIColorFromRGB(0x999999);
+        [cell addSubview:detailLabel];
+        
+        UIView *smallLineView = [[UIView alloc]initWithFrame:CGRectMake(75, 35, SCREEN_WIDTH-80, 1)];
+        smallLineView.hidden = YES;
+        [cell.contentView addSubview:smallLineView];
+        
+        UIView *longLineView = [[UIView alloc]initWithFrame:CGRectMake(3, 85, SCREEN_WIDTH-5, 1)];
+        [cell.contentView addSubview:longLineView];
     }
     else
     {
-        EMBAPersonalContentCell * contentCell = [[EMBAPersonalContentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
-        contentCell.titleContentLabel.text = _titleArray[indexPath.row-1];
-        contentCell.contentLabel.text = _subArray[indexPath.row-1];
-        
-        return contentCell;
+       
     }
+    
+    return cell;
 }
 
 #pragma mark - Click
