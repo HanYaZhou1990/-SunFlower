@@ -121,6 +121,7 @@
 		CF88F4331A41D7CB0009DCED /* EMBACalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF88F4321A41D7CB0009DCED /* EMBACalculation.m */; };
 		CF88F4411A41FFBB0009DCED /* To.png in Resources */ = {isa = PBXBuildFile; fileRef = CF88F43F1A41FFBB0009DCED /* To.png */; };
 		CF88F4421A41FFBB0009DCED /* To@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF88F4401A41FFBB0009DCED /* To@2x.png */; };
+		CF9229891A44AEFD00676A02 /* smallOpenBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9229871A44AEFD00676A02 /* smallOpenBar@2x.png */; };
 		CFA16E7B1A42EECC000E46D7 /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */; };
 		CFA16E7C1A42EECC000E46D7 /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E781A42EECC000E46D7 /* EMBAPersonalEditViewController.m */; };
 		CFA16E7D1A42EECC000E46D7 /* EMBAUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */; };
@@ -429,6 +430,7 @@
 		CF88F4321A41D7CB0009DCED /* EMBACalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACalculation.m; sourceTree = "<group>"; };
 		CF88F43F1A41FFBB0009DCED /* To.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = To.png; sourceTree = "<group>"; };
 		CF88F4401A41FFBB0009DCED /* To@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "To@2x.png"; sourceTree = "<group>"; };
+		CF9229871A44AEFD00676A02 /* smallOpenBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallOpenBar@2x.png"; sourceTree = "<group>"; };
 		CFA16E751A42EECC000E46D7 /* EMBAPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalCell.h; sourceTree = "<group>"; };
 		CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalCell.m; sourceTree = "<group>"; };
 		CFA16E771A42EECC000E46D7 /* EMBAPersonalEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalEditViewController.h; sourceTree = "<group>"; };
@@ -822,6 +824,7 @@
 		CF5021EA1A2B31A7004BA44D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CF9229871A44AEFD00676A02 /* smallOpenBar@2x.png */,
 				A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */,
 				A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */,
 				CF5021EB1A2B31D5004BA44D /* EMBAMainCell.h */,
@@ -1377,6 +1380,7 @@
 				CF59AA031A409C67005C6529 /* myActivity@2x.png in Resources */,
 				589D690B1A207E91002EAB1F /* noCollectPrompt@2x.png in Resources */,
 				589D690D1A207E91002EAB1F /* personalInfo_SArrow@2x.png in Resources */,
+				CF9229891A44AEFD00676A02 /* smallOpenBar@2x.png in Resources */,
 				A8367D5019FAA04500ED14CA /* bg.png in Resources */,
 				A8C927A91A26375D00426D48 /* school_icon@2x.png in Resources */,
 				CFD19E6B1A34ADAD00B07ECF /* Search_Bar.png in Resources */,

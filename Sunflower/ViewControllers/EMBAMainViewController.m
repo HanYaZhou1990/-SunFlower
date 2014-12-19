@@ -42,6 +42,7 @@
         
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
+    openItem.tag = 19;
     self.navigationItem.leftBarButtonItem = openItem;
     
     
