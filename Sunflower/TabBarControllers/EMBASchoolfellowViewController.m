@@ -11,6 +11,8 @@
 #import "EMBASchoolFellowTableViewCell.h"
 #import "EMBASegumentView.h"
 #import "ExpandHeader.h"
+#import "EMBAUserInfoViewController.h"
+#import "EMBAGroupDetailViewController.h"
 
 @interface EMBASchoolfellow_ViewController ()<UITableViewDelegate,UITableViewDataSource,EMBASegumentViewDelegate>
 {
@@ -58,7 +60,7 @@
     [self.view addSubview:segumentView];
     
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT-44) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT-44-TABBAR_HEIGHT) style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -441,8 +443,16 @@
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         if (_typeIndex == 0)
             {
-            
+                EMBAUserInfoViewController *uIVC = [[EMBAUserInfoViewController alloc]init];
+                uIVC.isUser = NO;
+                [self.navigationController pushViewController:uIVC animated:YES];
             }
+            if (_typeIndex == 1||_typeIndex ==2)
+            {
+                EMBAGroupDetailViewController *gDVC = [[EMBAGroupDetailViewController alloc]init];
+                [self.navigationController pushViewController:gDVC animated:YES];
+            }
+
         }
 }
 

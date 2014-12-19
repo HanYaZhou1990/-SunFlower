@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3EF9E7B71A44684D0011F182 /* open_expand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7B61A44684D0011F182 /* open_expand@2x.png */; };
+		3EF9E7BE1A44847F0011F182 /* icon-email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7BA1A44847F0011F182 /* icon-email@2x.png */; };
+		3EF9E7BF1A44847F0011F182 /* icon-telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7BB1A44847F0011F182 /* icon-telephone@2x.png */; };
+		3EF9E7C01A44847F0011F182 /* icon-useMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7BC1A44847F0011F182 /* icon-useMessage@2x.png */; };
+		3EF9E7C11A44847F0011F182 /* sendMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7BD1A44847F0011F182 /* sendMessage@2x.png */; };
+		3EF9E7C31A448D710011F182 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF9E7C21A448D710011F182 /* MessageUI.framework */; };
 		589D69061A207E91002EAB1F /* left_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FB1A207E91002EAB1F /* left_about@2x.png */; };
 		589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FC1A207E91002EAB1F /* left_collect@2x.png */; };
 		589D69081A207E91002EAB1F /* left_contactus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FD1A207E91002EAB1F /* left_contactus@2x.png */; };
@@ -187,6 +192,11 @@
 
 /* Begin PBXFileReference section */
 		3EF9E7B61A44684D0011F182 /* open_expand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_expand@2x.png"; sourceTree = "<group>"; };
+		3EF9E7BA1A44847F0011F182 /* icon-email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-email@2x.png"; sourceTree = "<group>"; };
+		3EF9E7BB1A44847F0011F182 /* icon-telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-telephone@2x.png"; sourceTree = "<group>"; };
+		3EF9E7BC1A44847F0011F182 /* icon-useMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-useMessage@2x.png"; sourceTree = "<group>"; };
+		3EF9E7BD1A44847F0011F182 /* sendMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sendMessage@2x.png"; sourceTree = "<group>"; };
+		3EF9E7C21A448D710011F182 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		589D68FB1A207E91002EAB1F /* left_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_about@2x.png"; sourceTree = "<group>"; };
 		589D68FC1A207E91002EAB1F /* left_collect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_collect@2x.png"; sourceTree = "<group>"; };
 		589D68FD1A207E91002EAB1F /* left_contactus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_contactus@2x.png"; sourceTree = "<group>"; };
@@ -496,6 +506,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF9E7C31A448D710011F182 /* MessageUI.framework in Frameworks */,
 				CF59A9F81A408E65005C6529 /* libExpandHeader.a in Frameworks */,
 				A825EE4519FAA8DB0044F48D /* QuartzCore.framework in Frameworks */,
 				A8367D1719FAA00E00ED14CA /* CoreGraphics.framework in Frameworks */,
@@ -603,6 +614,7 @@
 		A8367D1319FAA00E00ED14CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EF9E7C21A448D710011F182 /* MessageUI.framework */,
 				A825EE4419FAA8DB0044F48D /* QuartzCore.framework */,
 				A8367D1419FAA00E00ED14CA /* Foundation.framework */,
 				A8367D1619FAA00E00ED14CA /* CoreGraphics.framework */,
@@ -657,6 +669,10 @@
 		A8367D4919FAA03700ED14CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3EF9E7BA1A44847F0011F182 /* icon-email@2x.png */,
+				3EF9E7BB1A44847F0011F182 /* icon-telephone@2x.png */,
+				3EF9E7BC1A44847F0011F182 /* icon-useMessage@2x.png */,
+				3EF9E7BD1A44847F0011F182 /* sendMessage@2x.png */,
 				3EF9E7B61A44684D0011F182 /* open_expand@2x.png */,
 				CF88F43F1A41FFBB0009DCED /* To.png */,
 				CF88F4401A41FFBB0009DCED /* To@2x.png */,
@@ -1313,6 +1329,7 @@
 				A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */,
 				3EF9E7B71A44684D0011F182 /* open_expand@2x.png in Resources */,
 				CF59AA051A409C67005C6529 /* myClass@2x.png in Resources */,
+				3EF9E7C11A44847F0011F182 /* sendMessage@2x.png in Resources */,
 				A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */,
 				589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */,
 				CF59A9C81A408404005C6529 /* CURRENT.png in Resources */,
@@ -1329,11 +1346,13 @@
 				CF5CF82A1A385CAF00A3C2D2 /* other@2x.png in Resources */,
 				CFD19E701A34ADEB00B07ECF /* collect_bar_icon@2x.png in Resources */,
 				CF5021F01A2B542D004BA44D /* 1.png in Resources */,
+				3EF9E7BE1A44847F0011F182 /* icon-email@2x.png in Resources */,
 				A8367D2119FAA00E00ED14CA /* InfoPlist.strings in Resources */,
 				A8367D5119FAA04500ED14CA /* lock.png in Resources */,
 				CF5021F81A2B547D004BA44D /* newMessage1.png in Resources */,
 				A8C927A21A2636C900426D48 /* school_icon.png in Resources */,
 				CFD19E6C1A34ADAD00B07ECF /* Search_Bar@2x.png in Resources */,
+				3EF9E7BF1A44847F0011F182 /* icon-telephone@2x.png in Resources */,
 				CFDE4BDD1A38BBEE001B3BBA /* noCollection@2x.png in Resources */,
 				CF5CF8161A38231700A3C2D2 /* EaseMob.bundle in Resources */,
 				CFDE4BB61A3887B6001B3BBA /* 同乡.png in Resources */,
@@ -1359,6 +1378,7 @@
 				CFD19E6B1A34ADAD00B07ECF /* Search_Bar.png in Resources */,
 				CFDE4BB71A3887B6001B3BBA /* 同乡@2x.png in Resources */,
 				A8367D2C19FAA00E00ED14CA /* Images.xcassets in Resources */,
+				3EF9E7C01A44847F0011F182 /* icon-useMessage@2x.png in Resources */,
 				CF59AA061A409C67005C6529 /* myLesson.png in Resources */,
 				589D690A1A207E91002EAB1F /* left_systemsetting@2x.png in Resources */,
 				589D69101A207E91002EAB1F /* setting_switch@2x.png in Resources */,

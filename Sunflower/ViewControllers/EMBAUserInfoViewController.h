@@ -14,6 +14,9 @@
 
 @interface EMBAUserInfoViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property (strong ,nonatomic) NSString *userIdStr;//详情ID
+@property (assign,nonatomic) BOOL isUser;//判断是否是用户自己
+
 @property (strong, nonatomic) TWTSideMenuViewController *sideMenuViewController;
 
 @property (nonatomic, strong) UITableView                                               * tableView;

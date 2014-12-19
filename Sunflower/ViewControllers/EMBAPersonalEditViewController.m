@@ -51,7 +51,8 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0)
+    {
         EMBAPersonalCell * cell = [[EMBAPersonalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
         cell.titleLabel.text = @"金秀贤";
         cell.detailLabel.text = @"汽";
@@ -61,7 +62,9 @@
         cell.deleteButton.hidden = NO;
         return cell;
         
-    }else{
+    }
+    else
+    {
         EMBAPersonalContentCell * contentCell = [[EMBAPersonalContentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
         contentCell.titleContentLabel.text = _titleArray[indexPath.row-1];
         contentCell.contentLabel.text = _subArray[indexPath.row-1];
