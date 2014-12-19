@@ -10,6 +10,7 @@
 #import "TWTSideMenuViewController.h"
 #import "EMBAMainCell.h"
 #import "EMBAMessageViewController.h"
+#import "EMBAMyCollectionViewController.h"
 
 @interface EMBAMainViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 

@@ -17,6 +17,7 @@
 #import "EMBAMyClassViewController.h"
 #import "EMBAMyLessonViewController.h"
 #import "EMBAMyActivityViewController.h"
+#import "EMBAMyCollectionViewController.h"
 
 @interface EMBAMineViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate,EMBAMineMenuCellDelegate>
 

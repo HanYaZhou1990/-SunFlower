@@ -33,5 +33,6 @@
 @property (nonatomic, strong) NSArray                   *messageAry;
 /*!收藏的校友*/
 @property (nonatomic, strong) NSArray                   *schoolFriendAry;
-
+/*!作为进入页面的标示，用来判断依哪种形式完成返回，如果为yes －> pop*/
+@property (nonatomic, assign) BOOL                      needPop;
 @end

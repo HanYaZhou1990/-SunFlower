@@ -24,7 +24,9 @@
 }
 
 - (void)barItemClick:(UIBarButtonItem *)barButtonItem{
-    
+    EMBAMyCollectionViewController *myCollectionVC = [[EMBAMyCollectionViewController alloc] init];
+    myCollectionVC.needPop = YES;
+    [self.navigationController pushViewController:myCollectionVC animated:YES];
 }
 
 - (void)viewDidLoad
@@ -33,12 +35,12 @@
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     self.navigationItem.leftBarButtonItem = openItem;
     
-    UIBarButtonItem *searchBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Search_Bar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
-    searchBarItem.tag = 20;
+//    UIBarButtonItem *searchBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Search_Bar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
+//    searchBarItem.tag = 20;
     UIBarButtonItem* collectBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"collect_bar_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
-    collectBarItem.tag = 21;
+//    collectBarItem.tag = 21;
     
-    self.navigationItem.rightBarButtonItems = @[collectBarItem,searchBarItem];
+    self.navigationItem.rightBarButtonItem = collectBarItem;
     
     _mineTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT) style:UITableViewStyleGrouped];
     _mineTableView.dataSource = self;

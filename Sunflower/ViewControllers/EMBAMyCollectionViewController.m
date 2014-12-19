@@ -70,11 +70,15 @@
 }
 
 - (void)openButtonPressed:(UIButton *)sender{
-    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
-    self.sideMenuViewController.shadowColor = [UIColor blackColor];
-    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
-    self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
-    [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+    if (_needPop) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
+        self.sideMenuViewController.shadowColor = [UIColor blackColor];
+        self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+        self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+        [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+    }
 }
 
 #pragma mark -

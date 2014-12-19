@@ -27,7 +27,13 @@
 }
 
 - (void)barItemClick:(UIBarButtonItem *)barButtonItem{
-    
+    if (barButtonItem.tag == 21) {
+        EMBAMyCollectionViewController *myCollectionVC = [[EMBAMyCollectionViewController alloc] init];
+        myCollectionVC.needPop = YES;
+        [self.navigationController pushViewController:myCollectionVC animated:YES];
+    }else{
+        
+    }
 }
 
 - (void)viewDidLoad
