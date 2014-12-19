@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EF9E7B71A44684D0011F182 /* open_expand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9E7B61A44684D0011F182 /* open_expand@2x.png */; };
 		589D69061A207E91002EAB1F /* left_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FB1A207E91002EAB1F /* left_about@2x.png */; };
 		589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FC1A207E91002EAB1F /* left_collect@2x.png */; };
 		589D69081A207E91002EAB1F /* left_contactus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 589D68FD1A207E91002EAB1F /* left_contactus@2x.png */; };
@@ -185,6 +186,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EF9E7B61A44684D0011F182 /* open_expand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open_expand@2x.png"; sourceTree = "<group>"; };
 		589D68FB1A207E91002EAB1F /* left_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_about@2x.png"; sourceTree = "<group>"; };
 		589D68FC1A207E91002EAB1F /* left_collect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_collect@2x.png"; sourceTree = "<group>"; };
 		589D68FD1A207E91002EAB1F /* left_contactus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_contactus@2x.png"; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 		A8367D4919FAA03700ED14CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3EF9E7B61A44684D0011F182 /* open_expand@2x.png */,
 				CF88F43F1A41FFBB0009DCED /* To.png */,
 				CF88F4401A41FFBB0009DCED /* To@2x.png */,
 				CF59A9FC1A409C67005C6529 /* myActivity.png */,
@@ -1308,6 +1311,7 @@
 				CFA16E851A42EF7D000E46D7 /* addOneGroup@2x.png in Resources */,
 				CFD19E6F1A34ADEB00B07ECF /* collect_bar_icon.png in Resources */,
 				A869AEE51A2382C500ABDB4B /* OpenBar.png in Resources */,
+				3EF9E7B71A44684D0011F182 /* open_expand@2x.png in Resources */,
 				CF59AA051A409C67005C6529 /* myClass@2x.png in Resources */,
 				A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */,
 				589D69071A207E91002EAB1F /* left_collect@2x.png in Resources */,

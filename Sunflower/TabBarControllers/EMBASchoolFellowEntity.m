@@ -11,3 +11,8 @@
 @implementation EMBASchoolFellowEntity
 
 @end
+
+
+@implementation EMBASchoolFellowClassEntity
+
+@end

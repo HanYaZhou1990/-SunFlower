@@ -12,6 +12,7 @@
 {
     UIButton *_backButton;
     UILabel *_barlabel;
+    
 }
 @end
 
