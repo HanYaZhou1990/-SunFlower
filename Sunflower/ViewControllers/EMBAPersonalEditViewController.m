@@ -17,6 +17,7 @@
     UITextField *classTextField;//班级
     UIImageView *titleImgView;//头像
     
+    UITextField *currentTextField;
 }
 @end
 
@@ -34,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setLeftNavigationBar];
     self.title = @"金秀贤";
     
     _titleArray = @[@"电话",@"邮箱",@"地址",@"班级"];
@@ -47,7 +49,29 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.tableFooterView = [UIView new];
+    _tableView.backgroundColor = UIColorFromRGB(0xe5e5e5);
     [self.view addSubview:_tableView];
+}
+
+- (void)setLeftNavigationBar
+{
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 0, 60, 44);
+    
+    [backButton setImage:[UIImage imageNamed:@"backButtonIcon.png"] forState:UIControlStateNormal];
+    backButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);/***上／左／下／右***/
+    [backButton setTitle:@"取消" forState:UIControlStateNormal];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(14, -8, 10, 0);
+    [backButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    self.navigationItem.leftBarButtonItem=leftBarButton;
+}
+
+- (void)backButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //图片点击事件
@@ -337,14 +361,18 @@
         [signTextField setPlaceholder:@"请输入简介"];
         [cell.contentView addSubview:signTextField];
         
-        UIView *smallLineView = [[UIView alloc]initWithFrame:CGRectMake(80, 45, SCREEN_WIDTH-90, 1)];
+        UIView *smallLineView = [[UIView alloc]initWithFrame:CGRectMake(80, 45.5, SCREEN_WIDTH-80, 0.5)];
         smallLineView.backgroundColor = UIColorFromRGB(0xd9d9d9);
         [cell.contentView addSubview:smallLineView];
+        
+        UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 84.5, SCREEN_WIDTH, 0.5)];
+        lineLabel.backgroundColor = UIColorFromRGB(0xd9d9d9);
+        [cell.contentView addSubview:lineLabel];
     }
     else
     {
         UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 12, 40, 20)];
-        leftLabel.font = [UIFont systemFontOfSize:16];
+        leftLabel.font = [UIFont systemFontOfSize:13];
         leftLabel.text = [_titleArray objectAtIndex:indexPath.row-1];
         leftLabel.textColor = UIColorFromRGB(0x0681ff);
         [cell.contentView addSubview:leftLabel];
@@ -366,16 +394,20 @@
         textField.autocapitalizationType = UITextAutocapitalizationTypeNone;//首字母是否自动大写
         [textField setDelegate:self];
         [cell.contentView addSubview:textField];
+        
+        UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 43.5, SCREEN_WIDTH, 0.5)];
+        lineLabel.backgroundColor = UIColorFromRGB(0xd9d9d9);
+        [cell.contentView addSubview:lineLabel];
         if (indexPath.row==1)
         {
-            textField.keyboardType = UIKeyboardTypeDefault;
+            textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
             textField.returnKeyType = UIReturnKeyNext;
             [textField setPlaceholder:@"请输入您的电话号码"];
             telephoneTextField = textField;
         }
         else if (indexPath.row==2)
         {
-            textField.keyboardType = UIKeyboardTypeDefault;
+            textField.keyboardType = UIKeyboardTypeEmailAddress;
             textField.returnKeyType = UIReturnKeyNext;
             [textField setPlaceholder:@"请输入您的邮箱"];
             emailTextField = textField;
@@ -422,10 +454,45 @@
     [classTextField resignFirstResponder];
    
 }
+
+#pragma mark - keyboard monitor event
+- (void)keyboardWasChange:(NSNotification *)aNotification
+{
+    NSString *str = [[UITextInputMode currentInputMode] primaryLanguage];
+    NSLog(@"输入法：%@",str);
+    NSDictionary *info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    NSLog(@"keyboard's height:%f, screen_height is %f", kbSize.height, SCREEN_HEIGHT);
+    
+    CGFloat frameHeight = [currentTextField convertRect:currentTextField.bounds toView:_tableView].origin.y + currentTextField.frame.size.height + 64;
+    [UIView animateWithDuration:[[aNotification.userInfo valueForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+        if ((SCREEN_HEIGHT - kbSize.height - frameHeight) < 0)
+        {
+            _tableView.frame = CGRectMake(0, (SCREEN_HEIGHT - kbSize.height - frameHeight), _tableView.frame.size.width, _tableView.frame.size.height);
+        }
+        
+    }completion:^(BOOL finished){
+    }];
+}
+
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-   
+    if (currentTextField != textField)
+    {
+        currentTextField = textField;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasChange:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [UIView animateWithDuration:0.01 animations:^{
+        _tableView.frame = CGRectMake(0, 0, _tableView.frame.size.width, _tableView.frame.size.height);
+    }completion:^(BOOL finished){
+        
+    }];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
 //email失去焦点，键盘消失
@@ -471,7 +538,6 @@
         [classTextField resignFirstResponder];
         [self endRightBarItem];
     }
-    
     return YES;
 }
 

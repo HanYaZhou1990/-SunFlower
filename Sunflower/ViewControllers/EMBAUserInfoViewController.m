@@ -239,6 +239,10 @@
         cell.detailTextLabel.textColor = UIColorFromRGB(0x333333);
         cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64.5, SCREEN_WIDTH, 0.5)];
+        lineLabel.backgroundColor = UIColorFromRGB(0xd9d9d9);
+        [cell.contentView addSubview:lineLabel];
         if (self.isUser==NO)
         {
             if (indexPath.row==0)
