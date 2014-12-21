@@ -13,7 +13,9 @@
 #import "EMBASettingsViewController.h"
 #import "EMBAChangeRootViewController.h"
 
-@interface EMBALoginViewController : EMBAFatherViewController
+#import "EaseMob.h"
+
+@interface EMBALoginViewController : EMBAFatherViewController<IChatManagerDelegate>
 
 @property (nonatomic, strong) EMBALoginInputView *inputView;
 @property (strong, nonatomic) TWTSideMenuViewController *sideMenuViewController;

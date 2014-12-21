@@ -27,6 +27,30 @@
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loginStateChange:)
+                                                 name:KNOTIFICATION_LOGINCHANGE
+                                               object:nil];
+    
+    NSString *apnsCertName = nil;
+#if DEBUG
+    apnsCertName = @"chatdemoui_dev";
+#else
+    apnsCertName = @"chatdemoui";
+#endif
+    [[EaseMob sharedInstance] registerSDKWithAppKey:@"han-yazhou#homechat" apnsCertName:apnsCertName];
+    
+#if DEBUG
+    [[EaseMob sharedInstance] enableUncaughtExceptionHandler];
+#endif
+    [[[EaseMob sharedInstance] chatManager] setAutoFetchBuddyList:YES];
+    
+        //以下一行代码的方法里实现了自动登录，异步登录，需要监听[didLoginWithInfo: error:]
+        //demo中此监听方法在MainViewController中
+    [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    
     return YES;
 }
 
@@ -45,6 +69,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [self saveContext];
+}
+
+
+-(void)loginStateChange:(NSNotification *)notification
+{
+    NSLog(@"登陆成功了 %@",[notification object]);
 }
 
 - (void)saveContext

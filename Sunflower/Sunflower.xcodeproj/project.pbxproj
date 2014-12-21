@@ -139,6 +139,18 @@
 		CFA16EA31A42F02E000E46D7 /* EMBAMyActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16EA01A42F02E000E46D7 /* EMBAMyActivityViewController.m */; };
 		CFA16EA41A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16EA21A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m */; };
 		CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */; };
+		CFB784381A471B5B002F7789 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784371A471B5B002F7789 /* ImageIO.framework */; };
+		CFB7843C1A471B6A002F7789 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7843B1A471B6A002F7789 /* CoreText.framework */; };
+		CFB7843E1A471B72002F7789 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7843D1A471B72002F7789 /* MapKit.framework */; };
+		CFB784401A471B79002F7789 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7843F1A471B79002F7789 /* CoreLocation.framework */; };
+		CFB784421A471B86002F7789 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784411A471B86002F7789 /* libresolv.dylib */; };
+		CFB784441A471B94002F7789 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784431A471B94002F7789 /* SystemConfiguration.framework */; };
+		CFB784461A471B9B002F7789 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784451A471B9B002F7789 /* MobileCoreServices.framework */; };
+		CFB784481A471BA7002F7789 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784471A471BA7002F7789 /* libstdc++.dylib */; };
+		CFB7844A1A471BB8002F7789 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784491A471BB8002F7789 /* AddressBook.framework */; };
+		CFB7844C1A471BC1002F7789 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7844B1A471BC1002F7789 /* CFNetwork.framework */; };
+		CFB7844E1A471BCB002F7789 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7844D1A471BCB002F7789 /* libz.dylib */; };
+		CFB784501A471BD3002F7789 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7844F1A471BD3002F7789 /* libxml2.dylib */; };
 		CFBB009C1A4339EE00E3E6A8 /* EMBACreatGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB009B1A4339EE00E3E6A8 /* EMBACreatGroupCell.m */; };
 		CFBB00A01A43438300E3E6A8 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBB009F1A43438300E3E6A8 /* add@2x.png */; };
 		CFBB00A31A43460D00E3E6A8 /* EMBAAddSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBB00A21A43460D00E3E6A8 /* EMBAAddSuccessViewController.m */; };
@@ -464,6 +476,19 @@
 		CFA16EA21A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMyActivityDetailViewController.m; sourceTree = "<group>"; };
 		CFA1D4ED1A38CEB6001E0182 /* EMBASystemSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASystemSettingCell.h; sourceTree = "<group>"; };
 		CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSettingCell.m; sourceTree = "<group>"; };
+		CFB784371A471B5B002F7789 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		CFB7843B1A471B6A002F7789 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		CFB7843D1A471B72002F7789 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CFB7843F1A471B79002F7789 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CFB784411A471B86002F7789 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		CFB784431A471B94002F7789 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CFB784451A471B9B002F7789 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CFB784471A471BA7002F7789 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		CFB784491A471BB8002F7789 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		CFB7844B1A471BC1002F7789 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CFB7844D1A471BCB002F7789 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CFB7844F1A471BD3002F7789 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		CFB784531A473125002F7789 /* ChatDemoUIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoUIDefine.h; sourceTree = "<group>"; };
 		CFBB009A1A4339EE00E3E6A8 /* EMBACreatGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBACreatGroupCell.h; sourceTree = "<group>"; };
 		CFBB009B1A4339EE00E3E6A8 /* EMBACreatGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACreatGroupCell.m; sourceTree = "<group>"; };
 		CFBB009F1A43438300E3E6A8 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -510,6 +535,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB784501A471BD3002F7789 /* libxml2.dylib in Frameworks */,
+				CFB7844E1A471BCB002F7789 /* libz.dylib in Frameworks */,
+				CFB7844C1A471BC1002F7789 /* CFNetwork.framework in Frameworks */,
+				CFB7844A1A471BB8002F7789 /* AddressBook.framework in Frameworks */,
+				CFB784481A471BA7002F7789 /* libstdc++.dylib in Frameworks */,
+				CFB784461A471B9B002F7789 /* MobileCoreServices.framework in Frameworks */,
+				CFB784441A471B94002F7789 /* SystemConfiguration.framework in Frameworks */,
+				CFB784421A471B86002F7789 /* libresolv.dylib in Frameworks */,
+				CFB784401A471B79002F7789 /* CoreLocation.framework in Frameworks */,
+				CFB7843E1A471B72002F7789 /* MapKit.framework in Frameworks */,
+				CFB7843C1A471B6A002F7789 /* CoreText.framework in Frameworks */,
+				CFB784381A471B5B002F7789 /* ImageIO.framework in Frameworks */,
 				3EF9E7C31A448D710011F182 /* MessageUI.framework in Frameworks */,
 				CF59A9F81A408E65005C6529 /* libExpandHeader.a in Frameworks */,
 				A825EE4519FAA8DB0044F48D /* QuartzCore.framework in Frameworks */,
@@ -618,6 +655,18 @@
 		A8367D1319FAA00E00ED14CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFB7844F1A471BD3002F7789 /* libxml2.dylib */,
+				CFB7844D1A471BCB002F7789 /* libz.dylib */,
+				CFB7844B1A471BC1002F7789 /* CFNetwork.framework */,
+				CFB784491A471BB8002F7789 /* AddressBook.framework */,
+				CFB784471A471BA7002F7789 /* libstdc++.dylib */,
+				CFB784451A471B9B002F7789 /* MobileCoreServices.framework */,
+				CFB784431A471B94002F7789 /* SystemConfiguration.framework */,
+				CFB784411A471B86002F7789 /* libresolv.dylib */,
+				CFB7843F1A471B79002F7789 /* CoreLocation.framework */,
+				CFB7843D1A471B72002F7789 /* MapKit.framework */,
+				CFB7843B1A471B6A002F7789 /* CoreText.framework */,
+				CFB784371A471B5B002F7789 /* ImageIO.framework */,
 				3EF9E7C21A448D710011F182 /* MessageUI.framework */,
 				A825EE4419FAA8DB0044F48D /* QuartzCore.framework */,
 				A8367D1419FAA00E00ED14CA /* Foundation.framework */,
@@ -644,6 +693,7 @@
 		A8367D1D19FAA00E00ED14CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFB784531A473125002F7789 /* ChatDemoUIDefine.h */,
 				A8367D1E19FAA00E00ED14CA /* Sunflower-Info.plist */,
 				A8367D1F19FAA00E00ED14CA /* InfoPlist.strings */,
 				A8367D2219FAA00E00ED14CA /* main.m */,
@@ -1621,6 +1671,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EaseMobSDK/lib",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1644,6 +1695,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EaseMobSDK/lib",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

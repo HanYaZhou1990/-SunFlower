@@ -89,9 +89,10 @@
             self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
             self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
             [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
-            
-            
-//            
+    
+    [self loginWithUsername:@"15093296683" password:@"hanyazhou1990"];
+    
+//
 //        }
 //    } failed:^(NSURLResponse *response, NSError *error) {
 //        NSLog(@"%@",error);
@@ -109,7 +110,33 @@
     [self.view endEditing:YES];
 }
 
-
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password
+{
+    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:username
+                                                        password:password
+                                                      completion:
+     ^(NSDictionary *loginInfo, EMError *error) {
+         if (loginInfo && !error) {
+             [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES];
+             NSLog(@"success   %@ ",loginInfo);
+         }else {
+             switch (error.errorCode) {
+                 case EMErrorServerNotReachable:
+                     NSLog(@"连接服务器失败!");
+                     break;
+                 case EMErrorServerAuthenticationFailure:
+                     NSLog(@"用户名或密码错误");
+                     break;
+                 case EMErrorServerTimeout:
+                     NSLog(@"连接服务器超时!");
+                     break;
+                 default:
+                     NSLog(@"登录失败");
+                     break;
+             }
+         }
+     } onQueue:nil];
+}
 
 - (void)didReceiveMemoryWarning{[super didReceiveMemoryWarning];}
 @end
