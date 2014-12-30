@@ -10,10 +10,10 @@
 
 @interface EMBASchoolFellowEntity : NSObject
 
-@property (nonatomic,copy) NSString *headImage;
-@property (nonatomic,copy) NSString *titleString;
-@property (nonatomic,copy) NSString *detailString;
-@property (nonatomic,copy) NSString *timeString;
+@property (nonatomic,copy) NSString *picture;
+@property (nonatomic,copy) NSString *nameString;
+@property (nonatomic,copy) NSString *idString;
+@property (nonatomic,copy) NSString *loginTimeString;
 
 @end
 

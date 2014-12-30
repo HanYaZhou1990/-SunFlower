@@ -12,9 +12,7 @@
 {
     UIButton *_backButton;
     UILabel *_barlabel;
-    NSString *telePhoneStr;
-    NSString *emailStr;
-    
+    NSDictionary *_messageDictionary;
 }
 @end
 
@@ -25,9 +23,39 @@
     [super viewDidLoad];
     [self setLeftNavigationBarItem];
     
-    telePhoneStr = @"15093296683";
-    emailStr = @"710535238@qq.com";
+    NSDictionary * attDic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,[UIFont systemFontOfSize:15],UITextAttributeFont, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:attDic];
     
+    _messageDictionary = [[NSDictionary alloc] init];
+    _titleArray = @[@"电话",@"邮箱",@"地址",@"班级"];
+    if (self.isUser==YES)
+        {
+        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editRightBarItem)];
+        self.navigationItem.rightBarButtonItem = rightItem;
+        }
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [UIView new];
+    _tableView.backgroundColor = UIColorFromRGB(0xe5e5e5);
+    [self.view addSubview:_tableView];
+    
+    if (self.isUser == NO) {
+        [WTRequestCenter getWithURL:[NSString stringWithFormat:@"%@getUserById",HTTP_URL] parameters:@{@"userId":_userIdStr,@"sessionId":[EMBAUserId getUserId]} option:WTRequestCenterCachePolicyCacheAndRefresh finished:^(NSURLResponse *response, NSData *data) {
+            NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
+            if (jsonDic) {
+                _messageDictionary = jsonDic;
+                self.title = [jsonDic[@"name"] stringClearNull];
+                _subArray = @[[jsonDic[@"phone"] stringClearNull],[jsonDic[@"email"] stringClearNull],[jsonDic[@"address"] stringClearNull],[_classNameString stringClearNull]];
+                [_tableView reloadData];
+            }
+        } failed:^(NSURLResponse *response, NSError *error) {
+            NSLog(@"请求失败");
+        }];
+    }else {
+        _messageDictionary = [EMBAUserId getUserMessage];
+        _subArray =  @[[_messageDictionary[@"phone"] stringClearNull],[_messageDictionary[@"email"] stringClearNull],[_messageDictionary[@"address"] stringClearNull],[_messageDictionary[@"classId"] stringClearNull]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,27 +66,6 @@
 
 - (void)setLeftNavigationBarItem
 {
-    /*
-     _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-     _backButton.frame = CGRectMake(0, 0, 170, 26);
-     UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backButtonIcon.png"] highlightedImage:[UIImage imageNamed:@"backButtonIcon.png"]];
-     imageview.frame = CGRectMake(0, 0, 24, 24);
-     _barlabel = [[UILabel alloc] initWithFrame:CGRectMake(29, 0, 130, 26)];;
-     [_barlabel setFont:[UIFont boldSystemFontOfSize:20]];
-     [_barlabel setTextColor:[UIColor whiteColor]];
-     [_barlabel setText:@"返回"];
-     [_barlabel setBackgroundColor:[UIColor clearColor]];
-     [_backButton addSubview:imageview];
-     [_backButton addSubview:_barlabel];
-     [_backButton addTarget:self action:@selector(popPreViewController) forControlEvents:UIControlEventTouchUpInside];
-     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_backButton];
-     self.navigationItem.leftBarButtonItem = leftBarButtonItem;*/
-    /*
-     self.view.backgroundColor = [UIColor whiteColor];
-     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-     self.navigationItem.leftBarButtonItem = openItem;
-     */
-    
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame = CGRectMake(0, 0, 60, 44);
     
@@ -71,34 +78,18 @@
     UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
     self.navigationItem.leftBarButtonItem=leftBarButton;
-    
-    self.title = @"金秀贤";
-    NSDictionary * attDic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,[UIFont systemFontOfSize:15],UITextAttributeFont, nil];
-    [self.navigationController.navigationBar setTitleTextAttributes:attDic];
-    
-    _titleArray = @[@"电话",@"邮箱",@"地址",@"班级"];
-    _subArray = @[@"18877871122",@"18877871122@123.com",@"中国河南郑州",@"三年二班"];
-    if (self.isUser==YES)
-    {
-        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editRightBarItem)];
-        self.navigationItem.rightBarButtonItem = rightItem;
-    }
-    // Do any additional setup after loading the view.
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.tableFooterView = [UIView new];
-    _tableView.backgroundColor = UIColorFromRGB(0xe5e5e5);
-    [self.view addSubview:_tableView];
-    
 }
 - (void)openButtonPressed:(UIButton *)sender
 {
-    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
-    self.sideMenuViewController.shadowColor = [UIColor blackColor];
-    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
-    self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
-    [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+    if (self.isUser == NO) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }else {
+        self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
+        self.sideMenuViewController.shadowColor = [UIColor blackColor];
+        self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+        self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+        [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+    }
 }
 -(void)buttonClicked:(id)sender
 {
@@ -108,7 +99,7 @@
         case 1000:
         {
             //打电话
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",telePhoneStr]]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",[_messageDictionary[@"phone"] stringClearNull]]]];
         }
             break;
         case 1001:
@@ -120,7 +111,7 @@
                 {
                     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
                     controller.messageComposeDelegate = self;
-                    controller.recipients = [NSArray arrayWithObject:telePhoneStr];
+                    controller.recipients = [NSArray arrayWithObject:[_messageDictionary[@"phone"] stringClearNull]];
                     
                     [self presentViewController:controller animated:YES completion:nil];
                 }
@@ -132,7 +123,7 @@
             }
             else
             {
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"sms://%@",telePhoneStr]]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"sms://%@",[_messageDictionary[@"phone"] stringClearNull]]]];
             }
         }
             break;
@@ -145,7 +136,7 @@
                 
                 controller.mailComposeDelegate = self;
                 
-                [controller setToRecipients:[NSArray arrayWithObject:emailStr]];
+                [controller setToRecipients:[NSArray arrayWithObject:[_messageDictionary[@"email"] stringClearNull]]];
                 [self presentViewController:controller animated:YES completion:nil];
             }
             else
@@ -176,9 +167,10 @@
 
 
 //发送消息按钮被点击
--(void)sendMessageButtonclicked:(id)sender
-{
-    NSLog(@"点击发消息");
+-(void)sendMessageButtonclicked:(id)sender{
+    EMBAMessageViewController *messageViewController  = [[EMBAMessageViewController alloc] init];
+    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
+    [self.navigationController pushViewController:messageViewController animated:YES];
 }
 
 #pragma mark- 
@@ -218,9 +210,9 @@
     if (indexPath.section == 0)
     {
         EMBAPersonalCell * cell = [[EMBAPersonalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
-        cell.titleLabel.text = @"金秀贤";
+        cell.titleLabel.text = [_messageDictionary[@"name"] stringClearNull];
         cell.titleLabel.textColor = UIColorFromRGB(0x333333);
-        cell.detailLabel.text = @"汽车行业";
+        cell.detailLabel.text = [_messageDictionary[@"job"] stringClearNull];
         cell.detailLabel.textColor = UIColorFromRGB(0x999999);
         cell.titleImgView.image  = [UIImage imageNamed:@"success.png"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

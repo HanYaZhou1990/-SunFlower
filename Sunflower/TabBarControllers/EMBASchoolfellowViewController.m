@@ -110,7 +110,7 @@
         break;
     }
     
-        //此处刷新表格数据源 有接口请求接口 没接口自动选择数据
+//此处刷新表格数据源 有接口请求接口 没接口自动选择数据
     [self getDataSource];
 }
 
@@ -125,93 +125,72 @@
         }
     if (_typeIndex==0)
         {
-            //班级
-        EMBASchoolFellowClassEntity *classEntityOne = [[EMBASchoolFellowClassEntity alloc]init];
-        classEntityOne.classList = [[NSMutableArray alloc]init];
-        classEntityOne.classId = @"1";
-        classEntityOne.className = @"2013届1班";
-        
-        EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassOne.headImage = @"";
-        embaSchoolFellowClassOne.titleString = @"张迪";
-        embaSchoolFellowClassOne.detailString = @"18873959833";
-        embaSchoolFellowClassOne.timeString = @"";
-        [classEntityOne.classList addObject:embaSchoolFellowClassOne];
-        
-        EMBASchoolFellowEntity *embaSchoolFellowClassTwo = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassTwo.headImage = @"";
-        embaSchoolFellowClassTwo.titleString = @"张密";
-        embaSchoolFellowClassTwo.detailString = @"13244568876";
-        embaSchoolFellowClassTwo.timeString = @"";
-        [classEntityOne.classList addObject:embaSchoolFellowClassTwo];
-        
-        EMBASchoolFellowEntity *embaSchoolFellowClassThree = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassThree.headImage = @"";
-        embaSchoolFellowClassThree.titleString = @"张密";
-        embaSchoolFellowClassThree.detailString = @"13244568876";
-        embaSchoolFellowClassThree.timeString = @"";
-        [classEntityOne.classList addObject:embaSchoolFellowClassThree];
-        
-        [_dataSource addObject:classEntityOne];
-        
-        EMBASchoolFellowClassEntity *classEntityTwo = [[EMBASchoolFellowClassEntity alloc]init];
-        classEntityTwo.classList = [[NSMutableArray alloc]init];
-        classEntityTwo.classId = @"2";
-        classEntityTwo.className = @"2013届2班";
-        [classEntityTwo.classList addObject:embaSchoolFellowClassOne];
-        [classEntityTwo.classList addObject:embaSchoolFellowClassTwo];
-        [_dataSource addObject:classEntityTwo];
-        
-        EMBASchoolFellowClassEntity *classEntityThree = [[EMBASchoolFellowClassEntity alloc]init];
-        classEntityThree.classList = [[NSMutableArray alloc]init];
-        classEntityThree.classId = @"2";
-        classEntityThree.className = @"2013届2班";
-        [classEntityThree.classList addObject:embaSchoolFellowClassOne];
-        [classEntityThree.classList addObject:embaSchoolFellowClassTwo];
-        [classEntityThree.classList addObject:embaSchoolFellowClassThree];
-        [_dataSource addObject:classEntityThree];
-        
-        
+        [WTRequestCenter getWithURL:[NSString stringWithFormat:@"%@getAllUserWithBasic",HTTP_URL]parameters:@{@"sessionId":[EMBAUserId getUserId]} option:WTRequestCenterCachePolicyCacheAndRefresh finished:^(NSURLResponse *response, NSData *data) {
+            NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
+            for (NSString *keyString in [jsonDic[[jsonDic allKeys][0]] allKeys]) {
+                NSData *stringData = [keyString dataUsingEncoding:NSUTF8StringEncoding];
+                
+                EMBASchoolFellowClassEntity *classEntityOne = [[EMBASchoolFellowClassEntity alloc]init];
+                classEntityOne.classList = [[NSMutableArray alloc]init];
+                classEntityOne.classId = [WTRequestCenter JSONObjectWithData:stringData][@"gradeId"];
+                classEntityOne.className = [WTRequestCenter JSONObjectWithData:stringData][@"description"];
+                for (NSDictionary *memberDic in jsonDic[[jsonDic allKeys][0]][keyString]) {
+                    EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
+                    embaSchoolFellowClassOne.picture = [memberDic[@"picture"] stringClearNull];
+                    embaSchoolFellowClassOne.nameString = [memberDic[@"name"] stringClearNull];
+                    embaSchoolFellowClassOne.idString = [memberDic[@"id"] stringClearNull];
+                    embaSchoolFellowClassOne.loginTimeString = [memberDic[@"loginName"] stringClearNull];
+                    [classEntityOne.classList addObject:embaSchoolFellowClassOne];
+                }
+                
+                [_dataSource addObject:classEntityOne];
+                
+                [_tableView reloadData];
+            }
+            
+        } failed:^(NSURLResponse *response, NSError *error) {
+            
+        }];
         }
     else if (_typeIndex==1)
         {
             //行业
         EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassOne.headImage = @"";
-        embaSchoolFellowClassOne.titleString = @"郑州IT";
-        embaSchoolFellowClassOne.detailString = @"[韩亚周]有没有做ios开发的?";
-        embaSchoolFellowClassOne.timeString = @"18:35";
+        embaSchoolFellowClassOne.picture = @"";
+        embaSchoolFellowClassOne.nameString = @"郑州IT";
+        embaSchoolFellowClassOne.idString = @"[韩亚周]有没有做ios开发的?";
+        embaSchoolFellowClassOne.loginTimeString = @"18:35";
         [_dataSource addObject:embaSchoolFellowClassOne];
         
         EMBASchoolFellowEntity *embaSchoolFellowClassTwo = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassTwo.headImage = @"";
-        embaSchoolFellowClassTwo.titleString = @"机电行业";
-        embaSchoolFellowClassTwo.detailString = @"挖掘机技术哪家强";
-        embaSchoolFellowClassTwo.timeString = @"14:32";
+        embaSchoolFellowClassTwo.picture = @"";
+        embaSchoolFellowClassTwo.nameString = @"机电行业";
+        embaSchoolFellowClassTwo.idString = @"挖掘机技术哪家强";
+        embaSchoolFellowClassTwo.loginTimeString = @"14:32";
         [_dataSource addObject:embaSchoolFellowClassTwo];
         
         EMBASchoolFellowEntity *embaSchoolFellowClassThree = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassThree.headImage = @"";
-        embaSchoolFellowClassThree.titleString = @"珠宝行业";
-        embaSchoolFellowClassThree.detailString = @"金鑫珠宝黄金大298元/克";
-        embaSchoolFellowClassThree.timeString = @"14:32";
+        embaSchoolFellowClassThree.picture = @"";
+        embaSchoolFellowClassThree.nameString = @"珠宝行业";
+        embaSchoolFellowClassThree.idString = @"金鑫珠宝黄金大298元/克";
+        embaSchoolFellowClassThree.loginTimeString = @"14:32";
         [_dataSource addObject:embaSchoolFellowClassThree];
         }
     else if (_typeIndex==2)
         {
             //同乡
         EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassOne.headImage = @"";
-        embaSchoolFellowClassOne.titleString = @"郑州老乡群";
-        embaSchoolFellowClassOne.detailString = @"[年级班主任]陪伴是最长情的告白!";
-        embaSchoolFellowClassOne.timeString = @"14:32";
+        embaSchoolFellowClassOne.picture = @"";
+        embaSchoolFellowClassOne.nameString = @"郑州老乡群";
+        embaSchoolFellowClassOne.idString = @"[年级班主任]陪伴是最长情的告白!";
+        embaSchoolFellowClassOne.loginTimeString = @"14:32";
         [_dataSource addObject:embaSchoolFellowClassOne];
         
         EMBASchoolFellowEntity *embaSchoolFellowClassTwo = [[EMBASchoolFellowEntity alloc]init];
-        embaSchoolFellowClassTwo.headImage = @"";
-        embaSchoolFellowClassTwo.titleString = @"大同老乡群";
-        embaSchoolFellowClassTwo.detailString = @"陪伴是最长情的告白!";
-        embaSchoolFellowClassTwo.timeString = @"14:32";
+        embaSchoolFellowClassTwo.picture = @"";
+        embaSchoolFellowClassTwo.nameString = @"大同老乡群";
+        embaSchoolFellowClassTwo.idString = @"陪伴是最长情的告白!";
+        embaSchoolFellowClassTwo.loginTimeString = @"14:32";
         [_dataSource addObject:embaSchoolFellowClassTwo];
         }
     
@@ -313,7 +292,7 @@
             embaSchoolFellow = [_dataSource objectAtIndex:indexPath.row];
             }
         
-        [cell setImage:embaSchoolFellow.headImage andTitleStr:embaSchoolFellow.titleString andDetailStr:embaSchoolFellow.detailString andTimeStr:embaSchoolFellow.timeString];
+        [cell setImage:embaSchoolFellow.picture andTitleStr:embaSchoolFellow.nameString andDetailStr:embaSchoolFellow.idString andTimeStr:embaSchoolFellow.loginTimeString];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         return cell;
@@ -443,9 +422,15 @@
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         if (_typeIndex == 0)
             {
-                EMBAUserInfoViewController *uIVC = [[EMBAUserInfoViewController alloc]init];
-                uIVC.isUser = NO;
-                [self.navigationController pushViewController:uIVC animated:YES];
+            
+            EMBASchoolFellowClassEntity *classEntityOne = [_dataSource objectAtIndex:indexPath.section];
+            EMBASchoolFellowEntity *embaSchoolFellow  = [classEntityOne.classList objectAtIndex:indexPath.row];
+            EMBAUserInfoViewController *uIVC = [[EMBAUserInfoViewController alloc]init];
+            uIVC.isUser = NO;
+            uIVC.userIdStr = embaSchoolFellow.idString;
+            uIVC.classNameString = classEntityOne.className;
+            uIVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:uIVC animated:YES];
             }
             if (_typeIndex == 1||_typeIndex ==2)
             {

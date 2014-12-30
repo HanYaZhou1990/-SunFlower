@@ -11,6 +11,7 @@
 #import "EMBASettingsViewController.h"
 #import "EMBAChangeRootViewController.h"
 #import "EMBAPersonalEditViewController.h"
+#import "EMBAMessageViewController.h"
 
 @interface EMBAUserInfoViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
@@ -19,8 +20,9 @@
 
 @property (strong, nonatomic) TWTSideMenuViewController *sideMenuViewController;
 
-@property (nonatomic, strong) UITableView                                               * tableView;
+@property (nonatomic, strong) UITableView                                                 * tableView;
 @property (nonatomic, strong) NSArray                                                     * titleArray;
 @property (nonatomic, strong) NSArray                                                     * subArray;
+@property  (strong ,nonatomic) NSString                                                   * classNameString;//来自班级
 
 @end

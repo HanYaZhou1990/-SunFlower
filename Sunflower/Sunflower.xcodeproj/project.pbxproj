@@ -166,6 +166,7 @@
 		CFD5C6591A4333550092B7B7 /* creadOneGroup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD5C6581A4333550092B7B7 /* creadOneGroup@2x.png */; };
 		CFD5C65E1A4338580092B7B7 /* EMBACreatGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD5C65D1A4338580092B7B7 /* EMBACreatGroupViewController.m */; };
 		CFD5C6611A4338710092B7B7 /* EMBAAddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD5C6601A4338710092B7B7 /* EMBAAddGroupViewController.m */; };
+		CFDD886F1A52C5E40005B668 /* EMBAUserId.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDD886E1A52C5E40005B668 /* EMBAUserId.m */; };
 		CFDE4BB61A3887B6001B3BBA /* 同乡.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB01A3887B6001B3BBA /* 同乡.png */; };
 		CFDE4BB71A3887B6001B3BBA /* 同乡@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */; };
 		CFDE4BB81A3887B6001B3BBA /* 班级.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDE4BB21A3887B6001B3BBA /* 班级.png */; };
@@ -511,6 +512,8 @@
 		CFD5C65D1A4338580092B7B7 /* EMBACreatGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBACreatGroupViewController.m; sourceTree = "<group>"; };
 		CFD5C65F1A4338710092B7B7 /* EMBAAddGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAAddGroupViewController.h; sourceTree = "<group>"; };
 		CFD5C6601A4338710092B7B7 /* EMBAAddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAAddGroupViewController.m; sourceTree = "<group>"; };
+		CFDD886D1A52C5E40005B668 /* EMBAUserId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAUserId.h; sourceTree = "<group>"; };
+		CFDD886E1A52C5E40005B668 /* EMBAUserId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAUserId.m; sourceTree = "<group>"; };
 		CFDE4BB01A3887B6001B3BBA /* 同乡.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同乡.png"; sourceTree = "<group>"; };
 		CFDE4BB11A3887B6001B3BBA /* 同乡@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同乡@2x.png"; sourceTree = "<group>"; };
 		CFDE4BB21A3887B6001B3BBA /* 班级.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "班级.png"; sourceTree = "<group>"; };
@@ -784,6 +787,8 @@
 				A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */,
 				A825EE4119FAA7710044F48D /* EMBALoginInputView.h */,
 				A825EE4219FAA7710044F48D /* EMBALoginInputView.m */,
+				CFDD886D1A52C5E40005B668 /* EMBAUserId.h */,
+				CFDD886E1A52C5E40005B668 /* EMBAUserId.m */,
 			);
 			name = Login;
 			path = Sunflower/Login;
@@ -1479,6 +1484,7 @@
 				CF7872AC1A3F5A0B00271A1D /* UIImage+Color.m in Sources */,
 				A8A468131A1D0319001FFFFF /* UIDevice+WTRequestCenter.m in Sources */,
 				A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */,
+				CFDD886F1A52C5E40005B668 /* EMBAUserId.m in Sources */,
 				CFA16E921A42F01B000E46D7 /* EMBAMyClassHeaderView.m in Sources */,
 				A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */,
 				CFA16EA41A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m in Sources */,

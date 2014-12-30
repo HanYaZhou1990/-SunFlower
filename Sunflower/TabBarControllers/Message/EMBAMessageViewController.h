@@ -14,5 +14,6 @@
 @property (nonatomic, strong) UITableView               *messageTableView;/* 聊天表*/
 /*!消息数组*/
 @property (nonatomic, strong) NSArray                   *messageArray;
-
+/*!聊天对象的id*/
+@property (nonatomic, strong) NSString                  *friendIdStr;
 @end
