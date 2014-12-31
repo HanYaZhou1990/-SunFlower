@@ -70,6 +70,7 @@
     if (imageStr != nil&&![imageStr isEqualToString:@""])
     {
         //headImageView 加载在线图片
+    [headImageView setImageWithURL:imageStr placeholderImage:[UIImage imageNamed:@"bg.png"]];
     }
     titleLabel.text = titleStr;
     detailLabel.text = detailStr;

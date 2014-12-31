@@ -12,6 +12,7 @@
 #import "EMBAChangeRootViewController.h"
 #import "EMBAPersonalEditViewController.h"
 #import "EMBAMessageViewController.h"
+#import "UIImageView+WTRequestCenter.h"
 
 @interface EMBAUserInfoViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 

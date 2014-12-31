@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImageView+WTRequestCenter.h"
 
 @interface EMBASchoolFellowTableViewCell : UITableViewCell
 

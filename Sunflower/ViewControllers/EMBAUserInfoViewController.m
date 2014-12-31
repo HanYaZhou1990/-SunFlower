@@ -214,7 +214,7 @@
         cell.titleLabel.textColor = UIColorFromRGB(0x333333);
         cell.detailLabel.text = [_messageDictionary[@"job"] stringClearNull];
         cell.detailLabel.textColor = UIColorFromRGB(0x999999);
-        cell.titleImgView.image  = [UIImage imageNamed:@"success.png"];
+        [cell.titleImgView setImageWithURL:[_messageDictionary[@"picture"] stringClearNull] placeholderImage:[UIImage imageNamed:@"bg.png"]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
         
@@ -240,7 +240,7 @@
             if (indexPath.row==0)
             {
                 UIButton *telephoneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                telephoneButton.frame = CGRectMake(cell.frame.size.width-104, (cell.frame.size.height-33)/2, 33, 33);
+                telephoneButton.frame = CGRectMake(cell.frame.size.width-104, (cell.frame.size.height-33/2)/2, 33, 33);
                 [telephoneButton setImage:[UIImage imageNamed:@"icon-telephone.png"] forState:UIControlStateNormal];
                 [telephoneButton setImage:[UIImage imageNamed:@"icon-telephone.png"] forState:UIControlStateHighlighted];
                 [telephoneButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -248,7 +248,7 @@
                 [cell addSubview:telephoneButton];
                 
                 UIButton *messageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                messageButton.frame = CGRectMake(telephoneButton.frame.size.width+telephoneButton.frame.origin.x+17, (cell.frame.size.height-33)/2, 33, 33);
+                messageButton.frame = CGRectMake(telephoneButton.frame.size.width+telephoneButton.frame.origin.x+17, (cell.frame.size.height-33/2)/2, 33, 33);
                 [messageButton setImage:[UIImage imageNamed:@"icon-useMessage.png"] forState:UIControlStateNormal];
                 [messageButton setImage:[UIImage imageNamed:@"icon-useMessage.png"] forState:UIControlStateHighlighted];
                 [messageButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -258,7 +258,7 @@
             if (indexPath.row==1)
             {
                 UIButton *emailButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                emailButton.frame = CGRectMake(cell.frame.size.width-54, (cell.frame.size.height-33)/2, 33, 33);
+                emailButton.frame = CGRectMake(cell.frame.size.width-54, (cell.frame.size.height-33/2)/2, 33, 33);
                 [emailButton setImage:[UIImage imageNamed:@"icon-email.png"] forState:UIControlStateNormal];
                 [emailButton setImage:[UIImage imageNamed:@"icon-email.png"] forState:UIControlStateHighlighted];
                 [emailButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];

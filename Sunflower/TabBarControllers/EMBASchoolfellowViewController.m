@@ -136,6 +136,7 @@
                 classEntityOne.className = [WTRequestCenter JSONObjectWithData:stringData][@"description"];
                 for (NSDictionary *memberDic in jsonDic[[jsonDic allKeys][0]][keyString]) {
                     EMBASchoolFellowEntity *embaSchoolFellowClassOne = [[EMBASchoolFellowEntity alloc]init];
+                    NSLog(@"%@",[memberDic[@"picture"] stringClearNull]);
                     embaSchoolFellowClassOne.picture = [memberDic[@"picture"] stringClearNull];
                     embaSchoolFellowClassOne.nameString = [memberDic[@"name"] stringClearNull];
                     embaSchoolFellowClassOne.idString = [memberDic[@"id"] stringClearNull];
