@@ -25,6 +25,7 @@
 {
     _titleImgView = [[UIImageView alloc]initWithFrame:CGRectMake(16, 16, 50, 50)];
     _titleImgView.layer.cornerRadius = _titleImgView.frame.size.width/2;
+    _titleImgView.clipsToBounds = YES;
     [self.contentView addSubview:_titleImgView];
     
     _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 20, self.frame.size.width-90, 20)];

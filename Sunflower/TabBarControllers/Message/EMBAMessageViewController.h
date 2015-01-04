@@ -8,6 +8,7 @@
 
 #import "EMBAFatherViewController.h"
 #import "EMBAMessageCell.h"
+#import "DXMessageToolBar.h"
 
 @interface EMBAMessageViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
