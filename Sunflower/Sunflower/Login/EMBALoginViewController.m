@@ -81,20 +81,28 @@
 #pragma mark  button click -
 - (void)loginButtonClicked:(UIButton *)sender{
         //    http://www.vpengo.com/login?loginName=13598084041&password=123456
-    [WTRequestCenter postWithURL:@"http://www.vpengo.com/login" parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
+    [WTRequestCenter postWithURL:[NSString stringWithFormat:@"%@login",HTTP_URL]parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
         NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
         if (jsonDic[@"sessionId"]) {
-            
-            [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"sessionId"] forKey:@"sessionId"];
-            [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"user"] forKey:@"userMessage"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            
-            self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
-            self.sideMenuViewController.shadowColor = [UIColor blackColor];
-            self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
-            self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
-            [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
-            
+            [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_inputView.userNameField.text
+                                                                password:_inputView.userPswField.text
+                                                              completion:
+             ^(NSDictionary *loginInfo, EMError *error) {
+                 if (error) {
+                     NSLog(@"登录失败");
+                 }else {
+                     NSLog(@"登录成功");
+                     [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"sessionId"] forKey:@"sessionId"];
+                     [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"user"] forKey:@"userMessage"];
+                     [[NSUserDefaults standardUserDefaults] synchronize];
+                     
+                     self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:[EMBASettingsViewController new] mainViewController:[EMBAChangeRootViewController loginSuccess]];
+                     self.sideMenuViewController.shadowColor = [UIColor blackColor];
+                     self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+                     self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+                     [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
+                 }
+             } onQueue:nil];
         }
     } failed:^(NSURLResponse *response, NSError *error) {
         NSLog(@"%@",error);

@@ -39,7 +39,7 @@
 #else
     apnsCertName = @"chatdemoui";
 #endif
-    [[EaseMob sharedInstance] registerSDKWithAppKey:@"han-yazhou#homechat" apnsCertName:apnsCertName];
+    [[EaseMob sharedInstance] registerSDKWithAppKey:@"fltcoo#emba" apnsCertName:apnsCertName];
     
 #if DEBUG
     [[EaseMob sharedInstance] enableUncaughtExceptionHandler];
@@ -58,17 +58,26 @@
     return (EMBAAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application{}
+- (void)applicationWillResignActive:(UIApplication *)application{
+    [[EaseMob sharedInstance] applicationWillResignActive:application];
+}
 
-- (void)applicationDidEnterBackground:(UIApplication *)application{}
+- (void)applicationDidEnterBackground:(UIApplication *)application{
+    [[EaseMob sharedInstance] applicationDidEnterBackground:application];
+}
 
-- (void)applicationWillEnterForeground:(UIApplication *)application{}
+- (void)applicationWillEnterForeground:(UIApplication *)application{
+    [[EaseMob sharedInstance] applicationWillEnterForeground:application];
+}
 
-- (void)applicationDidBecomeActive:(UIApplication *)application{}
+- (void)applicationDidBecomeActive:(UIApplication *)application{
+    [[EaseMob sharedInstance] applicationDidBecomeActive:application];
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [self saveContext];
+    [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
 
 

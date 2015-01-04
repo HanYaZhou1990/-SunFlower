@@ -60,6 +60,11 @@
     _mainTableView.tableFooterView = [UIView new];
     [_mainTableView registerClass:[EMBAMainCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_mainTableView];
+    
+    
+    EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:@"15093296683" isGroup:NO];
+    NSLog(@"%@",conversation.chatter);
+    NSLog(@"%@",conversation.messages);
 }
 
 #pragma mark -
