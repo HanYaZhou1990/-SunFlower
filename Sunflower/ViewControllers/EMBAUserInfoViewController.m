@@ -168,8 +168,13 @@
 
 //发送消息按钮被点击
 -(void)sendMessageButtonclicked:(id)sender{
-    EMBAMessageViewController *messageViewController  = [[EMBAMessageViewController alloc] init];
-    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
+//    EMBAMessageViewController *messageViewController  = [[EMBAMessageViewController alloc] init];
+//    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
+//    [self.navigationController pushViewController:messageViewController animated:YES];
+    
+    ChatViewController *messageViewController  = [[ChatViewController alloc] initWithChatter:@"13598084041" isGroup:NO];
+//    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
+    messageViewController.title = [_messageDictionary[@"phone"] stringClearNull];
     [self.navigationController pushViewController:messageViewController animated:YES];
 }
 

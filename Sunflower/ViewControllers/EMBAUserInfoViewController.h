@@ -13,6 +13,7 @@
 #import "EMBAPersonalEditViewController.h"
 #import "EMBAMessageViewController.h"
 #import "UIImageView+WTRequestCenter.h"
+#import "ChatViewController.h"
 
 @interface EMBAUserInfoViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
