@@ -62,9 +62,8 @@
     [self.view addSubview:_mainTableView];
     
     
-    EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:@"15093296683" isGroup:NO];
-    NSLog(@"＋＋＋＋%@",conversation.chatter);
-    NSLog(@"＋＋＋＋%@",conversation.messages);
+//    = [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase];
+    NSLog(@"++++++%@",[EaseMob sharedInstance].chatManager.conversations);
 }
 
 #pragma mark -

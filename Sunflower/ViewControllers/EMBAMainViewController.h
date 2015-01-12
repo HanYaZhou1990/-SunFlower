@@ -11,6 +11,7 @@
 #import "EMBAMainCell.h"
 #import "EMBAMessageViewController.h"
 #import "EMBAMyCollectionViewController.h"
+#import "EaseMob.h"
 
 @interface EMBAMainViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate>
 
