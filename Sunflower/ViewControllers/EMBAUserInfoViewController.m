@@ -171,8 +171,8 @@
 //    EMBAMessageViewController *messageViewController  = [[EMBAMessageViewController alloc] init];
 //    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
 //    [self.navigationController pushViewController:messageViewController animated:YES];
-    
-    ChatViewController *messageViewController  = [[ChatViewController alloc] initWithChatter:@"13598084041" isGroup:NO];
+//    13598084041
+    ChatViewController *messageViewController  = [[ChatViewController alloc] initWithChatter:@"15225135761" isGroup:NO];
 //    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
     messageViewController.title = [_messageDictionary[@"phone"] stringClearNull];
     [self.navigationController pushViewController:messageViewController animated:YES];
