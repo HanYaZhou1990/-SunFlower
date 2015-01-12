@@ -122,6 +122,7 @@
 		CF903B901A641315006D98EA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF903B8F1A641315006D98EA /* libsqlite3.dylib */; };
 		CF903BF31A6414E1006D98EA /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF903BF01A6414E1006D98EA /* libEaseMobClientSDKLite.a */; };
 		CF903BF41A6414E1006D98EA /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF903BF21A6414E1006D98EA /* EaseMob.bundle */; };
+		CF903BF71A64181B006D98EA /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF903BF61A64181B006D98EA /* ChatViewController.m */; };
 		CF9229891A44AEFD00676A02 /* smallOpenBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF9229871A44AEFD00676A02 /* smallOpenBar@2x.png */; };
 		CF97A2A01A543706002629BA /* DXMessageToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF97A2641A543706002629BA /* DXMessageToolBar.m */; };
 		CF97A2A11A543706002629BA /* DXFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF97A2681A543706002629BA /* DXFaceView.m */; };
@@ -253,7 +254,6 @@
 		CFA16EA41A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16EA21A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m */; };
 		CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */; };
 		CFA56AF31A5DA06A00E49038 /* WCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA56AF21A5DA06A00E49038 /* WCAlertView.m */; };
-		CFA56AFA1A5DA09E00E49038 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA56AF71A5DA09E00E49038 /* ChatViewController.m */; };
 		CFA56AFB1A5DA09E00E49038 /* ChatSendHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA56AF91A5DA09E00E49038 /* ChatSendHelper.m */; };
 		CFB784381A471B5B002F7789 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB784371A471B5B002F7789 /* ImageIO.framework */; };
 		CFB7843C1A471B6A002F7789 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7843B1A471B6A002F7789 /* CoreText.framework */; };
@@ -646,6 +646,8 @@
 		CF903BEE1A6414E1006D98EA /* EMErrorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMErrorDefs.h; sourceTree = "<group>"; };
 		CF903BF01A6414E1006D98EA /* libEaseMobClientSDKLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDKLite.a; sourceTree = "<group>"; };
 		CF903BF21A6414E1006D98EA /* EaseMob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseMob.bundle; sourceTree = "<group>"; };
+		CF903BF51A64181B006D98EA /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		CF903BF61A64181B006D98EA /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		CF9229871A44AEFD00676A02 /* smallOpenBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallOpenBar@2x.png"; sourceTree = "<group>"; };
 		CF97A2631A543706002629BA /* DXMessageToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXMessageToolBar.h; sourceTree = "<group>"; };
 		CF97A2641A543706002629BA /* DXMessageToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXMessageToolBar.m; sourceTree = "<group>"; };
@@ -863,8 +865,6 @@
 		CFA1D4EE1A38CEB6001E0182 /* EMBASystemSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASystemSettingCell.m; sourceTree = "<group>"; };
 		CFA56AF11A5DA06A00E49038 /* WCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAlertView.h; sourceTree = "<group>"; };
 		CFA56AF21A5DA06A00E49038 /* WCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAlertView.m; sourceTree = "<group>"; };
-		CFA56AF61A5DA09E00E49038 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
-		CFA56AF71A5DA09E00E49038 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		CFA56AF81A5DA09E00E49038 /* ChatSendHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSendHelper.h; sourceTree = "<group>"; };
 		CFA56AF91A5DA09E00E49038 /* ChatSendHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSendHelper.m; sourceTree = "<group>"; };
 		CFB784371A471B5B002F7789 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -1430,8 +1430,8 @@
 				CF97A2621A543706002629BA /* MessageToolbar */,
 				CF5E32721A35FF1900460F22 /* EMBAMessageViewController.h */,
 				CF62D7221A39EEC90087E95C /* EMBAMessageViewController.m */,
-				CFA56AF61A5DA09E00E49038 /* ChatViewController.h */,
-				CFA56AF71A5DA09E00E49038 /* ChatViewController.m */,
+				CF903BF51A64181B006D98EA /* ChatViewController.h */,
+				CF903BF61A64181B006D98EA /* ChatViewController.m */,
 				CFA56AF81A5DA09E00E49038 /* ChatSendHelper.h */,
 				CFA56AF91A5DA09E00E49038 /* ChatSendHelper.m */,
 				CF5E32751A3607DB00460F22 /* EMBAMessageCell.h */,
@@ -2628,6 +2628,7 @@
 				CF97A39A1A5438F5002629BA /* EMSearchBar.m in Sources */,
 				A825EE3319FAA17D0044F48D /* MySqlite.m in Sources */,
 				CF97A3761A54388E002629BA /* NSDate+Category.m in Sources */,
+				CF903BF71A64181B006D98EA /* ChatViewController.m in Sources */,
 				CFA16E7B1A42EECC000E46D7 /* EMBAPersonalCell.m in Sources */,
 				CF97A3991A5438F5002629BA /* BaseTableViewCell.m in Sources */,
 				A8A467F61A1D0309001FFFFF /* WTDataSaver.m in Sources */,
@@ -2682,7 +2683,6 @@
 				CF97A3581A54380A002629BA /* PSTCollectionViewCell.m in Sources */,
 				CFA16E911A42F01B000E46D7 /* EMBAAnnouncementCell.m in Sources */,
 				CF97A2FA1A5437DC002629BA /* MessageModel.m in Sources */,
-				CFA56AFA1A5DA09E00E49038 /* ChatViewController.m in Sources */,
 				CF97A3A01A5438F5002629BA /* EMSearchDisplayController.m in Sources */,
 				CFD5C65E1A4338580092B7B7 /* EMBACreatGroupViewController.m in Sources */,
 				CF97A3541A54380A002629BA /* MWZoomingScrollView.m in Sources */,

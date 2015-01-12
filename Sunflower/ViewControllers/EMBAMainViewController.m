@@ -61,9 +61,9 @@
     [_mainTableView registerClass:[EMBAMainCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_mainTableView];
     
-    
-//    = [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase];
-    NSLog(@"++++++%@",[EaseMob sharedInstance].chatManager.conversations);
+    for (EMConversation *conversation in [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase]) {
+        NSLog(@"%@",conversation.chatter);
+    }
 }
 
 #pragma mark -

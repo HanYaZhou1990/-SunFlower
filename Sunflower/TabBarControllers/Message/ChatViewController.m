@@ -44,6 +44,7 @@
     
     dispatch_queue_t _messageQueue;
     
+    NSMutableArray *_messages;
     BOOL _isScrollToBottom;
 }
 
@@ -61,6 +62,7 @@
 @property (strong, nonatomic) EMConversation *conversation;//会话管理者
 @property (strong, nonatomic) NSDate *chatTagDate;
 
+@property (strong, nonatomic) NSMutableArray *messages;
 @property (nonatomic) BOOL isScrollToBottom;
 @property (nonatomic) BOOL isPlayingAudio;
 
@@ -75,9 +77,11 @@
         _isPlayingAudio = NO;
         _chatter = chatter;
         _isChatGroup = isGroup;
+        _messages = [NSMutableArray array];
         
         //根据接收者的username获取当前会话的管理者
         _conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:chatter isGroup:_isChatGroup];
+        [_conversation markAllMessagesAsRead:YES];
     }
     
     return self;
@@ -100,6 +104,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeAllMessages:) name:@"RemoveAllMessages" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exitGroup) name:@"ExitGroup" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertCallMessage:) name:@"insertCallMessage" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground) name:@"applicationDidEnterBackground" object:nil];
     
     _messageQueue = dispatch_queue_create("easemob.com", NULL);
@@ -122,7 +127,8 @@
     [self loadMoreMessages];
 }
 
-- (void)setupBarButtonItem {
+- (void)setupBarButtonItem
+{
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame = CGRectMake(0, 0, 60, 44);
     
@@ -152,6 +158,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -171,7 +178,7 @@
     [super viewWillDisappear:animated];
     
     // 设置当前conversation的所有message为已读
-    [_conversation markMessagesAsRead:YES];
+    [_conversation markAllMessagesAsRead:YES];
 }
 
 - (void)dealloc
@@ -238,7 +245,7 @@
             }
             dispatch_semaphore_signal(wait);
         }];
-        int timeout = dispatch_semaphore_wait(wait, DISPATCH_TIME_FOREVER);
+        long timeout = dispatch_semaphore_wait(wait, DISPATCH_TIME_FOREVER);
         if (timeout) {
             NSLog(@"timeout.");
         }
@@ -630,7 +637,7 @@
 - (void)reloadTableViewDataWithMessage:(EMMessage *)message{
     __weak ChatViewController *weakSelf = self;
     dispatch_async(_messageQueue, ^{
-        if ([weakSelf.conversation.chatter isEqualToString:message.conversation.chatter])
+        if ([weakSelf.conversation.chatter isEqualToString:message.conversationChatter])
         {
             for (int i = 0; i < weakSelf.dataSource.count; i ++) {
                 id object = [weakSelf.dataSource objectAtIndex:i];
@@ -682,13 +689,21 @@
 }
 
 - (void)didFetchingMessageAttachments:(EMMessage *)message progress:(float)progress{
-    NSLog(@"didFetchingMessageAttachment: %f  %@", progress,message);
+    NSLog(@"didFetchingMessageAttachment: %f", progress);
 }
 
 -(void)didReceiveMessage:(EMMessage *)message
 {
-    if ([_conversation.chatter isEqualToString:message.from]) {
-        [self addChatDataToMessage:message];
+    if ([_conversation.chatter isEqualToString:message.conversationChatter]) {
+        [self addMessage:message];
+        [_messages addObject:message];
+    }
+}
+
+-(void)didReceiveCmdMessage:(EMMessage *)message
+{
+    if ([_conversation.chatter isEqualToString:message.conversationChatter]) {
+        [self showHint:@"有透传消息"];
     }
 }
 
@@ -705,7 +720,7 @@
     [_chatToolBar cancelTouchRecord];
     
     // 设置当前conversation的所有message为已读
-    [_conversation markMessagesAsRead:YES];
+    [_conversation markAllMessagesAsRead:YES];
     
     [self stopAudioPlaying];
 }
@@ -760,7 +775,22 @@
 
 - (void)moreViewAudioCallAction:(DXChatBarMoreView *)moreView
 {
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"callOutWithChatter" object:self.chatter];
     
+//    __weak typeof(self) weakSelf = self;
+//    if([[AVAudioSession sharedInstance] respondsToSelector:@selector(requestRecordPermission:)])
+//    {
+//        //requestRecordPermission
+//        [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+//            NSLog(@"granted = %d",granted);
+//            if(granted)
+//            {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:@"callOutWithChatter" object:weakSelf.chatter];
+//                });
+//            }
+//        }];
+//    }
 }
 
 #pragma mark - LocationViewDelegate
@@ -768,7 +798,7 @@
 -(void)sendLocationLatitude:(double)latitude longitude:(double)longitude andAddress:(NSString *)address
 {
     EMMessage *locationMessage = [ChatSendHelper sendLocationLatitude:latitude longitude:longitude address:address toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
-    [self addChatDataToMessage:locationMessage];
+    [self addMessage:locationMessage];
 }
 
 #pragma mark - DXMessageToolBarDelegate
@@ -815,15 +845,17 @@
 //    }
 //    _isRecording = YES;
     
-    DXRecordView *tmpView = (DXRecordView *)recordView;
-    tmpView.center = self.view.center;
-    [self.view addSubview:tmpView];
-    [self.view bringSubviewToFront:recordView];
-    
-    NSError *error = nil;
-    [[EaseMob sharedInstance].chatManager startRecordingAudioWithError:&error];
-    if (error) {
-        NSLog(@"开始录音失败");
+    if ([self canRecord]) {
+        DXRecordView *tmpView = (DXRecordView *)recordView;
+        tmpView.center = self.view.center;
+        [self.view addSubview:tmpView];
+        [self.view bringSubviewToFront:recordView];
+        
+        NSError *error = nil;
+        [[EaseMob sharedInstance].chatManager startRecordingAudioWithError:&error];
+        if (error) {
+            NSLog(@"开始录音失败");
+        }
     }
 }
 
@@ -909,7 +941,7 @@
     if (_longPressIndexPath && _longPressIndexPath.row > 0) {
         MessageModel *model = [self.dataSource objectAtIndex:_longPressIndexPath.row];
         NSMutableArray *messages = [NSMutableArray arrayWithObjects:model, nil];
-        [_conversation removeMessage:model.messageId];
+        [_conversation removeMessage:model.message];
         NSMutableArray *indexPaths = [NSMutableArray arrayWithObjects:_longPressIndexPath, nil];;
         if (_longPressIndexPath.row - 1 >= 0) {
             id nextMessage = nil;
@@ -936,19 +968,12 @@
     __block BOOL bCanRecord = YES;
     if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending)
     {
-        dispatch_semaphore_t sema = dispatch_semaphore_create(0);
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];
         if ([audioSession respondsToSelector:@selector(requestRecordPermission:)]) {
             [audioSession performSelector:@selector(requestRecordPermission:) withObject:^(BOOL granted) {
-                if (granted) {
-                    bCanRecord = YES;
-                } else {
-                    bCanRecord = NO;
-                }
+                bCanRecord = granted;
             }];
         }
-        
-        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     }
     
     return bCanRecord;
@@ -978,19 +1003,16 @@
 {
     __weak typeof(self) weakSelf = self;
     dispatch_async(_messageQueue, ^{
-        NSInteger currentCount = [weakSelf.dataSource count];
-        EMMessage *latestMessage = [weakSelf.conversation latestMessage];
-        NSTimeInterval beforeTime = 0;
-        if (latestMessage) {
-            beforeTime = latestMessage.timestamp + 1;
-        }else{
-            beforeTime = [[NSDate date] timeIntervalSince1970] * 1000 + 1;
-        }
+        long long timestamp = [[NSDate date] timeIntervalSince1970] * 1000 + 1;
         
-        NSArray *chats = [weakSelf.conversation loadNumbersOfMessages:(currentCount + KPageCount) before:beforeTime];
-        
-        if ([chats count] > currentCount) {
-            weakSelf.dataSource.array = [weakSelf sortChatSource:chats];
+        NSArray *messages = [weakSelf.conversation loadNumbersOfMessages:([weakSelf.messages count] + KPageCount) before:timestamp];
+        if ([messages count] > 0) {
+            [weakSelf.messages removeAllObjects];
+            [weakSelf.messages addObjectsFromArray:messages];
+            
+            NSInteger currentCount = [weakSelf.dataSource count];
+            [weakSelf.dataSource removeAllObjects];
+            [weakSelf.dataSource addObjectsFromArray:[weakSelf formatMessages:messages]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf.tableView reloadData];
                 
@@ -1000,30 +1022,29 @@
     });
 }
 
-- (NSArray *)sortChatSource:(NSArray *)array
+- (NSArray *)formatMessages:(NSArray *)messagesArray
 {
-    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
-    if (array && [array count] > 0) {
-        
-        for (EMMessage *message in array) {
+    NSMutableArray *formatArray = [[NSMutableArray alloc] init];
+    if ([messagesArray count] > 0) {
+        for (EMMessage *message in messagesArray) {
             NSDate *createDate = [NSDate dateWithTimeIntervalInMilliSecondSince1970:(NSTimeInterval)message.timestamp];
             NSTimeInterval tempDate = [createDate timeIntervalSinceDate:self.chatTagDate];
             if (tempDate > 60 || tempDate < -60 || (self.chatTagDate == nil)) {
-                [resultArray addObject:[createDate formattedTime]];
+                [formatArray addObject:[createDate formattedTime]];
                 self.chatTagDate = createDate;
             }
             
             MessageModel *model = [MessageModelManager modelWithMessage:message];
             if (model) {
-                [resultArray addObject:model];
+                [formatArray addObject:model];
             }
         }
     }
     
-    return resultArray;
+    return formatArray;
 }
 
--(NSMutableArray *)addChatToMessage:(EMMessage *)message
+-(NSMutableArray *)formatMessage:(EMMessage *)message
 {
     NSMutableArray *ret = [[NSMutableArray alloc] init];
     NSDate *createDate = [NSDate dateWithTimeIntervalInMilliSecondSince1970:(NSTimeInterval)message.timestamp];
@@ -1041,15 +1062,16 @@
     return ret;
 }
 
--(void)addChatDataToMessage:(EMMessage *)message
+-(void)addMessage:(EMMessage *)message
 {
     __weak ChatViewController *weakSelf = self;
     dispatch_async(_messageQueue, ^{
-        NSArray *messages = [weakSelf addChatToMessage:message];
+        NSArray *messages = [weakSelf formatMessage:message];
         NSMutableArray *indexPaths = [[NSMutableArray alloc] init];
         
         for (int i = 0; i < messages.count; i++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:weakSelf.dataSource.count+i inSection:0];
+//            [indexPaths insertObject:indexPath atIndex:0];
             [indexPaths addObject:indexPath];
         }
         
@@ -1058,6 +1080,8 @@
             [weakSelf.dataSource addObjectsFromArray:messages];
             [weakSelf.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
             [weakSelf.tableView endUpdates];
+            
+            //            [weakSelf.tableView reloadData];
             
             [weakSelf.tableView scrollToRowAtIndexPath:[indexPaths lastObject] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         });
@@ -1077,8 +1101,6 @@
 {
     [self.view endEditing:YES];
     if (_isChatGroup) {
-//        ChatGroupDetailViewController *detailController = [[ChatGroupDetailViewController alloc] initWithGroupId:_chatter];
-//        [self.navigationController pushViewController:detailController animated:YES];
     }
 }
 
@@ -1144,12 +1166,21 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)insertCallMessage:(NSNotification *)notification
+{
+    id object = notification.object;
+    if (object) {
+        EMMessage *message = (EMMessage *)object;
+        [self didReceiveMessage:message];
+    }
+}
+
 - (void)applicationDidEnterBackground
 {
     [_chatToolBar cancelTouchRecord];
     
     // 设置当前conversation的所有message为已读
-    [_conversation markMessagesAsRead:YES];
+    [_conversation markAllMessagesAsRead:YES];
 }
 
 #pragma mark - send message
@@ -1162,25 +1193,25 @@
 //        [self addChatDataToMessage:tempMessage];
 //    }
     EMMessage *tempMessage = [ChatSendHelper sendTextMessageWithString:textMessage toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
-    [self addChatDataToMessage:tempMessage];
+    [self addMessage:tempMessage];
 }
 
 -(void)sendImageMessage:(UIImage *)imageMessage
 {
     EMMessage *tempMessage = [ChatSendHelper sendImageMessageWithImage:imageMessage toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
-    [self addChatDataToMessage:tempMessage];
+    [self addMessage:tempMessage];
 }
 
 -(void)sendAudioMessage:(EMChatVoice *)voice
 {
     EMMessage *tempMessage = [ChatSendHelper sendVoice:voice toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
-    [self addChatDataToMessage:tempMessage];
+    [self addMessage:tempMessage];
 }
 
 -(void)sendVideoMessage:(EMChatVideo *)video
 {
     EMMessage *tempMessage = [ChatSendHelper sendVideo:video toUsername:_conversation.chatter isChatGroup:_isChatGroup requireEncryption:NO];
-    [self addChatDataToMessage:tempMessage];
+    [self addMessage:tempMessage];
 }
 
 #pragma mark - EMDeviceManagerProximitySensorDelegate
