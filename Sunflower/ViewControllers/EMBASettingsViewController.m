@@ -112,7 +112,7 @@
     UILabel *myselfName = [[UILabel alloc] initWithFrame:CGRectMake(myselfAvatar.frame.origin.x + myselfAvatar.frame.size.width + 17, 40, 150, 20)];
     myselfName.textColor = UIColorFromRGB(0xffffff);
     myselfName.font = [UIFont boldSystemFontOfSize:15.0f];
-    myselfName.text = @"金秀贤";
+    myselfName.text = [EMBAUserId getUserMessage][@"name"];
     [sectionHeaderBtn addSubview:myselfName];
     
     /*UILable:UIView  所以如果是同样的效果，我会选择使用UIView*/

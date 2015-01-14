@@ -14,7 +14,6 @@
     return [[NSUserDefaults standardUserDefaults] valueForKey:@"sessionId"];
 }
 + (NSDictionary *)getUserMessage{
-    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"userMessage"]);
     NSData *data = [[[NSUserDefaults standardUserDefaults] valueForKey:@"userMessage"] dataUsingEncoding:NSUTF8StringEncoding];
     return [WTRequestCenter JSONObjectWithData:data];
 }

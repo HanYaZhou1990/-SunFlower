@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     [self setLeftNavigationBar];
-    self.title = @"金秀贤";
+    self.title = [EMBAUserId getUserMessage][@"name"];
     
     _titleArray = @[@"电话",@"邮箱",@"地址",@"班级"];
     _subArray = @[@"18788899987",@"18788899987@123.com",@"中国河南郑州市",@"三年二班"];
@@ -344,7 +344,7 @@
         
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(80, 15, SCREEN_WIDTH-90, 20)];
         titleLabel.font = [UIFont systemFontOfSize:15];
-        titleLabel.text = @"金秀贤";
+        titleLabel.text = [EMBAUserId getUserMessage][@"name"];
         titleLabel.textColor = UIColorFromRGB(0x333333);
         [cell.contentView addSubview:titleLabel];
         
