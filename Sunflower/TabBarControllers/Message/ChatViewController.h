@@ -12,7 +12,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ChatViewControllerDelegate <NSObject>
+
+- (void)dataReload;
+
+@end
+
 @interface ChatViewController : UIViewController
+
+@property (nonatomic, assign) id <ChatViewControllerDelegate>  delegate;
 
 - (instancetype)initWithChatter:(NSString *)chatter isGroup:(BOOL)isGroup;
 

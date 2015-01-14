@@ -14,6 +14,7 @@
 #import "EMBAChangeRootViewController.h"
 
 #import "EaseMob.h"
+#import "MBProgressHUD+Add.h"
 
 @interface EMBALoginViewController : EMBAFatherViewController<IChatManagerDelegate>
 

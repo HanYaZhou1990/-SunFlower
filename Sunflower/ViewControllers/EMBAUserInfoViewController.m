@@ -172,9 +172,8 @@
 //    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
 //    [self.navigationController pushViewController:messageViewController animated:YES];
 //    13598084041
-    ChatViewController *messageViewController  = [[ChatViewController alloc] initWithChatter:@"15225135761" isGroup:NO];
-//    messageViewController.friendIdStr = [_messageDictionary[@"id"] stringClearNull];
-    messageViewController.title = [_messageDictionary[@"phone"] stringClearNull];
+    ChatViewController *messageViewController  = [[ChatViewController alloc] initWithChatter:[_messageDictionary[@"name"] stringClearNull] isGroup:NO];
+    messageViewController.title = [_messageDictionary[@"name"] stringClearNull];
     [self.navigationController pushViewController:messageViewController animated:YES];
 }
 

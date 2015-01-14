@@ -57,9 +57,10 @@
         _contentLable.font = [UIFont systemFontOfSize:13];
         [self.contentView addSubview:_contentLable];
         
-        _timeLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - LEFT_RIGHT_TOP_WIDTH - HEADER_WIDTH_HEIGHT - 4 , 5, HEADER_WIDTH_HEIGHT+4 , LABLE_HEIGHT)];
+        _timeLable = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - LEFT_RIGHT_TOP_WIDTH - HEADER_WIDTH_HEIGHT - 4 , 5, HEADER_WIDTH_HEIGHT+4 , LABLE_HEIGHT*2+5)];
         _timeLable.backgroundColor = [UIColor clearColor];
         _timeLable.textAlignment = NSTextAlignmentCenter;
+        _timeLable.numberOfLines = 0;
         _timeLable.text = @"10:14";
         _timeLable.textColor = UIColorFromRGB(0x999999);
         _timeLable.font = [UIFont systemFontOfSize:12.f];
@@ -71,6 +72,20 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
+    if ([_numberLable.text intValue] > 0) {
+        if ([_numberLable.text intValue] < 9) {
+            _numberLable.font = [UIFont systemFontOfSize:13];
+        }else if([_numberLable.text intValue] > 9 && [_numberLable.text intValue] < 99){
+            _numberLable.font = [UIFont systemFontOfSize:12];
+        }else{
+            _numberLable.font = [UIFont systemFontOfSize:10];
+        }
+        [_numberLable setHidden:NO];
+        [self.contentView bringSubviewToFront:_numberLable];
+        _numberLable.text = [NSString stringWithFormat:@"%d",[_numberLable.text intValue]];
+    }else{
+        [_numberLable setHidden:YES];
+    }
 }
 
 - (void)awakeFromNib{}

@@ -39,12 +39,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
+    self.tabBarController.delegate = self;
+    
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     openItem.tag = 19;
     self.navigationItem.leftBarButtonItem = openItem;
-    
     
     UIBarButtonItem *searchBarItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Search_Bar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(barItemClick:)];
     searchBarItem.tag = 20;
@@ -53,6 +54,7 @@
         
     self.navigationItem.rightBarButtonItems = @[collectBarItem,searchBarItem];
     
+    _historyArray = [[NSMutableArray alloc] init];
     
     _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATEION_HEIGHT-TABBAR_HEIGHT) style:UITableViewStylePlain];
     _mainTableView.delegate = self;
@@ -62,8 +64,32 @@
     [self.view addSubview:_mainTableView];
     
     for (EMConversation *conversation in [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase]) {
-        NSLog(@"%@",conversation.chatter);
+        [_historyArray addObject:conversation];
     }
+}
+
+#pragma mark -
+#pragma mark UITabBarControllerDelegate -
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    if ([viewController.childViewControllers[0] isKindOfClass:[EMBAMainViewController class]]) {
+        [_historyArray removeAllObjects];
+        for (EMConversation *conversation in [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase]) {
+            [_historyArray addObject:conversation];
+        }
+        [_mainTableView reloadData];
+    }else {
+        
+    }
+}
+
+#pragma mark -
+#pragma mark ChatViewControllerDelegate -
+- (void)dataReload{
+    [_historyArray removeAllObjects];
+    for (EMConversation *conversation in [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase]) {
+        [_historyArray addObject:conversation];
+    }
+    [_mainTableView reloadData];
 }
 
 #pragma mark -
@@ -77,11 +103,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return _historyArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     EMBAMainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.firstImageView.hidden = YES;
+    
+    EMConversation *conversation = [_historyArray objectAtIndex:indexPath.row];
+    
+    cell.nameLable.text = conversation.chatter;
+    cell.contentLable.text = [self subTitleMessageByConversation:conversation];
+    cell.timeLable.text = [self lastMessageTimeByConversation:conversation];
+    cell.numberLable.text = [NSString stringWithFormat:@"%ld",(long)[self unreadMessageCountByConversation:conversation]];
     return cell;
 }
 
@@ -89,9 +123,68 @@
 #pragma mark UITableViewDelegate -
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    EMBAMessageViewController *messageViewController = [[EMBAMessageViewController alloc] init];
+    EMConversation *conversation = [_historyArray objectAtIndex:indexPath.row];
+    
+    ChatViewController *messageViewController  = [[ChatViewController alloc] initWithChatter:conversation.chatter isGroup:NO];
+    messageViewController.title = conversation.chatter;
     messageViewController.hidesBottomBarWhenPushed = YES;
+    messageViewController.delegate = self;
     [self.navigationController pushViewController:messageViewController animated:YES];
+}
+
+    // 得到最后消息文字或者类型
+-(NSString *)subTitleMessageByConversation:(EMConversation *)conversation
+{
+    NSString *ret = @"";
+    EMMessage *lastMessage = [conversation latestMessage];
+    if (lastMessage) {
+        id<IEMMessageBody> messageBody = lastMessage.messageBodies.lastObject;
+        switch (messageBody.messageBodyType) {
+            case eMessageBodyType_Image:{
+                ret = @"[图片]";
+            } break;
+            case eMessageBodyType_Text:{
+                    // 表情映射。
+                NSString *didReceiveText = [ConvertToCommonEmoticonsHelper
+                                            convertToSystemEmoticons:((EMTextMessageBody *)messageBody).text];
+                ret = didReceiveText;
+            } break;
+            case eMessageBodyType_Voice:{
+                ret = @"[声音]";
+            } break;
+            case eMessageBodyType_Location: {
+                ret = @"[位置]";
+            } break;
+            case eMessageBodyType_Video: {
+                ret = @"[视频]";
+            } break;
+            default: {
+            } break;
+        }
+    }
+    
+    return ret;
+}
+
+    // 得到最后消息时间
+-(NSString *)lastMessageTimeByConversation:(EMConversation *)conversation
+{
+    NSString *ret = @"";
+    EMMessage *lastMessage = [conversation latestMessage];;
+    if (lastMessage) {
+        ret = [NSDate formattedTimeFromTimeInterval:lastMessage.timestamp];
+    }
+    
+    return ret;
+}
+
+    // 得到未读消息条数
+- (NSInteger)unreadMessageCountByConversation:(EMConversation *)conversation
+{
+    NSInteger ret = 0;
+    ret = conversation.unreadMessagesCount;
+    
+    return  ret;
 }
 
 - (void)openButtonPressed

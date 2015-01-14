@@ -209,6 +209,10 @@
         [[EaseMob sharedInstance].chatManager removeConversationByChatter:_conversation.chatter deleteMessages:YES];
     }
     
+    if ([_delegate respondsToSelector:@selector(dataReload)]) {
+        [_delegate dataReload];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

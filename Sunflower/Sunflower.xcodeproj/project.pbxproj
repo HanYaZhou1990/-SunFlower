@@ -32,7 +32,6 @@
 		A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3519FAA2BA0044F48D /* UserInformation.m */; };
 		A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */; };
 		A825EE3D19FAA5080044F48D /* HYZ+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3C19FAA5080044F48D /* HYZ+Color.m */; };
-		A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */; };
 		A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A825EE4219FAA7710044F48D /* EMBALoginInputView.m */; };
 		A825EE4519FAA8DB0044F48D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A825EE4419FAA8DB0044F48D /* QuartzCore.framework */; };
 		A8367D1519FAA00E00ED14CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8367D1419FAA00E00ED14CA /* Foundation.framework */; };
@@ -70,7 +69,6 @@
 		A8A468161A1D0319001FFFFF /* UIWebView+WTRequestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4680A1A1D0319001FFFFF /* UIWebView+WTRequestCenter.m */; };
 		A8A468171A1D0319001FFFFF /* WTImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4680C1A1D0319001FFFFF /* WTImageViewer.m */; };
 		A8A468181A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4680E1A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m */; };
-		A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */; };
 		A8A468231A1D121E001FFFFF /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A468221A1D121E001FFFFF /* TWTSideMenuViewController.m */; };
 		A8A468261A1D159F001FFFFF /* EMBASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A468251A1D159F001FFFFF /* EMBASettingsViewController.m */; };
 		A8C9278E1A262CD300426D48 /* EMBAChangeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C9278D1A262CD300426D48 /* EMBAChangeRootViewController.m */; };
@@ -84,7 +82,10 @@
 		A8C927A81A26375D00426D48 /* mine_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A41A26375D00426D48 /* mine_icon@2x.png */; };
 		A8C927A91A26375D00426D48 /* school_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A51A26375D00426D48 /* school_icon@2x.png */; };
 		A8C927AA1A26375D00426D48 /* together_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8C927A61A26375D00426D48 /* together_icon@2x.png */; };
-		CF5021ED1A2B31D5004BA44D /* EMBAMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5021EC1A2B31D5004BA44D /* EMBAMainCell.m */; };
+		CF30A3E41A66AA8F0096DBE1 /* EMBALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30A3E31A66AA8F0096DBE1 /* EMBALoginViewController.m */; };
+		CF30A3E91A66AACA0096DBE1 /* EMBAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30A3E61A66AACA0096DBE1 /* EMBAMainViewController.m */; };
+		CF30A3EA1A66AACA0096DBE1 /* EMBAMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30A3E81A66AACA0096DBE1 /* EMBAMainCell.m */; };
+		CF30A3ED1A66ABE20096DBE1 /* EMBAUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30A3EC1A66ABE20096DBE1 /* EMBAUserInfoViewController.m */; };
 		CF5021F01A2B542D004BA44D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021EE1A2B542D004BA44D /* 1.png */; };
 		CF5021F11A2B542D004BA44D /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021EF1A2B542D004BA44D /* 1@2x.png */; };
 		CF5021F61A2B547D004BA44D /* newMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = CF5021F21A2B547D004BA44D /* newMessage.png */; };
@@ -238,7 +239,6 @@
 		CF97A3A11A5438F5002629BA /* XHMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF97A3981A5438F5002629BA /* XHMessageTextView.m */; };
 		CFA16E7B1A42EECC000E46D7 /* EMBAPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */; };
 		CFA16E7C1A42EECC000E46D7 /* EMBAPersonalEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E781A42EECC000E46D7 /* EMBAPersonalEditViewController.m */; };
-		CFA16E7D1A42EECC000E46D7 /* EMBAUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */; };
 		CFA16E851A42EF7D000E46D7 /* addOneGroup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA16E7E1A42EF7D000E46D7 /* addOneGroup@2x.png */; };
 		CFA16E861A42EF7D000E46D7 /* EMBASchoolFellowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E801A42EF7D000E46D7 /* EMBASchoolFellowEntity.m */; };
 		CFA16E871A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA16E821A42EF7D000E46D7 /* EMBASchoolFellowTableViewCell.m */; };
@@ -437,8 +437,6 @@
 		A825EE3919FAA3810044F48D /* EMBAFatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAFatherViewController.m; sourceTree = "<group>"; };
 		A825EE3B19FAA5080044F48D /* HYZ+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HYZ+Color.h"; sourceTree = "<group>"; };
 		A825EE3C19FAA5080044F48D /* HYZ+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HYZ+Color.m"; sourceTree = "<group>"; };
-		A825EE3E19FAA5BD0044F48D /* EMBALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBALoginViewController.h; sourceTree = "<group>"; };
-		A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBALoginViewController.m; sourceTree = "<group>"; };
 		A825EE4119FAA7710044F48D /* EMBALoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBALoginInputView.h; sourceTree = "<group>"; };
 		A825EE4219FAA7710044F48D /* EMBALoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBALoginInputView.m; sourceTree = "<group>"; };
 		A825EE4419FAA8DB0044F48D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -496,8 +494,6 @@
 		A8A4680D1A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		A8A4680E1A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		A8A4680F1A1D0319001FFFFF /* WTRequestCenterMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTRequestCenterMacro.h; sourceTree = "<group>"; };
-		A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBAMainViewController.h; path = ../ViewControllers/EMBAMainViewController.h; sourceTree = "<group>"; };
-		A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMBAMainViewController.m; path = ../ViewControllers/EMBAMainViewController.m; sourceTree = "<group>"; };
 		A8A468211A1D121E001FFFFF /* TWTSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTSideMenuViewController.h; sourceTree = "<group>"; };
 		A8A468221A1D121E001FFFFF /* TWTSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTSideMenuViewController.m; sourceTree = "<group>"; };
 		A8A468241A1D159F001FFFFF /* EMBASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASettingsViewController.h; sourceTree = "<group>"; };
@@ -516,8 +512,14 @@
 		A8C927A41A26375D00426D48 /* mine_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_icon@2x.png"; sourceTree = "<group>"; };
 		A8C927A51A26375D00426D48 /* school_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "school_icon@2x.png"; sourceTree = "<group>"; };
 		A8C927A61A26375D00426D48 /* together_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "together_icon@2x.png"; sourceTree = "<group>"; };
-		CF5021EB1A2B31D5004BA44D /* EMBAMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMainCell.h; sourceTree = "<group>"; };
-		CF5021EC1A2B31D5004BA44D /* EMBAMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMainCell.m; sourceTree = "<group>"; };
+		CF30A3E21A66AA8F0096DBE1 /* EMBALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBALoginViewController.h; sourceTree = "<group>"; };
+		CF30A3E31A66AA8F0096DBE1 /* EMBALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBALoginViewController.m; sourceTree = "<group>"; };
+		CF30A3E51A66AACA0096DBE1 /* EMBAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMainViewController.h; sourceTree = "<group>"; };
+		CF30A3E61A66AACA0096DBE1 /* EMBAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMainViewController.m; sourceTree = "<group>"; };
+		CF30A3E71A66AACA0096DBE1 /* EMBAMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAMainCell.h; sourceTree = "<group>"; };
+		CF30A3E81A66AACA0096DBE1 /* EMBAMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAMainCell.m; sourceTree = "<group>"; };
+		CF30A3EB1A66ABE20096DBE1 /* EMBAUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAUserInfoViewController.h; sourceTree = "<group>"; };
+		CF30A3EC1A66ABE20096DBE1 /* EMBAUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAUserInfoViewController.m; sourceTree = "<group>"; };
 		CF5021EE1A2B542D004BA44D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		CF5021EF1A2B542D004BA44D /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		CF5021F21A2B547D004BA44D /* newMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newMessage.png; sourceTree = "<group>"; };
@@ -834,8 +836,6 @@
 		CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalCell.m; sourceTree = "<group>"; };
 		CFA16E771A42EECC000E46D7 /* EMBAPersonalEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAPersonalEditViewController.h; sourceTree = "<group>"; };
 		CFA16E781A42EECC000E46D7 /* EMBAPersonalEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAPersonalEditViewController.m; sourceTree = "<group>"; };
-		CFA16E791A42EECC000E46D7 /* EMBAUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBAUserInfoViewController.h; sourceTree = "<group>"; };
-		CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBAUserInfoViewController.m; sourceTree = "<group>"; };
 		CFA16E7E1A42EF7D000E46D7 /* addOneGroup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addOneGroup@2x.png"; sourceTree = "<group>"; };
 		CFA16E7F1A42EF7D000E46D7 /* EMBASchoolFellowEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBASchoolFellowEntity.h; sourceTree = "<group>"; };
 		CFA16E801A42EF7D000E46D7 /* EMBASchoolFellowEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBASchoolFellowEntity.m; sourceTree = "<group>"; };
@@ -1270,8 +1270,8 @@
 		A8367D4A19FAA03700ED14CA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A825EE3E19FAA5BD0044F48D /* EMBALoginViewController.h */,
-				A825EE3F19FAA5BD0044F48D /* EMBALoginViewController.m */,
+				CF30A3E21A66AA8F0096DBE1 /* EMBALoginViewController.h */,
+				CF30A3E31A66AA8F0096DBE1 /* EMBALoginViewController.m */,
 				A825EE4119FAA7710044F48D /* EMBALoginInputView.h */,
 				A825EE4219FAA7710044F48D /* EMBALoginInputView.m */,
 				CFDD886D1A52C5E40005B668 /* EMBAUserId.h */,
@@ -1367,10 +1367,10 @@
 			isa = PBXGroup;
 			children = (
 				CF9229871A44AEFD00676A02 /* smallOpenBar@2x.png */,
-				A8A4681E1A1D0EDC001FFFFF /* EMBAMainViewController.h */,
-				A8A4681F1A1D0EDC001FFFFF /* EMBAMainViewController.m */,
-				CF5021EB1A2B31D5004BA44D /* EMBAMainCell.h */,
-				CF5021EC1A2B31D5004BA44D /* EMBAMainCell.m */,
+				CF30A3E51A66AACA0096DBE1 /* EMBAMainViewController.h */,
+				CF30A3E61A66AACA0096DBE1 /* EMBAMainViewController.m */,
+				CF30A3E71A66AACA0096DBE1 /* EMBAMainCell.h */,
+				CF30A3E81A66AACA0096DBE1 /* EMBAMainCell.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -2207,8 +2207,8 @@
 		CFDE4BBE1A388C73001B3BBA /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
-				CFA16E791A42EECC000E46D7 /* EMBAUserInfoViewController.h */,
-				CFA16E7A1A42EECC000E46D7 /* EMBAUserInfoViewController.m */,
+				CF30A3EB1A66ABE20096DBE1 /* EMBAUserInfoViewController.h */,
+				CF30A3EC1A66ABE20096DBE1 /* EMBAUserInfoViewController.m */,
 				CFA16E751A42EECC000E46D7 /* EMBAPersonalCell.h */,
 				CFA16E761A42EECC000E46D7 /* EMBAPersonalCell.m */,
 				CFA16E771A42EECC000E46D7 /* EMBAPersonalEditViewController.h */,
@@ -2605,15 +2605,16 @@
 				CF97A2F31A5437DC002629BA /* EMChatTextBubbleView.m in Sources */,
 				A8A468131A1D0319001FFFFF /* UIDevice+WTRequestCenter.m in Sources */,
 				CF97A3551A54380A002629BA /* DACircularProgressView.m in Sources */,
-				A825EE4019FAA5BD0044F48D /* EMBALoginViewController.m in Sources */,
 				CFDD886F1A52C5E40005B668 /* EMBAUserId.m in Sources */,
 				CFA16E921A42F01B000E46D7 /* EMBAMyClassHeaderView.m in Sources */,
 				CF97A2FC1A5437DC002629BA /* MessageReadManager.m in Sources */,
 				CF97A2EF1A5437DC002629BA /* EMChatAudioBubbleView.m in Sources */,
 				CF97A3591A54380A002629BA /* PSTCollectionViewController.m in Sources */,
 				A825EE3619FAA2BA0044F48D /* UserInformation.m in Sources */,
+				CF30A3E41A66AA8F0096DBE1 /* EMBALoginViewController.m in Sources */,
 				CFA16EA41A42F02E000E46D7 /* EMBAMyActivityDetailViewController.m in Sources */,
 				A8A468181A1D0319001FFFFF /* WTNetworkActivityIndicatorManager.m in Sources */,
+				CF30A3ED1A66ABE20096DBE1 /* EMBAUserInfoViewController.m in Sources */,
 				CF97A3621A54380A002629BA /* PSTGridLayoutSection.m in Sources */,
 				CFBB00A61A43461D00E3E6A8 /* EMBACreatSuccessViewController.m in Sources */,
 				CF88F4331A41D7CB0009DCED /* EMBACalculation.m in Sources */,
@@ -2637,10 +2638,10 @@
 				CF5CF82D1A38840800A3C2D2 /* EMBAMyCollectionViewController.m in Sources */,
 				A8A467F81A1D0309001FFFFF /* WTRequestCenter.m in Sources */,
 				CF97A35D1A54380A002629BA /* PSTCollectionViewLayout.m in Sources */,
+				CF30A3E91A66AACA0096DBE1 /* EMBAMainViewController.m in Sources */,
 				CF7872A31A3F532A00271A1D /* EMBAImageProcessing.m in Sources */,
 				CFA1D4EF1A38CEB6001E0182 /* EMBASystemSettingCell.m in Sources */,
 				CF97A2F11A5437DC002629BA /* EMChatImageBubbleView.m in Sources */,
-				CFA16E7D1A42EECC000E46D7 /* EMBAUserInfoViewController.m in Sources */,
 				CFA16E901A42F01B000E46D7 /* EMBAMyClassViewController.m in Sources */,
 				CFDE4BDB1A38B5EE001B3BBA /* EMBACollectionCell.m in Sources */,
 				CFA16E9D1A42F025000E46D7 /* EMBAMyLessonLable.m in Sources */,
@@ -2661,7 +2662,6 @@
 				CF97A3811A5438B4002629BA /* ConvertToCommonEmoticonsHelper.m in Sources */,
 				CF97A2F21A5437DC002629BA /* EMChatLocationBubbleView.m in Sources */,
 				CF97A2F61A5437DC002629BA /* EMChatTimeCell.m in Sources */,
-				A8A468201A1D0EDC001FFFFF /* EMBAMainViewController.m in Sources */,
 				A825EE4319FAA7710044F48D /* EMBALoginInputView.m in Sources */,
 				CFA16E9C1A42F025000E46D7 /* EMBAMyLessonCell.m in Sources */,
 				A8A468141A1D0319001FFFFF /* UIImage+WTRequestCenter.m in Sources */,
@@ -2670,7 +2670,6 @@
 				CF97A34F1A54380A002629BA /* MWGridViewController.m in Sources */,
 				A825EE3A19FAA3810044F48D /* EMBAFatherViewController.m in Sources */,
 				A8A468121A1D0319001FFFFF /* UIColor+WTRequestCenter.m in Sources */,
-				CF5021ED1A2B31D5004BA44D /* EMBAMainCell.m in Sources */,
 				CF97A3681A54380A002629BA /* THProgressView.m in Sources */,
 				CF97A35F1A54380A002629BA /* PSTGridLayoutInfo.m in Sources */,
 				CF78729E1A3F4E5000271A1D /* EMBAMineHeaderView.m in Sources */,
@@ -2710,6 +2709,7 @@
 				CF97A2F01A5437DC002629BA /* EMChatBaseBubbleView.m in Sources */,
 				CF97A3571A54380A002629BA /* PSTCollectionView.m in Sources */,
 				A8A467F91A1D0309001FFFFF /* WTURLRequestOperation.m in Sources */,
+				CF30A3EA1A66AACA0096DBE1 /* EMBAMainCell.m in Sources */,
 				A8A468101A1D0319001FFFFF /* UIAlertView+WTRequestCenter.m in Sources */,
 				CF7872AF1A3F5FD900271A1D /* EMBAMineMenuView.m in Sources */,
 				A8C927951A262DB500426D48 /* EMBAMineViewController.m in Sources */,

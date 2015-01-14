@@ -81,7 +81,9 @@
 #pragma mark  button click -
 - (void)loginButtonClicked:(UIButton *)sender{
         //    http://www.vpengo.com/login?loginName=13598084041&password=123456
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [WTRequestCenter postWithURL:[NSString stringWithFormat:@"%@login",HTTP_URL]parameters:@{@"loginName":_inputView.userNameField.text,@"password":_inputView.userPswField.text} finished:^(NSURLResponse *response, NSData *data) {
+        [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
         NSDictionary *jsonDic = [WTRequestCenter JSONObjectWithData:data];
         if (jsonDic[@"sessionId"]) {
             [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:_inputView.userNameField.text
@@ -90,6 +92,7 @@
              ^(NSDictionary *loginInfo, EMError *error) {
                  if (error) {
                      NSLog(@"登录失败");
+                     [MBProgressHUD showError:[NSString stringWithFormat:@"%@",error] toView:self.navigationController.view];
                  }else {
                      NSLog(@"登录成功");
                      [[NSUserDefaults standardUserDefaults] setObject:jsonDic[@"sessionId"] forKey:@"sessionId"];
@@ -103,9 +106,12 @@
                      [UIApplication sharedApplication].keyWindow.rootViewController = self.sideMenuViewController;
                  }
              } onQueue:nil];
+        }else{
+            [MBProgressHUD showError:[NSString stringWithFormat:@"%@",jsonDic[@"error"]] toView:self.navigationController.view];
         }
     } failed:^(NSURLResponse *response, NSError *error) {
-        NSLog(@"%@",error);
+        NSLog(@"+++++%@",error);
+        [MBProgressHUD showError:[NSString stringWithFormat:@"%@",error] toView:self.navigationController.view];
     }];
 }
 //忘记密码
