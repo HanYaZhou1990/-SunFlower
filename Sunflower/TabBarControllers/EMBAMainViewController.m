@@ -9,6 +9,7 @@
 //
 
 #import "EMBAMainViewController.h"
+#import "EMBAAppDelegate.h"
 
 @interface EMBAMainViewController ()
 
@@ -40,8 +41,6 @@
 {
     [super viewDidLoad];
     
-    self.tabBarController.delegate = self;
-    
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OpenBar.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     openItem.tag = 19;
@@ -65,20 +64,6 @@
     
     for (EMConversation *conversation in [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase]) {
         [_historyArray addObject:conversation];
-    }
-}
-
-#pragma mark -
-#pragma mark UITabBarControllerDelegate -
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    if ([viewController.childViewControllers[0] isKindOfClass:[EMBAMainViewController class]]) {
-        [_historyArray removeAllObjects];
-        for (EMConversation *conversation in [[EaseMob sharedInstance].chatManager loadAllConversationsFromDatabase]) {
-            [_historyArray addObject:conversation];
-        }
-        [_mainTableView reloadData];
-    }else {
-        
     }
 }
 

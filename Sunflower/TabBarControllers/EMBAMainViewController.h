@@ -15,8 +15,9 @@
 #import "ConvertToCommonEmoticonsHelper.h"
 #import "NSDate+Category.h"
 #import "ChatViewController.h"
+@class EMBAAppDelegate;
 
-@interface EMBAMainViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate,UITabBarControllerDelegate,ChatViewControllerDelegate>
+@interface EMBAMainViewController : EMBAFatherViewController<UITableViewDataSource,UITableViewDelegate,ChatViewControllerDelegate>
 
 @property (nonatomic, strong) UITableView          *mainTableView;
 @property (nonatomic, strong) NSMutableArray       *historyArray;

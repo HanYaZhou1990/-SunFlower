@@ -32,6 +32,7 @@
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lVC];
     _tabBarController = [[UITabBarController alloc] init];
     _tabBarController.tabBar.tintColor = UIColorFromRGB(0x09bb07);
+    _tabBarController.delegate = self;
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -92,6 +93,18 @@
 -(void)loginStateChange:(NSNotification *)notification
 {
     NSLog(@"登陆成功了 %@",[notification object]);
+}
+
+#pragma mark -
+#pragma mark UITabBarControllerDelegate -
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    if ([viewController.childViewControllers[0] isKindOfClass:[EMBAMainViewController class]]) {
+        [viewController.childViewControllers[0] dataReload];
+    }else if ([viewController.childViewControllers[0] isKindOfClass:[EMBASchoolfellowViewController class]]){
+        
+    }else {
+        
+    }
 }
 
 - (void)saveContext

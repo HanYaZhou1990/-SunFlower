@@ -14,7 +14,7 @@
 #import "EMBAUserInfoViewController.h"
 #import "EMBAGroupDetailViewController.h"
 
-@interface EMBASchoolfellow_ViewController ()<UITableViewDelegate,UITableViewDataSource,EMBASegumentViewDelegate>
+@interface EMBASchoolfellowViewController ()<UITableViewDelegate,UITableViewDataSource,EMBASegumentViewDelegate>
 {
     EMBASegumentView  *segumentView;
     NSMutableArray    *_dataSource;
@@ -29,7 +29,7 @@
 }
 @end
 
-@implementation EMBASchoolfellow_ViewController
+@implementation EMBASchoolfellowViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

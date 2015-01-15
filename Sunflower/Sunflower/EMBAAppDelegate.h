@@ -10,7 +10,7 @@
 #import "EMBALoginViewController.h"
 #import "EMBAChangeRootViewController.h"
 
-@interface EMBAAppDelegate : UIResponder <UIApplicationDelegate,IChatManagerDelegate>
+@interface EMBAAppDelegate : UIResponder <UIApplicationDelegate,IChatManagerDelegate,UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UITabBarController   *tabBarController;

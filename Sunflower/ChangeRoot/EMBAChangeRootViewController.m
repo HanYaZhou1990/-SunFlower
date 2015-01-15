@@ -16,7 +16,7 @@
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:[EMBAMainViewController new]];
     mainNav.navigationBar.backgroundColor = [UIColor whiteColor];
     
-    UINavigationController *schoolNav = [[UINavigationController alloc] initWithRootViewController:[EMBASchoolfellow_ViewController new]];
+    UINavigationController *schoolNav = [[UINavigationController alloc] initWithRootViewController:[EMBASchoolfellowViewController new]];
     
     UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:[EMBAMineViewController new]];
     

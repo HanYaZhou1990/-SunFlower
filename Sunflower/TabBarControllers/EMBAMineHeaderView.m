@@ -20,7 +20,7 @@
             [self.contentView addSubview:_headerImageView];
             
             _nameLable = [[UILabel alloc] init];
-            _nameLable.text = @"韩亚周";
+            _nameLable.text = [EMBAUserId getUserMessage][@"name"];
             _nameLable.font = [UIFont systemFontOfSize:18];
             [_nameLable setTextColor:UIColorFromRGB(0xFFFFFF)];
             [self.contentView addSubview:_nameLable];

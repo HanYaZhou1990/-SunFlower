@@ -11,6 +11,6 @@
 #import "EMBAAddGroupViewController.h"
 #import "EMBACreatGroupViewController.h"
 
-@interface EMBASchoolfellow_ViewController : EMBAFatherViewController
+@interface EMBASchoolfellowViewController : EMBAFatherViewController
 
 @end

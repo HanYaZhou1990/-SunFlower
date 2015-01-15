@@ -28,7 +28,7 @@
         
         _somebodyLable = [[UILabel alloc] init];
         _somebodyLable.font = [UIFont systemFontOfSize:13];
-        _somebodyLable.text = @"韩亚周";
+        _somebodyLable.text = [EMBAUserId getUserMessage][@"name"];
         _somebodyLable.textColor = UIColorFromRGB(0x555555);
         _somebodyLable.textAlignment = NSTextAlignmentRight;
         _somebodyLable.adjustsFontSizeToFitWidth = YES;

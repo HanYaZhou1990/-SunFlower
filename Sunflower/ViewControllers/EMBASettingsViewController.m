@@ -127,7 +127,6 @@
 #pragma mark - UITableView sectionHeader点击事件
 - (void)sectionheaderClicked
 {
-    NSLog(@"昵称点击");
     EMBAUserInfoViewController *uiVC = [[EMBAUserInfoViewController alloc] init];
     uiVC.isUser = YES;
     UINavigationController *userInfoVC = [[UINavigationController alloc] initWithRootViewController:uiVC];
